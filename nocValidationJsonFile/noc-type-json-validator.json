@@ -1,0 +1,505 @@
+{ 
+   "PETNOC":{ 
+      "applicantName":{ 
+         "fieldName":"applicantName",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Applicant Name",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"1"
+      },
+      "houseNo":{ 
+         "fieldName":"houseNo",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[0-9]++$",
+         "displayName":"House No",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"2"
+      },
+      "sector":{ 
+         "fieldName":"sector",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Sector",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"3"
+      },
+      "nameOfPetDog":{ 
+         "fieldName":"nameOfPetDog",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Name of pet dog",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"4"
+      },
+      "age":{ 
+         "fieldName":"age",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[0-9-]*$",
+         "displayName":"Age",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"5"
+      },
+      "sex":{ 
+         "fieldName":"sex",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Sex",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"6"
+      },
+      "breed":{ 
+         "fieldName":"breed",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Breed",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"7"
+      },
+      "color":{ 
+         "fieldName":"color",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Color",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"8"
+      },
+      "identificationMark":{ 
+         "fieldName":"identificationMark",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"^[a-zA-Z0-9]+$",
+         "displayName":"Identification Mark",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"9"
+      },
+      "uploadPetPicture":{ 
+         "fieldName":"uploadPetPicture",
+         "type":"jsonArray",
+         "mandatory":"true",
+         "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+         "displayName":"Upload Pet Picture",
+         "inputType":"file",
+         "value":"",
+         "displaySequence":"10"
+      },
+      "uploadVaccinationCertificate":{ 
+         "fieldName":"uploadVaccinationCertificate",
+         "type":"jsonArray",
+         "mandatory":"true",
+         "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+         "displayName":"Upload Vaccination Certificate",
+         "inputType":"file",
+         "value":"",
+         "displaySequence":"11"
+      },
+      "immunizationNameVeterinaryDoctor":{ 
+         "fieldName":"immunizationNameVeterinaryDoctor",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Immunization Name Veterinary Doctor",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"12"
+      },
+      "veterinaryCouncilRegistrationNo":{ 
+         "fieldName":"veterinaryCouncilRegistrationNo",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"[0-9]++$",
+         "displayName":"Veterinary Council Registration No.",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"13"
+      },
+      "immunizationContactDetail":{ 
+         "fieldName":"immunizationContactDetail",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"(0/91)?[1-9][0-9]{9}",
+         "displayName":"Contact Detail",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"14"
+      },
+      "immunizationClinicNo":{ 
+         "fieldName":"immunizationClinicNo",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[0-9]++$",
+         "displayName":"House/Clinic No",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"15"
+      },
+      "immunizationSector":{ 
+         "fieldName":"immunizationSector",
+         "type":"number",
+         "mandatory":"false",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Immunization Sector",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"16"
+      }
+   },
+   "ROADCUTNOC":{ 
+      "typeOfApplicant":{ 
+         "fieldName":"typeOfApplicant",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Type Of Applicant",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"1"
+      },
+      "purposeOfRoadCutting":{ 
+         "fieldName":"purposeOfRoadCutting",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Purpose Of RoadCutting",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"2"
+      },
+      "applicantName":{ 
+         "fieldName":"applicantName",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Applicant Name",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"3"
+      },
+      "division":{ 
+         "fieldName":"division",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z0-9]+$",
+         "displayName":"Division",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"4"
+      },
+      "ward":{ 
+         "fieldName":"ward",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z0-9]+$",
+         "displayName":"Ward",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"5"
+      },
+      "sector":{ 
+         "fieldName":"sector",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[0-9]++$",
+         "displayName":"Sector",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"6"
+      },
+      "requestedLocation":{ 
+         "fieldName":"requestedLocation",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\"]*$",
+         "displayName":"Requested Location",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"7"
+      },
+      "landmark":{ 
+         "fieldName":"landmark",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z0-9]+$",
+         "displayName":"Landmark",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"8"
+      },
+      "length":{ 
+         "fieldName":"length",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[0-9]++$",
+         "displayName":"Breed",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"9"
+      },
+      "width":{ 
+         "fieldName":"width",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[0-9]++$",
+         "displayName":"Color",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"10"
+      },
+      "uploadDocuments":{ 
+         "fieldName":"uploadDocuments",
+         "type":"jsonArray",
+         "mandatory":"true",
+         "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+         "displayName":"Upload Documents",
+         "inputType":"file",
+         "value":"",
+         "displaySequence":"11"
+      }
+   },
+   "SELLMEATNOC":{ 
+      "applicantName":{ 
+         "fieldName":"applicantName",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"[A-Za-z]++$",
+         "displayName":"Applicant Name",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"1"
+      },
+      "fatherHusbandName":{ 
+         "fieldName":"fatherHusbandName",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"[A-Za-z]++$",
+         "displayName":"Father/Husband Name",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"2"
+      },
+      "houseNo":{ 
+         "fieldName":"houseNo",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[0-9]++$",
+         "displayName":"House No",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"3"
+      },
+      "division":{ 
+         "fieldName":"division",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[0-9]++$",
+         "displayName":"Division/Sector/ward/Shop No",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"4"
+      },
+      "nocSought":{ 
+         "fieldName":"nocSought",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"NOC Sought For",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"6"
+      },
+      "uploadDocuments":{ 
+         "fieldName":"uploadDocuments",
+         "type":"jsonArray",
+         "mandatory":"true",
+         "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+         "displayName":"Upload Documents",
+         "inputType":"file",
+         "value":"",
+         "displaySequence":"7"
+      }
+   },
+   "ADVERTISEMENTNOC":{ 
+      "typeOfApplicant":{ 
+         "fieldName":"typeOfApplicant",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Type Of Applicant",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"1"
+      },
+      "applicantName":{ 
+         "fieldName":"applicantName",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Applicant Name",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"2"
+      },
+      "address":{ 
+         "fieldName":"address",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\"]*$",
+         "displayName":"Address",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"3"
+      },
+      "mobileNo":{ 
+         "fieldName":"mobileNo",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"(0/91)?[1-9][0-9]{9}",
+         "displayName":"Mobile No",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"4"
+      },
+      "emailId":{ 
+         "fieldName":"emailId",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^(.+)@(.+)$",
+         "displayName":"Email Id",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"5"
+      },
+      "typeOfAdvertisement":{ 
+         "fieldName":"typeOfAdvertisement",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Type of Advertisement",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"6"
+      },
+      "subTypeOfAdvertisement":{ 
+         "fieldName":"subTypeOfAdvertisement",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "displayName":"Sub-type of Advertisement",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"7"
+      },
+      "duration":{ 
+         "fieldName":"duration",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[0-9]++$",
+         "displayName":"Duration",
+         "inputType":"dropdown",
+         "dropdownData":[ 
+
+         ],
+         "value":"",
+         "displaySequence":"8"
+      },
+      "noOfDayWeekMonthsYears":{ 
+         "fieldName":"noOfDayWeekMonthsYears",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"[0-9]++$",
+         "displayName":"No. of day/week/months/Years",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"9"
+      },
+      "space":{ 
+         "fieldName":"space",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"[-+]?[0-9]*\\.?[0-9]*",
+         "displayName":"Enter space (In Sq. ft.)",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"10"
+      },
+      "fee":{ 
+         "fieldName":"fee",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[-+]?[0-9]*\\.?[0-9]*",
+         "displayName":"Fee",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"11"
+      },
+      "date":{ 
+         "fieldName":"date",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[0-9]++$",
+         "displayName":"Date",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"12"
+      }
+   }
+}
