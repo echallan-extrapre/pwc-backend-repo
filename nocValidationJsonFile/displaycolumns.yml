@@ -11,7 +11,7 @@ ColumnMaps:
  
    - applicationType: PETNOC
      roles: [CITIZEN]
-     colunmNames: select EA.noc_number "nocNumber", EA.applicant_name "applicantName",EA.application_type "applicationType", replace(cast(ED.application_detail -> 'color' as VARCHAR),'"','') as "color", replace(cast(ED.application_detail -> 'nameOfPetDog' as VARCHAR),'"','') as "nameOfPetDog", EA.application_status "applicationStatus"  from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.application_status=[:applicationStatus:] AND ED.is_active=TRUE
+     colunmNames: select EA.noc_number "nocNumber", EA.applicant_name "applicantName",EA.application_type "applicationType", replace(cast(ED.application_detail -> 'color' as VARCHAR),'"','') as "color", replace(cast(ED.application_detail -> 'nameOfPetDog' as VARCHAR),'"','') as "nameOfPetDog", EA.application_status "applicationStatus"  from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.created_by=[:createdBy:]
    
    - applicationType: ROADCUTNOC
      roles: [SI2,MOH2]
