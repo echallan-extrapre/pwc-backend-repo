@@ -24,7 +24,7 @@
          "fieldName":"sector",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z0-9 ]{1,250}$",
          "displayName":"Sector",
          "inputType":"dropdown",
          "dropdownData":[ 
