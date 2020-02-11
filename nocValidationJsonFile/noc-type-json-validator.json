@@ -8,7 +8,13 @@
          "displayName":"Applicant Name",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"1"
+         "displaySequence":"1",
+         "isMasterDataRequired":"false",
+         "moduleName":"",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"1",
+         "sectionName":"Basic Detail"
       },
       "houseNo":{ 
          "fieldName":"houseNo",
@@ -18,7 +24,13 @@
          "displayName":"House No",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"2"
+         "displaySequence":"2",
+         "isMasterDataRequired":"false",
+         "moduleName":"",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"1",
+         "sectionName":"Basic Detail"
       },
       "sector":{ 
          "fieldName":"sector",
@@ -31,7 +43,13 @@
 
          ],
          "value":"",
-         "displaySequence":"3"
+         "displaySequence":"3",
+         "isMasterDataRequired":"true",
+         "moduleName":"sector",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"1",
+         "sectionName":"Basic Detail"
       },
       "nameOfPetDog":{ 
          "fieldName":"nameOfPetDog",
@@ -41,7 +59,13 @@
          "displayName":"Name of pet dog",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"4"
+         "displaySequence":"4",
+         "isMasterDataRequired":"false",
+         "moduleName":"",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"1",
+         "sectionName":"Basic Detail"
       },
       "age":{ 
          "fieldName":"age",
@@ -54,7 +78,13 @@
 
          ],
          "value":"",
-         "displaySequence":"5"
+         "displaySequence":"5",
+         "isMasterDataRequired":"true",
+         "moduleName":"age",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"1",
+         "sectionName":"Basic Detail"
       },
       "sex":{ 
          "fieldName":"sex",
@@ -67,7 +97,13 @@
 
          ],
          "value":"",
-         "displaySequence":"6"
+         "displaySequence":"6",
+         "isMasterDataRequired":"true",
+         "moduleName":"sex",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"1",
+         "sectionName":"Basic Detail"
       },
       "breed":{ 
          "fieldName":"breed",
@@ -80,7 +116,13 @@
 
          ],
          "value":"",
-         "displaySequence":"7"
+         "displaySequence":"7",
+         "isMasterDataRequired":"true",
+         "moduleName":"breed",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"1",
+         "sectionName":"Basic Detail"
       },
       "color":{ 
          "fieldName":"color",
@@ -93,7 +135,13 @@
 
          ],
          "value":"",
-         "displaySequence":"8"
+         "displaySequence":"8",
+         "isMasterDataRequired":"true",
+         "moduleName":"color",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"1",
+         "sectionName":"Basic Detail"
       },
       "identificationMark":{ 
          "fieldName":"identificationMark",
@@ -103,7 +151,13 @@
          "displayName":"Identification Mark",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"9"
+         "displaySequence":"9",
+         "isMasterDataRequired":"false",
+         "moduleName":"",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"1",
+         "sectionName":"Basic Detail"
       },
       "uploadPetPicture":{ 
          "fieldName":"uploadPetPicture",
@@ -113,7 +167,13 @@
          "displayName":"Upload Pet Picture",
          "inputType":"file",
          "value":"",
-         "displaySequence":"10"
+         "displaySequence":"10",
+         "isMasterDataRequired":"false",
+         "moduleName":"",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"3",
+         "sectionName":"Documents Upload"
       },
       "uploadVaccinationCertificate":{ 
          "fieldName":"uploadVaccinationCertificate",
@@ -123,7 +183,13 @@
          "displayName":"Upload Vaccination Certificate",
          "inputType":"file",
          "value":"",
-         "displaySequence":"11"
+         "displaySequence":"11",
+         "isMasterDataRequired":"false",
+         "moduleName":"",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"3",
+         "sectionName":"Documents Upload"
       },
       "immunizationNameVeterinaryDoctor":{ 
          "fieldName":"immunizationNameVeterinaryDoctor",
@@ -133,7 +199,13 @@
          "displayName":"Immunization Name Veterinary Doctor",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"12"
+         "displaySequence":"12",
+         "isMasterDataRequired":"false",
+         "moduleName":"",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"2",
+         "sectionName":"Doctor Detail"
       },
       "veterinaryCouncilRegistrationNo":{ 
          "fieldName":"veterinaryCouncilRegistrationNo",
@@ -143,7 +215,13 @@
          "displayName":"Veterinary Council Registration No.",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"13"
+         "displaySequence":"13",
+         "isMasterDataRequired":"false",
+         "moduleName":"",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"2",
+         "sectionName":"Doctor Detail"
       },
       "immunizationContactDetail":{ 
          "fieldName":"immunizationContactDetail",
@@ -153,7 +231,13 @@
          "displayName":"Contact Detail",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"14"
+         "displaySequence":"14",
+         "isMasterDataRequired":"false",
+         "moduleName":"",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"2",
+         "sectionName":"Doctor Detail"
       },
       "immunizationClinicNo":{ 
          "fieldName":"immunizationClinicNo",
@@ -163,7 +247,13 @@
          "displayName":"House/Clinic No",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"15"
+         "displaySequence":"15",
+         "isMasterDataRequired":"false",
+         "moduleName":"",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"2",
+         "sectionName":"Doctor Detail"
       },
       "immunizationSector":{ 
          "fieldName":"immunizationSector",
@@ -176,7 +266,13 @@
 
          ],
          "value":"",
-         "displaySequence":"16"
+         "displaySequence":"16",
+         "isMasterDataRequired":"true",
+         "moduleName":"immunizationSector",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"2",
+         "sectionName":"Doctor Detail"
       }
    },
    "ROADCUTNOC":{ 
@@ -191,7 +287,13 @@
 
          ],
          "value":"",
-         "displaySequence":"1"
+         "displaySequence":"1",
+         "isMasterDataRequired":"true",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"typeOfApplicant",
+         "section":"1",
+         "sectionName":""
       },
       "purposeOfRoadCutting":{ 
          "fieldName":"purposeOfRoadCutting",
@@ -204,7 +306,13 @@
 
          ],
          "value":"",
-         "displaySequence":"2"
+         "displaySequence":"2",
+         "isMasterDataRequired":"true",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"purposeOfRoadCutting",
+         "section":"1",
+         "sectionName":""
       },
       "applicantName":{ 
          "fieldName":"applicantName",
@@ -214,7 +322,13 @@
          "displayName":"Applicant Name",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"3"
+         "displaySequence":"3",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "division":{ 
          "fieldName":"division",
@@ -224,7 +338,13 @@
          "displayName":"Division",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"4"
+         "displaySequence":"4",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "ward":{ 
          "fieldName":"ward",
@@ -234,7 +354,13 @@
          "displayName":"Ward",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"5"
+         "displaySequence":"5",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "sector":{ 
          "fieldName":"sector",
@@ -247,7 +373,13 @@
 
          ],
          "value":"",
-         "displaySequence":"6"
+         "displaySequence":"6",
+         "isMasterDataRequired":"true",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"sector",
+         "section":"1",
+         "sectionName":""
       },
       "requestedLocation":{ 
          "fieldName":"requestedLocation",
@@ -257,7 +389,13 @@
          "displayName":"Requested Location",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"7"
+         "displaySequence":"7",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "landmark":{ 
          "fieldName":"landmark",
@@ -267,7 +405,13 @@
          "displayName":"Landmark",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"8"
+         "displaySequence":"8",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "length":{ 
          "fieldName":"length",
@@ -280,7 +424,13 @@
 
          ],
          "value":"",
-         "displaySequence":"9"
+         "displaySequence":"9",
+         "isMasterDataRequired":"true",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"length",
+         "section":"1",
+         "sectionName":""
       },
       "width":{ 
          "fieldName":"width",
@@ -290,7 +440,13 @@
          "displayName":"Color",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"10"
+         "displaySequence":"10",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "uploadDocuments":{ 
          "fieldName":"uploadDocuments",
@@ -300,7 +456,13 @@
          "displayName":"Upload Documents",
          "inputType":"file",
          "value":"",
-         "displaySequence":"11"
+         "displaySequence":"11",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       }
    },
    "SELLMEATNOC":{ 
@@ -312,7 +474,13 @@
          "displayName":"Applicant Name",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"1"
+         "displaySequence":"1",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "fatherHusbandName":{ 
          "fieldName":"fatherHusbandName",
@@ -322,7 +490,13 @@
          "displayName":"Father/Husband Name",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"2"
+         "displaySequence":"2",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "houseNo":{ 
          "fieldName":"houseNo",
@@ -332,7 +506,13 @@
          "displayName":"House No",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"3"
+         "displaySequence":"3",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "division":{ 
          "fieldName":"division",
@@ -342,7 +522,13 @@
          "displayName":"Division/Sector/ward/Shop No",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"4"
+         "displaySequence":"4",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "nocSought":{ 
          "fieldName":"nocSought",
@@ -355,7 +541,13 @@
 
          ],
          "value":"",
-         "displaySequence":"6"
+         "displaySequence":"6",
+         "isMasterDataRequired":"true",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"nocSought",
+         "section":"1",
+         "sectionName":""
       },
       "uploadDocuments":{ 
          "fieldName":"uploadDocuments",
@@ -365,7 +557,13 @@
          "displayName":"Upload Documents",
          "inputType":"file",
          "value":"",
-         "displaySequence":"7"
+         "displaySequence":"7",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       }
    },
    "ADVERTISEMENTNOC":{ 
@@ -380,7 +578,13 @@
 
          ],
          "value":"",
-         "displaySequence":"1"
+         "displaySequence":"1",
+         "isMasterDataRequired":"true",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"typeOfApplicant",
+         "section":"1",
+         "sectionName":""
       },
       "applicantName":{ 
          "fieldName":"applicantName",
@@ -390,7 +594,13 @@
          "displayName":"Applicant Name",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"2"
+         "displaySequence":"2",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "address":{ 
          "fieldName":"address",
@@ -400,7 +610,13 @@
          "displayName":"Address",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"3"
+         "displaySequence":"3",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "mobileNo":{ 
          "fieldName":"mobileNo",
@@ -410,7 +626,13 @@
          "displayName":"Mobile No",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"4"
+         "displaySequence":"4",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "emailId":{ 
          "fieldName":"emailId",
@@ -420,7 +642,13 @@
          "displayName":"Email Id",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"5"
+         "displaySequence":"5",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "typeOfAdvertisement":{ 
          "fieldName":"typeOfAdvertisement",
@@ -433,7 +661,13 @@
 
          ],
          "value":"",
-         "displaySequence":"6"
+         "displaySequence":"6",
+         "isMasterDataRequired":"true",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"typeOfAdvertisement",
+         "section":"1",
+         "sectionName":""
       },
       "subTypeOfAdvertisement":{ 
          "fieldName":"subTypeOfAdvertisement",
@@ -446,7 +680,13 @@
 
          ],
          "value":"",
-         "displaySequence":"7"
+         "displaySequence":"7",
+         "isMasterDataRequired":"true",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"subTypeOfAdvertisement",
+         "section":"1",
+         "sectionName":""
       },
       "duration":{ 
          "fieldName":"duration",
@@ -459,7 +699,13 @@
 
          ],
          "value":"",
-         "displaySequence":"8"
+         "displaySequence":"8",
+         "isMasterDataRequired":"true",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"duration",
+         "section":"1",
+         "sectionName":""
       },
       "noOfDayWeekMonthsYears":{ 
          "fieldName":"noOfDayWeekMonthsYears",
@@ -469,7 +715,13 @@
          "displayName":"No. of day/week/months/Years",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"9"
+         "displaySequence":"9",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "space":{ 
          "fieldName":"space",
@@ -479,7 +731,13 @@
          "displayName":"Enter space (In Sq. ft.)",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"10"
+         "displaySequence":"10",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "fee":{ 
          "fieldName":"fee",
@@ -489,7 +747,13 @@
          "displayName":"Fee",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"11"
+         "displaySequence":"11",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       },
       "date":{ 
          "fieldName":"date",
@@ -499,7 +763,13 @@
          "displayName":"Date",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"12"
+         "displaySequence":"12",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":""
       }
    }
 }
