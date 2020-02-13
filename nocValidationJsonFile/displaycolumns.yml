@@ -28,7 +28,3 @@ ColumnMaps:
    - applicationType: SELLMEATNOC
      roles: [CITIZEN]
      colunmNames: select EA.noc_number "applicationId", EA.applicant_name "applicantName",EA.application_type "applicationType", replace(cast(ED.application_detail -> 'fatherHusbandName' as VARCHAR),'"','') as "fatherHusbandName", replace(cast(ED.application_detail -> 'nocSought' as VARCHAR),'"','') as "nocSought", EA.application_status "applicationStatus"  from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.created_by=[:createdBy:] AND EA.is_active=TRUE AND ED.is_active=TRUE
-     
-  - applicationType: ADVERTISEMENTNOC
-     roles: [CITIZEN]
-     colunmNames: select EA.noc_number "applicationId", EA.applicant_name "applicantName",EA.application_type "applicationType", replace(cast(ED.application_detail -> 'typeOfAdvertisement' as VARCHAR),'"','') as "typeOfAdvertisement", replace(cast(ED.application_detail -> 'space' as VARCHAR),'"','') as "space", EA.application_status "applicationStatus"  from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.application_status=[:applicationStatus:] AND ED.is_active=TRUE AND EA.is_active=TRUE
