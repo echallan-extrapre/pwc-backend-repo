@@ -1,0 +1,10 @@
+{ 
+   "ADVERTISEMENTNOC":{ 
+      "fieldsName":[ 
+         "length",
+         "width",
+         "height"
+      ],
+      "formula":"length*width*height"
+   }
+}
