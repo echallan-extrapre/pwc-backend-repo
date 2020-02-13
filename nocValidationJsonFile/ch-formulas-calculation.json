@@ -2,9 +2,9 @@
    "CH":{ 
       "ADVERTISEMENTNOC":{ 
          "fieldsName":[ 
-            "length",
-            "width",
-            "height"
+            length,
+            width,
+            height
          ],
          "formula":"length*width*height"
       }
