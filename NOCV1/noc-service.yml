@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: noc-svc-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: noc-svc
+  template:
+    metadata:
+      labels:
+        app: noc-svc
+    spec:
+      containers:
+        - name: noc-svc
+          image: 'kartikrj/pwc:noc'
+          ports:
+            - containerPort: 8009
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: noc-svc-svc
+spec:
+  selector:
+    app: noc-svc
+  type: NodePort
+  ports:
+    - port: 8091
+      targetPort: 8009
+      nodePort: 30043
+      protocol: TCP

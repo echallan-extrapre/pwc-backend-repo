@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/noc-service.jar noc-service.jar
+EXPOSE 8009
+ENTRYPOINT ["java","-jar","noc-service.jar"]
