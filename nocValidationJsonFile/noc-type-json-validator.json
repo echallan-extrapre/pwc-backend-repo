@@ -280,7 +280,7 @@
          "fieldName":"typeOfApplicant",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\" ]*$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
          "dropdownData":[ 
@@ -366,7 +366,7 @@
          "fieldName":"sector",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"[0-9]++$",
+         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\" ]*$",
          "displayName":"Sector",
          "inputType":"dropdown",
          "dropdownData":[ 
@@ -571,7 +571,7 @@
          "fieldName":"typeOfApplicant",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\" ]*$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
          "dropdownData":[ 
