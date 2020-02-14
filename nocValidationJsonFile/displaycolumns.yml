@@ -3,11 +3,11 @@ ColumnMaps:
  columnConfig:
    - applicationType: PETNOC
      roles: [SI]
-     colunmNames: select EA.noc_number "applicationId", EA.applicant_name "applicantName",replace(cast(ED.application_detail -> 'nameOfPetDog' as VARCHAR),'"','') as "nameOfPetDog",replace(cast(ED.application_detail -> 'color' as VARCHAR),'"','') as "color",replace(cast(ED.application_detail -> 'breed' as VARCHAR),'"','') as "breed",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.application_status in ([:applicationStatus1:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId", EA.applicant_name "applicantName",replace(cast(ED.application_detail -> 'nameOfPetDog' as VARCHAR),'"','') as "nameOfPetDog",replace(cast(ED.application_detail -> 'color' as VARCHAR),'"','') as "color",replace(cast(ED.application_detail -> 'breed' as VARCHAR),'"','') as "breed",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
 
    - applicationType: PETNOC
      roles: [MOH]
-     colunmNames: select EA.noc_number "applicationId", EA.applicant_name "applicantName",replace(cast(ED.application_detail -> 'nameOfPetDog' as VARCHAR),'"','') as "nameOfPetDog",replace(cast(ED.application_detail -> 'color' as VARCHAR),'"','') as "color",replace(cast(ED.application_detail -> 'breed' as VARCHAR),'"','') as "breed",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.application_status in ([:applicationStatus1:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId", EA.applicant_name "applicantName",replace(cast(ED.application_detail -> 'nameOfPetDog' as VARCHAR),'"','') as "nameOfPetDog",replace(cast(ED.application_detail -> 'color' as VARCHAR),'"','') as "color",replace(cast(ED.application_detail -> 'breed' as VARCHAR),'"','') as "breed",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
  
    - applicationType: PETNOC
      roles: [CITIZEN]
@@ -15,11 +15,11 @@ ColumnMaps:
    
    - applicationType: SELLMEATNOC
      roles: [SI]
-     colunmNames: select EA.noc_number "applicationId", EA.applicant_name "applicantName",EA.house_Number "houseNo",replace(cast(ED.application_detail -> 'nocSought' as VARCHAR),'"','') as "nocSought",replace(cast(ED.application_detail -> 'division' as VARCHAR),'"','') as "division",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.application_status in ([:applicationStatus1:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId", EA.applicant_name "applicantName",EA.house_Number "houseNo",replace(cast(ED.application_detail -> 'nocSought' as VARCHAR),'"','') as "nocSought",replace(cast(ED.application_detail -> 'division' as VARCHAR),'"','') as "division",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
      
    - applicationType: SELLMEATNOC
      roles: [MOH]
-     colunmNames: select EA.noc_number "applicationId", EA.applicant_name "applicantName",EA.house_Number "houseNo",replace(cast(ED.application_detail -> 'nocSought' as VARCHAR),'"','') as "nocSought",replace(cast(ED.application_detail -> 'division' as VARCHAR),'"','') as "division",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.application_status in ([:applicationStatus1:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId", EA.applicant_name "applicantName",EA.house_Number "houseNo",replace(cast(ED.application_detail -> 'nocSought' as VARCHAR),'"','') as "nocSought",replace(cast(ED.application_detail -> 'division' as VARCHAR),'"','') as "division",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type=[:applicationType:] AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
      
    - applicationType: SELLMEATNOC
      roles: [CITIZEN]
