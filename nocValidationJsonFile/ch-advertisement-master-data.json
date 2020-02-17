@@ -1,0 +1,31 @@
+{ 
+   "A":{ 
+      "A1":{ 
+         "min":"0",
+         "max":"10",
+         "annualPrice":"2400",
+         "perDayPrice":"",
+         "weekDayPrice":"",
+         "monthDayPrice":"",
+         "calculationSequense":"1"
+      },
+      "A2":{ 
+         "min":"11",
+         "max":"25",
+         "annualPrice":"4800",
+         "perDayPrice":"",
+         "weekDayPrice":"",
+         "monthDayPrice":"",
+         "calculationSequense":"2"
+      },
+      "A3":{ 
+         "min":"0",
+         "max":"25",
+         "annualPrice":"6000",
+         "perDayPrice":"",
+         "weekDayPrice":"",
+         "monthDayPrice":"",
+         "calculationSequense":"3"
+      }
+   }
+}
