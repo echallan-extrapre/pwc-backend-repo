@@ -4,7 +4,7 @@
    "nocPriceBook":[ 
       { 
          "id":"1",
-         "applicationType":"NOC_TO_KEEP_PET",
+         "applicationType":"PETNOC",
          "description":"NOC amount for keeping pet NOC",
          "name":"keeping Pet NOC",
          "code":"EGPM_KEEP_PET_NOC",
@@ -17,10 +17,11 @@
       },
       { 
          "id":"2",
-         "applicationType":"NOC_TO_ADVERTISEMENT",
+         "applicationType":"ADVERTISEMENTNOC",
          "description":"NOC amount for Advertisement",
          "name":"Advertisement NOC",
          "code":"EGPM_ADVERTISEMENT_NOC",
+         "categoryId":"1001",
          "category":"Advertisement or hoarding on wall or post or in the form of non-illuminated sky-signs",
          "subCategory":"For a space up to 10 Sq. ft.",
          "min":"0",
@@ -35,10 +36,11 @@
       },
       { 
          "id":"3",
-         "applicationType":"NOC_TO_ADVERTISEMENT",
+         "applicationType":"ADVERTISEMENTNOC",
          "description":"NOC amount for Advertisement",
          "name":"Advertisement NOC",
          "code":"EGPM_ADVERTISEMENT_NOC",
+         "categoryId":"1001",
          "category":"Advertisement or hoarding on wall or post or in the form of non-illuminated sky-signs",
          "subCategory":"For a space over 10 Sq. ft. and up to 25 sq. ft.",
          "min":"10",
@@ -57,6 +59,7 @@
          "description":"NOC amount for Advertisement",
          "name":"Advertisement NOC",
          "code":"EGPM_ADVERTISEMENT_NOC",
+         "categoryId":"1001",
          "category":"Advertisement or hoarding on wall or post or in the form of non-illuminated sky-signs",
          "subCategory":"For every additional 25 sq. ft. or less",
          "min":"0",
