@@ -55,7 +55,7 @@
       },
       { 
          "id":"4",
-         "applicationType":"NOC_TO_ADVERTISEMENT",
+         "applicationType":"ADVERTISEMENTNOC",
          "description":"NOC amount for Advertisement",
          "name":"Advertisement NOC",
          "code":"EGPM_ADVERTISEMENT_NOC",
