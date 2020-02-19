@@ -480,7 +480,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"Section1"
       },
       "fatherHusbandName":{ 
          "fieldName":"fatherHusbandName",
@@ -496,7 +496,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"2",
-         "sectionName":""
+         "sectionName":"Section2"
       },
       "houseNo":{ 
          "fieldName":"houseNo",
@@ -512,7 +512,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"3",
-         "sectionName":""
+         "sectionName":"Section3"
       },
       "division":{ 
          "fieldName":"division",
@@ -528,7 +528,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"2",
-         "sectionName":""
+         "sectionName":"Section2"
       },
       "nocSought":{ 
          "fieldName":"nocSought",
@@ -547,7 +547,7 @@
          "pageName":"Page 1",
          "moduleName":"nocSought",
          "section":"4",
-         "sectionName":""
+         "sectionName":"Section14"
       },
       "uploadDocuments":{ 
          "fieldName":"uploadDocuments",
@@ -563,7 +563,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"4",
-         "sectionName":""
+         "sectionName":"Section4"
       }
    },
    "ADVERTISEMENTNOC":{ 
