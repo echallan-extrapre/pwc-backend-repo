@@ -490,12 +490,12 @@
          "displayName":"Father/Husband Name",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"2",
+         "displaySequence":"1",
          "isMasterDataRequired":"false",
          "pageNo":"1",
          "pageName":"Page 1",
          "moduleName":"",
-         "section":"1",
+         "section":"2",
          "sectionName":""
       },
       "houseNo":{ 
@@ -506,12 +506,12 @@
          "displayName":"House No",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"3",
+         "displaySequence":"1",
          "isMasterDataRequired":"false",
          "pageNo":"1",
          "pageName":"Page 1",
          "moduleName":"",
-         "section":"1",
+         "section":"3",
          "sectionName":""
       },
       "division":{ 
@@ -522,12 +522,12 @@
          "displayName":"Division/Sector/ward/Shop No",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"4",
+         "displaySequence":"2",
          "isMasterDataRequired":"false",
          "pageNo":"1",
          "pageName":"Page 1",
          "moduleName":"",
-         "section":"1",
+         "section":"2",
          "sectionName":""
       },
       "nocSought":{ 
@@ -541,12 +541,12 @@
 
          ],
          "value":"",
-         "displaySequence":"6",
+         "displaySequence":"1",
          "isMasterDataRequired":"true",
          "pageNo":"1",
          "pageName":"Page 1",
          "moduleName":"nocSought",
-         "section":"1",
+         "section":"4",
          "sectionName":""
       },
       "uploadDocuments":{ 
@@ -557,12 +557,12 @@
          "displayName":"Upload Documents",
          "inputType":"file",
          "value":"",
-         "displaySequence":"7",
+         "displaySequence":"2",
          "isMasterDataRequired":"false",
          "pageNo":"1",
          "pageName":"Page 1",
          "moduleName":"",
-         "section":"1",
+         "section":"4",
          "sectionName":""
       }
    },
