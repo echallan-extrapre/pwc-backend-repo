@@ -8,6 +8,391 @@
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
                "inputType":"text",
+               "displaySequence":"1",
+               "value":""
+            },
+            "uploadDocuemts":{ 
+               "fieldName":"uploadDocuemts",
+               "mandatory":"true",
+               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+               "displayName":"Upload Docuemts",
+               "inputType":"file",
+               "displaySequence":"2",
+               "value":""
+            }
+         },
+         "REJECT":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "MOH":{ 
+         "APPROVE":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "REJECT":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "FE":{ 
+         "APPROVE":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "REJECT":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "CITIZEN":{ 
+         "WITHDRAW":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "SYSTEM_PAYMENT":{ 
+         "PAID":{ 
+
+         }
+      }
+   },
+   "ROADCUTNOC":{ 
+      "SI":{ 
+         "REVIEW":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "displaySequence":"1",
+               "value":""
+            },
+            "uploadDocuemts":{ 
+               "fieldName":"uploadDocuemts",
+               "mandatory":"true",
+               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+               "displayName":"Upload Docuemts",
+               "inputType":"file",
+               "displaySequence":"2",
+               "value":""
+            }
+         },
+         "REJECT":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "MOH":{ 
+         "APPROVE":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "REJECT":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "FE":{ 
+         "APPROVE":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "REJECT":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "CITIZEN":{ 
+         "WITHDRAW":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "SYSTEM_PAYMENT":{ 
+         "PAID":{ 
+
+         }
+      }
+   },
+   "SELLMEATNOC":{ 
+      "SI":{ 
+         "REVIEW":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "displaySequence":"1",
+               "value":""
+            },
+            "uploadDocuemts":{ 
+               "fieldName":"uploadDocuemts",
+               "mandatory":"true",
+               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+               "displayName":"Upload Docuemts",
+               "inputType":"file",
+               "displaySequence":"2",
+               "value":""
+            }
+         },
+         "REJECT":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "MOH":{ 
+         "APPROVE":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "REJECT":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "FE":{ 
+         "APPROVE":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "REJECT":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "CITIZEN":{ 
+         "WITHDRAW":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "SYSTEM_PAYMENT":{ 
+         "PAID":{ 
+
+         }
+      }
+   },
+   "ADVERTISEMENTNOC":{ 
+      "SI":{ 
+         "REVIEW":{ 
+            "remarks":{ 
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "displaySequence":"1",
+               "value":""
+            },
+            "uploadDocuemts":{ 
+               "fieldName":"uploadDocuemts",
+               "mandatory":"true",
+               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+               "displayName":"Upload Docuemts",
+               "inputType":"file",
+               "displaySequence":"2",
                "value":""
             }
          },
