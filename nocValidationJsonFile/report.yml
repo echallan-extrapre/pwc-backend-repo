@@ -50,13 +50,13 @@ ReportDefinitions:
     type: epoch
     source: tl
     isMandatory: false
-    searchClause: AND issueddate >= $fromDate
+    searchClause: AND applied_date >= $fromDate
   - name: toDate
     label: reports.tl.toDate
     type: epoch
     source: tl
     isMandatory: false
-    searchClause: AND issueddate <= $toDate
+    searchClause: AND applied_date <= $toDate
   - name: application_type
     label: reports.tl.application_type
     type: epoch
@@ -66,3 +66,28 @@ ReportDefinitions:
   additionalConfig:
     reportTitle: reports.tl.SampleRejectNOCReport.title
   query:  select ena.noc_number as noc_number,ena.applicant_name as applicant_name,  ena.applied_date as applied_date,  ena.application_type as application_type,  ena.application_status as ena_application_status,  enar.application_status as enar_application_status,  enar.remark as remark, enar.remark_by as remark_by  from egpm_noc_application ena inner join egpm_noc_application_remark enar on ena.application_uuid=enar.application_uuid
+  
+- reportName: SampleNOCReport
+  decryptionPathId: SampleNOCReport
+  summary: SampleNOCReport
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: application_uuid
+    label: report.tl.application_uuid
+    type: string
+    source: tl
+    total: false
+  - name: noc_number
+    label: report.tl.noc_number
+    type: string
+    source: tl
+    total: false
+  - name: amount
+    label: report.tl.amount
+    type: string
+    source: tl
+    total: true
+  additionalConfig:
+    reportTitle: reports.tl.SampleNOCReport.title
+  query:  SELECT application_uuid, noc_number, amount FROM public.egpm_noc_application
