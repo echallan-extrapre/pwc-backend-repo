@@ -15,4 +15,4 @@ ColumnMaps:
    
    - applicationType: PETNOC
      status: [REASSIGN]
-     template: <i>Greetings!</i><br><b>Wish you a nice day!</b><br><font color=red>Duke</font>
+     template: <i>Dear Applicant</i><br/>Thank you for submitting online application for permission of keeping pets at Chandigarh Municipal Corporation portal. Your Application id - <> .You can log on to the MCC Chandigarh portal for further details.<br/>Regards,<br/>Portal Administrator (MCC Chandigarh)Dear Applicant
