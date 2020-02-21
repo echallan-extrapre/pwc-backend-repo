@@ -65,12 +65,4 @@ ReportDefinitions:
     searchClause: AND application_type == $application_type
   additionalConfig:
     reportTitle: reports.tl.SampleRejectNOCReport.title
-  query:  select ena.noc_number as noc_number,
-  ena.applicant_name as applicant_name,
-  ena.applied_date as applied_date,
-  ena.application_type as application_type,
-  ena.application_status as ena_application_status,
-  enar.application_status as enat_application_status,
-  enar.remark as remark,
-  enar.remark_by as remark_by
-  from egpm_noc_application ena inner join egpm_noc_application_remark enar on ena.application_uuid=enar.application_uuid;
+  query:  select ena.noc_number as noc_number,ena.applicant_name as applicant_name,  ena.applied_date as applied_date,  ena.application_type as application_type,  ena.application_status as ena_application_status,  enar.application_status as enat_application_status,  enar.remark as remark, enar.remark_by as remark_by  from egpm_noc_application ena inner join egpm_noc_application_remark enar on ena.application_uuid=enar.application_uuid;
