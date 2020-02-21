@@ -11,7 +11,7 @@ ColumnMaps:
 
    - applicationType: PETNOC
      status: [SUBMIT]
-     template: Dear Applicant<br/>Thank you for submitting online application for permission of keeping pets at Chandigarh Municipal Corporation portal. Your Application id - [:applicationId:] .You can log on to the MCC Chandigarh portal for further details.<br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant<br/><br />Thank you for submitting online application for permission of keeping pets at Chandigarh Municipal Corporation portal. Your Application id - [:applicationId:] .You can log on to the MCC Chandigarh portal for further details.<br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
    
    - applicationType: PETNOC
      status: [REASSIGN]
