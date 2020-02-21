@@ -10,7 +10,7 @@ ColumnMaps:
      template: Dear Applicant<br/><p>Your application id - [:applicationId:] for permission for keeping of Pets has been rejected. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
 
    - applicationType: PETNOC
-     status: [SUBMIT]
+     status: [INITIATE]
      template: Dear Applicant<br/><p>Thank you for submitting online application for permission of keeping pets at Chandigarh Municipal Corporation portal. Your Application id - [:applicationId:] .You can log on to the MCC Chandigarh portal for further details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
    
    - applicationType: PETNOC
