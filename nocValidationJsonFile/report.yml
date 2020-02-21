@@ -21,5 +21,81 @@ ReportDefinitions:
     source: tl
     total: true
   additionalConfig:
-    reportTitle: reports.tl.tradeWiseCollectionReport.title
+    reportTitle: reports.tl.SampleNOCReport.title
   query:  SELECT application_uuid, noc_number, amount FROM public.egpm_noc_application
+  
+- reportName: SampleRejectNOCReport
+  summary: SampleRejectNOCReport
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: noc_number
+    label: report.tl.noc_number
+    type: string
+    source: tl
+    total: false
+  - name: applicant_name
+    label: report.tl.applicant_name
+    type: string
+    source: tl
+    total: false
+  - name: applied_date
+    label: report.tl.applied_date
+    type: string
+    source: tl
+    total: false
+  - name: application_type
+    label: report.tl.application_type
+    type: string
+    source: tl
+    total: false
+  - name: ena_application_status
+    label: report.tl.ena_application_status
+    type: string
+    source: tl
+    total: false
+  - name: enar_application_status
+    label: report.tl.enar_application_status
+    type: string
+    source: tl
+    total: false
+  - name: remark
+    label: report.tl.remark
+    type: string
+    source: tl
+    total: false
+  - name: remark_by
+    label: report.tl.remark_by
+    type: string
+    source: tl
+    total: false
+  searchParams:
+  - name: fromDate
+    label: reports.tl.fromDate
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND issueddate >= $fromDate
+  - name: toDate
+    label: reports.tl.toDate
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND issueddate <= $toDate
+  - name: application_type
+    label: reports.tl.toDate
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND application_type == $application_type
+  additionalConfig:
+    reportTitle: reports.tl.SampleRejectNOCReport.title
+  query:  select ena.noc_number as noc_number,
+  ena.applicant_name as applicant_name,
+  ena.applied_date as applied_date,
+  ena.application_type as application_type,
+  ena.application_status as ena_application_status,
+  enar.application_status as enat_application_status,
+  enar.remark as remark,
+  enar.remark_by as remark_by
+  from egpm_noc_application ena inner join egpm_noc_application_remark enar on ena.application_uuid=enar.application_uuid;
