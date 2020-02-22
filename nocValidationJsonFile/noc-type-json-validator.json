@@ -1,6 +1,6 @@
-{ 
-   "PETNOC":{ 
-      "applicantName":{ 
+{
+   "PETNOC":{
+      "applicantName":{
          "fieldName":"applicantName",
          "type":"text",
          "mandatory":"true",
@@ -14,9 +14,10 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail"
+         "sectionName":"Basic Detail",
+         "isbackendRequired":"true"
       },
-      "houseNo":{ 
+      "houseNo":{
          "fieldName":"houseNo",
          "type":"number",
          "mandatory":"true",
@@ -30,16 +31,17 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail"
+         "sectionName":"Basic Detail",
+         "isbackendRequired":"true"
       },
-      "sector":{ 
+      "sector":{
          "fieldName":"sector",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z0-9 ]{1,250}$",
          "displayName":"Sector",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -49,9 +51,10 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail"
+         "sectionName":"Basic Detail",
+         "isbackendRequired":"true"
       },
-      "nameOfPetDog":{ 
+      "nameOfPetDog":{
          "fieldName":"nameOfPetDog",
          "type":"text",
          "mandatory":"true",
@@ -65,16 +68,17 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail"
+         "sectionName":"Basic Detail",
+         "isbackendRequired":"true"
       },
-      "age":{ 
+      "age":{
          "fieldName":"age",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[0-9-]*$",
          "displayName":"Age",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -84,16 +88,17 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail"
+         "sectionName":"Basic Detail",
+         "isbackendRequired":"true"
       },
-      "sex":{ 
+      "sex":{
          "fieldName":"sex",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z ]{1,250}$",
          "displayName":"Sex",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -103,16 +108,17 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail"
+         "sectionName":"Basic Detail",
+         "isbackendRequired":"true"
       },
-      "breed":{ 
+      "breed":{
          "fieldName":"breed",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z ]{1,250}$",
          "displayName":"Breed",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -122,16 +128,17 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail"
+         "sectionName":"Basic Detail",
+         "isbackendRequired":"true"
       },
-      "color":{ 
+      "color":{
          "fieldName":"color",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z ]{1,250}$",
          "displayName":"Color",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -141,9 +148,10 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail"
+         "sectionName":"Basic Detail",
+         "isbackendRequired":"true"
       },
-      "identificationMark":{ 
+      "identificationMark":{
          "fieldName":"identificationMark",
          "type":"text",
          "mandatory":"false",
@@ -157,9 +165,10 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail"
+         "sectionName":"Basic Detail",
+         "isbackendRequired":"true"
       },
-      "uploadPetPicture":{ 
+      "uploadPetPicture":{
          "fieldName":"uploadPetPicture",
          "type":"jsonArray",
          "mandatory":"true",
@@ -173,9 +182,10 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"3",
-         "sectionName":"Documents Upload"
+         "sectionName":"Documents Upload",
+         "isbackendRequired":"true"
       },
-      "uploadVaccinationCertificate":{ 
+      "uploadVaccinationCertificate":{
          "fieldName":"uploadVaccinationCertificate",
          "type":"jsonArray",
          "mandatory":"true",
@@ -189,9 +199,10 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"3",
-         "sectionName":"Documents Upload"
+         "sectionName":"Documents Upload",
+         "isbackendRequired":"true"
       },
-      "immunizationNameVeterinaryDoctor":{ 
+      "immunizationNameVeterinaryDoctor":{
          "fieldName":"immunizationNameVeterinaryDoctor",
          "type":"text",
          "mandatory":"true",
@@ -205,9 +216,10 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"2",
-         "sectionName":"Doctor Detail"
+         "sectionName":"Doctor Detail",
+         "isbackendRequired":"true"
       },
-      "veterinaryCouncilRegistrationNo":{ 
+      "veterinaryCouncilRegistrationNo":{
          "fieldName":"veterinaryCouncilRegistrationNo",
          "type":"text",
          "mandatory":"true",
@@ -221,9 +233,10 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"2",
-         "sectionName":"Doctor Detail"
+         "sectionName":"Doctor Detail",
+         "isbackendRequired":"true"
       },
-      "immunizationContactDetail":{ 
+      "immunizationContactDetail":{
          "fieldName":"immunizationContactDetail",
          "type":"text",
          "mandatory":"true",
@@ -237,9 +250,10 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"2",
-         "sectionName":"Doctor Detail"
+         "sectionName":"Doctor Detail",
+         "isbackendRequired":"true"
       },
-      "immunizationClinicNo":{ 
+      "immunizationClinicNo":{
          "fieldName":"immunizationClinicNo",
          "type":"number",
          "mandatory":"true",
@@ -253,16 +267,17 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"2",
-         "sectionName":"Doctor Detail"
+         "sectionName":"Doctor Detail",
+         "isbackendRequired":"true"
       },
-      "immunizationSector":{ 
+      "immunizationSector":{
          "fieldName":"immunizationSector",
          "type":"number",
          "mandatory":"false",
          "validateRegularExp":"^[a-zA-Z ]{1,250}$",
          "displayName":"Immunization Sector",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -272,18 +287,36 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"2",
-         "sectionName":"Doctor Detail"
+         "sectionName":"Doctor Detail",
+         "isbackendRequired":"true"
+      },
+      "remarks":{
+         "fieldName":"remarks",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"",
+         "displayName":"Remarks",
+         "inputType":"text",
+         "value":"",
+         "displaySequence":"5",
+         "isMasterDataRequired":"false",
+         "moduleName":"immunizationSector",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"2",
+         "sectionName":"Remarks Detail",
+         "isbackendRequired":"false"
       }
    },
-   "ROADCUTNOC":{ 
-      "typeOfApplicant":{ 
+   "ROADCUTNOC":{
+      "typeOfApplicant":{
          "fieldName":"typeOfApplicant",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\" ]*$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -293,16 +326,17 @@
          "pageName":"Page 1",
          "moduleName":"typeOfApplicant",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "purposeOfRoadCutting":{ 
+      "purposeOfRoadCutting":{
          "fieldName":"purposeOfRoadCutting",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z ]{1,250}$",
          "displayName":"Purpose Of RoadCutting",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -312,9 +346,10 @@
          "pageName":"Page 1",
          "moduleName":"purposeOfRoadCutting",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "applicantName":{ 
+      "applicantName":{
          "fieldName":"applicantName",
          "type":"text",
          "mandatory":"true",
@@ -328,9 +363,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "division":{ 
+      "division":{
          "fieldName":"division",
          "type":"text",
          "mandatory":"true",
@@ -344,9 +380,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "ward":{ 
+      "ward":{
          "fieldName":"ward",
          "type":"text",
          "mandatory":"true",
@@ -360,16 +397,17 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "sector":{ 
+      "sector":{
          "fieldName":"sector",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\" ]*$",
          "displayName":"Sector",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -379,9 +417,10 @@
          "pageName":"Page 1",
          "moduleName":"sector",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "requestedLocation":{ 
+      "requestedLocation":{
          "fieldName":"requestedLocation",
          "type":"text",
          "mandatory":"false",
@@ -395,9 +434,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "landmark":{ 
+      "landmark":{
          "fieldName":"landmark",
          "type":"text",
          "mandatory":"true",
@@ -411,16 +451,17 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "length":{ 
+      "length":{
          "fieldName":"length",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"[0-9]++$",
          "displayName":"Length",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -430,9 +471,10 @@
          "pageName":"Page 1",
          "moduleName":"length",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "width":{ 
+      "width":{
          "fieldName":"width",
          "type":"number",
          "mandatory":"true",
@@ -446,9 +488,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "uploadDocuments":{ 
+      "uploadDocuments":{
          "fieldName":"uploadDocuments",
          "type":"jsonArray",
          "mandatory":"true",
@@ -462,11 +505,29 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
+      },
+      "remarks":{
+         "fieldName":"remarks",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"",
+         "displayName":"Remarks",
+         "inputType":"text",
+         "value":"",
+         "displaySequence":"5",
+         "isMasterDataRequired":"false",
+         "moduleName":"immunizationSector",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"2",
+         "sectionName":"Remarks Detail",
+         "isbackendRequired":"false"
       }
    },
-   "SELLMEATNOC":{ 
-      "applicantName":{ 
+   "SELLMEATNOC":{
+      "applicantName":{
          "fieldName":"applicantName",
          "type":"text",
          "mandatory":"true",
@@ -480,9 +541,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"Section1"
+         "sectionName":"Section1",
+         "isbackendRequired":"true"
       },
-      "fatherHusbandName":{ 
+      "fatherHusbandName":{
          "fieldName":"fatherHusbandName",
          "type":"text",
          "mandatory":"true",
@@ -496,9 +558,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"2",
-         "sectionName":"Section2"
+         "sectionName":"Section2",
+         "isbackendRequired":"true"
       },
-      "houseNo":{ 
+      "houseNo":{
          "fieldName":"houseNo",
          "type":"number",
          "mandatory":"true",
@@ -512,9 +575,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"3",
-         "sectionName":"Section3"
+         "sectionName":"Section3",
+         "isbackendRequired":"true"
       },
-      "division":{ 
+      "division":{
          "fieldName":"division",
          "type":"number",
          "mandatory":"true",
@@ -528,16 +592,17 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"2",
-         "sectionName":"Section2"
+         "sectionName":"Section2",
+         "isbackendRequired":"true"
       },
-      "nocSought":{ 
+      "nocSought":{
          "fieldName":"nocSought",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\" ]*$",
          "displayName":"NOC Sought For",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -547,9 +612,10 @@
          "pageName":"Page 1",
          "moduleName":"nocSought",
          "section":"4",
-         "sectionName":"Section14"
+         "sectionName":"Section14",
+         "isbackendRequired":"true"
       },
-      "uploadDocuments":{ 
+      "uploadDocuments":{
          "fieldName":"uploadDocuments",
          "type":"jsonArray",
          "mandatory":"true",
@@ -563,18 +629,36 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"4",
-         "sectionName":"Section4"
+         "sectionName":"Section4",
+         "isbackendRequired":"true"
+      },
+      "remarks":{
+         "fieldName":"remarks",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"",
+         "displayName":"Remarks",
+         "inputType":"text",
+         "value":"",
+         "displaySequence":"5",
+         "isMasterDataRequired":"false",
+         "moduleName":"immunizationSector",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"2",
+         "sectionName":"Remarks Detail",
+         "isbackendRequired":"false"
       }
    },
-   "ADVERTISEMENTNOC":{ 
-      "typeOfApplicant":{ 
+   "ADVERTISEMENTNOC":{
+      "typeOfApplicant":{
          "fieldName":"typeOfApplicant",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\" ]*$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -584,9 +668,10 @@
          "pageName":"Page 1",
          "moduleName":"typeOfApplicant",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "applicantName":{ 
+      "applicantName":{
          "fieldName":"applicantName",
          "type":"text",
          "mandatory":"true",
@@ -600,9 +685,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "address":{ 
+      "address":{
          "fieldName":"address",
          "type":"text",
          "mandatory":"true",
@@ -616,9 +702,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "mobileNo":{ 
+      "mobileNo":{
          "fieldName":"mobileNo",
          "type":"number",
          "mandatory":"true",
@@ -632,9 +719,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "emailId":{ 
+      "emailId":{
          "fieldName":"emailId",
          "type":"text",
          "mandatory":"true",
@@ -648,16 +736,17 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "typeOfAdvertisement":{ 
+      "typeOfAdvertisement":{
          "fieldName":"typeOfAdvertisement",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z ]{1,250}$",
          "displayName":"Type of Advertisement",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -667,16 +756,17 @@
          "pageName":"Page 1",
          "moduleName":"typeOfAdvertisement",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "subTypeOfAdvertisement":{ 
+      "subTypeOfAdvertisement":{
          "fieldName":"subTypeOfAdvertisement",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z ]{1,250}$",
          "displayName":"Sub-type of Advertisement",
          "inputType":"dropdown",
-         "dropdownData":[ 
+         "dropdownData":[
 
          ],
          "value":"",
@@ -686,9 +776,10 @@
          "pageName":"Page 1",
          "moduleName":"subTypeOfAdvertisement",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "fromDate":{ 
+      "fromDate":{
          "fieldName":"fromDate",
          "type":"number",
          "mandatory":"true",
@@ -702,9 +793,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "toDate":{ 
+      "toDate":{
          "fieldName":"toDate",
          "type":"number",
          "mandatory":"true",
@@ -718,9 +810,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "noOfDayWeekMonthsYears":{ 
+      "noOfDayWeekMonthsYears":{
          "fieldName":"noOfDayWeekMonthsYears",
          "type":"text",
          "mandatory":"false",
@@ -734,9 +827,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "space":{ 
+      "space":{
          "fieldName":"space",
          "type":"text",
          "mandatory":"true",
@@ -750,9 +844,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "fee":{ 
+      "fee":{
          "fieldName":"fee",
          "type":"number",
          "mandatory":"true",
@@ -766,9 +861,10 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
       },
-      "date":{ 
+      "date":{
          "fieldName":"date",
          "type":"number",
          "mandatory":"true",
@@ -782,7 +878,25 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":""
+         "sectionName":"",
+         "isbackendRequired":"true"
+      },
+      "remarks":{
+         "fieldName":"remarks",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"",
+         "displayName":"Remarks",
+         "inputType":"text",
+         "value":"",
+         "displaySequence":"5",
+         "isMasterDataRequired":"false",
+         "moduleName":"immunizationSector",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"2",
+         "sectionName":"Remarks Detail",
+         "isbackendRequired":"false"
       }
    }
 }
