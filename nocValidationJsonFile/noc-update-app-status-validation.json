@@ -1,8 +1,20 @@
-{ 
-   "PETNOC":{ 
-      "SI":{ 
-         "REVIEW":{ 
-            "remarks":{ 
+{
+   "PETNOC":{
+      "CITIZEN":{
+         "WITHDRAW":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "SI":{
+         "REVIEW":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -11,18 +23,18 @@
                "displaySequence":"1",
                "value":""
             },
-            "uploadDocuemts":{ 
-               "fieldName":"uploadDocuemts",
+            "uploadDocuments":{
+               "fieldName":"uploadDocuments",
                "mandatory":"true",
                "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Docuemts",
+               "displayName":"Upload Documents",
                "inputType":"file",
                "displaySequence":"2",
                "value":""
             }
          },
-         "REJECT":{ 
-            "remarks":{ 
+         "REJECT":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -31,8 +43,8 @@
                "value":""
             }
          },
-         "FORWARD":{ 
-            "remarks":{ 
+         "FORWARD":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -42,9 +54,9 @@
             }
          }
       },
-      "MOH":{ 
-         "APPROVE":{ 
-            "remarks":{ 
+      "MOH":{
+         "APPROVE":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -53,62 +65,8 @@
                "value":""
             }
          },
-         "REJECT":{ 
-            "remarks":{ 
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"text",
-               "value":""
-            }
-         },
-         "FORWARD":{ 
-            "remarks":{ 
-               "fieldName":"remarks",
-               "mandatory":"false",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"text",
-               "value":""
-            }
-         }
-      },
-      "FE":{ 
-         "APPROVE":{ 
-            "remarks":{ 
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"text",
-               "value":""
-            }
-         },
-         "REJECT":{ 
-            "remarks":{ 
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"text",
-               "value":""
-            }
-         },
-         "FORWARD":{ 
-            "remarks":{ 
-               "fieldName":"remarks",
-               "mandatory":"false",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"text",
-               "value":""
-            }
-         }
-      },
-      "CITIZEN":{ 
-         "WITHDRAW":{ 
-            "remarks":{ 
+         "REJECT":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -118,16 +76,28 @@
             }
          }
       },
-      "SYSTEM_PAYMENT":{ 
-         "PAID":{ 
+      "SYSTEM_PAYMENT":{
+         "PAID":{
 
          }
       }
    },
-   "ROADCUTNOC":{ 
-      "SI":{ 
-         "REVIEW":{ 
-            "remarks":{ 
+   "ROADCUTNOC":{
+      "CITIZEN":{
+         "WITHDRAW":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "JE":{
+         "REVIEW":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -136,7 +106,7 @@
                "displaySequence":"1",
                "value":""
             },
-            "uploadDocuemts":{ 
+            "uploadDocuemts":{
                "fieldName":"uploadDocuemts",
                "mandatory":"true",
                "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
@@ -146,8 +116,8 @@
                "value":""
             }
          },
-         "REJECT":{ 
-            "remarks":{ 
+         "REJECT":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -156,8 +126,8 @@
                "value":""
             }
          },
-         "FORWARD":{ 
-            "remarks":{ 
+         "FORWARD":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -167,9 +137,9 @@
             }
          }
       },
-      "MOH":{ 
-         "APPROVE":{ 
-            "remarks":{ 
+      "SDO":{
+         "APPROVE":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -178,8 +148,8 @@
                "value":""
             }
          },
-         "REJECT":{ 
-            "remarks":{ 
+         "REJECT":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -188,8 +158,8 @@
                "value":""
             }
          },
-         "FORWARD":{ 
-            "remarks":{ 
+         "FORWARD":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -199,9 +169,9 @@
             }
          }
       },
-      "FE":{ 
-         "APPROVE":{ 
-            "remarks":{ 
+      "EE":{
+         "APPROVE":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -210,8 +180,8 @@
                "value":""
             }
          },
-         "REJECT":{ 
-            "remarks":{ 
+         "REJECT":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -220,8 +190,8 @@
                "value":""
             }
          },
-         "FORWARD":{ 
-            "remarks":{ 
+         "FORWARD":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -231,9 +201,9 @@
             }
          }
       },
-      "CITIZEN":{ 
-         "WITHDRAW":{ 
-            "remarks":{ 
+      "SE":{
+         "APPROVE":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -241,18 +211,82 @@
                "inputType":"text",
                "value":""
             }
+         },
+         "REJECT":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
          }
       },
-      "SYSTEM_PAYMENT":{ 
-         "PAID":{ 
+      "CE":{
+         "APPROVE":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "REJECT":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "SYSTEM_PAYMENT":{
+         "PAID":{
 
          }
       }
    },
-   "SELLMEATNOC":{ 
-      "SI":{ 
-         "REVIEW":{ 
-            "remarks":{ 
+   "SELLMEATNOC":{
+      "CITIZEN":{
+         "WITHDRAW":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "SI":{
+         "REVIEW":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -261,7 +295,7 @@
                "displaySequence":"1",
                "value":""
             },
-            "uploadDocuemts":{ 
+            "uploadDocuemts":{
                "fieldName":"uploadDocuemts",
                "mandatory":"true",
                "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
@@ -271,8 +305,8 @@
                "value":""
             }
          },
-         "REJECT":{ 
-            "remarks":{ 
+         "REJECT":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -281,8 +315,8 @@
                "value":""
             }
          },
-         "FORWARD":{ 
-            "remarks":{ 
+         "FORWARD":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -292,9 +326,9 @@
             }
          }
       },
-      "MOH":{ 
-         "APPROVE":{ 
-            "remarks":{ 
+      "SUPERINTENDENT":{
+         "APPROVE":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -303,8 +337,8 @@
                "value":""
             }
          },
-         "REJECT":{ 
-            "remarks":{ 
+         "REJECT":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -313,8 +347,8 @@
                "value":""
             }
          },
-         "FORWARD":{ 
-            "remarks":{ 
+         "FORWARD":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -324,9 +358,9 @@
             }
          }
       },
-      "FE":{ 
-         "APPROVE":{ 
-            "remarks":{ 
+      "MOH":{
+         "APPROVE":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -335,8 +369,8 @@
                "value":""
             }
          },
-         "REJECT":{ 
-            "remarks":{ 
+         "REJECT":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -345,8 +379,8 @@
                "value":""
             }
          },
-         "FORWARD":{ 
-            "remarks":{ 
+         "FORWARD":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -356,28 +390,28 @@
             }
          }
       },
-      "CITIZEN":{ 
-         "WITHDRAW":{ 
-            "remarks":{ 
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"text",
-               "value":""
-            }
-         }
-      },
-      "SYSTEM_PAYMENT":{ 
-         "PAID":{ 
+      "SYSTEM_PAYMENT":{
+         "PAID":{
 
          }
       }
    },
-   "ADVERTISEMENTNOC":{ 
-      "SI":{ 
-         "REVIEW":{ 
-            "remarks":{ 
+   "ADVERTISEMENTNOC":{
+      "CITIZEN":{
+         "WITHDRAW":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         }
+      },
+      "JE":{
+         "REVIEW":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -386,7 +420,7 @@
                "displaySequence":"1",
                "value":""
             },
-            "uploadDocuemts":{ 
+            "uploadDocuemts":{
                "fieldName":"uploadDocuemts",
                "mandatory":"true",
                "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
@@ -396,8 +430,8 @@
                "value":""
             }
          },
-         "REJECT":{ 
-            "remarks":{ 
+         "REJECT":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -406,8 +440,8 @@
                "value":""
             }
          },
-         "FORWARD":{ 
-            "remarks":{ 
+         "FORWARD":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -417,9 +451,9 @@
             }
          }
       },
-      "MOH":{ 
-         "APPROVE":{ 
-            "remarks":{ 
+      "SUPERINTENDENT":{
+         "APPROVE":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -428,8 +462,8 @@
                "value":""
             }
          },
-         "REJECT":{ 
-            "remarks":{ 
+         "REJECT":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -438,8 +472,8 @@
                "value":""
             }
          },
-         "FORWARD":{ 
-            "remarks":{ 
+         "FORWARD":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -449,9 +483,9 @@
             }
          }
       },
-      "FE":{ 
-         "APPROVE":{ 
-            "remarks":{ 
+      "SDO":{
+         "APPROVE":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -460,8 +494,8 @@
                "value":""
             }
          },
-         "REJECT":{ 
-            "remarks":{ 
+         "REJECT":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -470,8 +504,8 @@
                "value":""
             }
          },
-         "FORWARD":{ 
-            "remarks":{ 
+         "FORWARD":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -481,9 +515,9 @@
             }
          }
       },
-      "CITIZEN":{ 
-         "WITHDRAW":{ 
-            "remarks":{ 
+      "COMMISSIONER":{
+         "APPROVE":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -491,10 +525,30 @@
                "inputType":"text",
                "value":""
             }
+         },
+         "REJECT":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
+         },
+         "FORWARD":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            }
          }
       },
-      "SYSTEM_PAYMENT":{ 
-         "PAID":{ 
+      "SYSTEM_PAYMENT":{
+         "PAID":{
 
          }
       }
