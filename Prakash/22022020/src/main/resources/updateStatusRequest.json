@@ -1,0 +1,29 @@
+{ 
+   "RequestInfo":{ 
+      "userInfo":{ 
+         "id":93,
+         "userName":"vaishnavi",
+         "name":"vaishnavi",
+         "type":"EMPLOYEE",
+         "roles":[ 
+            { 
+               "code":"SYSTEM_PAYMENT"
+            }
+         ],
+         "tenantId":"pb.amritsar",
+         "uuid":"e77f23de-9219-410f-be16-478328a184d9"
+      }
+   },
+   "applicationType":"PETNOC",
+   "tenantId":"CH",
+   "applicationStatus":"PAID",
+   "applicationId": "PMS-2020-02-17-041747",
+   "dataPayload":{    	
+   },
+   "auditDetails":{ 
+      "createdBy":1,
+      "lastModifiedBy":1,
+      "createdTime":1578894136873,
+      "lastModifiedTime":1578894136873
+   }
+}
