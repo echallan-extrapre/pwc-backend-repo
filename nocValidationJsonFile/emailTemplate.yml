@@ -18,5 +18,10 @@ ColumnMaps:
    
    - applicationType: PETNOC
      status: [REASSIGN]
-     roles: [CITIZEN,COMMISSIONER]
+     roles: [CITIZEN]
      template: Dear Applicant<br/><p>You are requested to provide additional clarification as requested by the Department against your application id [:applicationId:] for permission of Keeping pets. Please login to MCC portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     
+   - applicationType: PETNOC
+     status: [REASSIGN]
+     roles: [COMMISSIONER]
+     template: Dear COMMISSIONER<br/><p>You are requested to provide additional clarification as requested by the Department against your application id [:applicationId:] for permission of Keeping pets. Please login to MCC portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
