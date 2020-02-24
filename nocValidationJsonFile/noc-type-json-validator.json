@@ -14,7 +14,7 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "houseNo":{
@@ -31,7 +31,7 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "sector":{
@@ -51,7 +51,7 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"1",
-         "sectionName":"Basic Detail",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "nameOfPetDog":{
@@ -67,8 +67,8 @@
          "moduleName":"",
          "pageNo":"1",
          "pageName":"Page 1",
-         "section":"1",
-         "sectionName":"Basic Detail",
+         "section":"2",
+         "sectionName":"Particular Of Pet Dog",
          "isbackendRequired":"true"
       },
       "age":{
@@ -87,8 +87,8 @@
          "moduleName":"age",
          "pageNo":"1",
          "pageName":"Page 1",
-         "section":"1",
-         "sectionName":"Basic Detail",
+         "section":"2",
+         "sectionName":"Particular Of Pet Dog",
          "isbackendRequired":"true"
       },
       "sex":{
@@ -107,8 +107,8 @@
          "moduleName":"sex",
          "pageNo":"1",
          "pageName":"Page 1",
-         "section":"1",
-         "sectionName":"Basic Detail",
+         "section":"2",
+         "sectionName":"Particular Of Pet Dog",
          "isbackendRequired":"true"
       },
       "breed":{
@@ -127,8 +127,8 @@
          "moduleName":"breed",
          "pageNo":"1",
          "pageName":"Page 1",
-         "section":"1",
-         "sectionName":"Basic Detail",
+         "section":"2",
+         "sectionName":"Particular Of Pet Dog",
          "isbackendRequired":"true"
       },
       "color":{
@@ -147,8 +147,8 @@
          "moduleName":"color",
          "pageNo":"1",
          "pageName":"Page 1",
-         "section":"1",
-         "sectionName":"Basic Detail",
+         "section":"2",
+         "sectionName":"Particular Of Pet Dog",
          "isbackendRequired":"true"
       },
       "identificationMark":{
@@ -164,8 +164,8 @@
          "moduleName":"",
          "pageNo":"1",
          "pageName":"Page 1",
-         "section":"1",
-         "sectionName":"Basic Detail",
+         "section":"2",
+         "sectionName":"Particular Of Pet Dog",
          "isbackendRequired":"true"
       },
       "uploadPetPicture":{
@@ -173,16 +173,16 @@
          "type":"jsonArray",
          "mandatory":"true",
          "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-         "displayName":"Upload Pet Picture",
+         "displayName":"Pet Picture",
          "inputType":"file",
          "value":"",
          "displaySequence":"1",
          "isMasterDataRequired":"false",
          "moduleName":"",
-         "pageNo":"1",
+         "pageNo":"3",
          "pageName":"Page 1",
-         "section":"3",
-         "sectionName":"Documents Upload",
+         "section":"1",
+         "sectionName":"Documents",
          "isbackendRequired":"true"
       },
       "uploadVaccinationCertificate":{
@@ -190,16 +190,16 @@
          "type":"jsonArray",
          "mandatory":"true",
          "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-         "displayName":"Upload Vaccination Certificate",
+         "displayName":"Vaccination Certificate",
          "inputType":"file",
          "value":"",
          "displaySequence":"2",
          "isMasterDataRequired":"false",
          "moduleName":"",
-         "pageNo":"1",
+         "pageNo":"3",
          "pageName":"Page 1",
-         "section":"3",
-         "sectionName":"Documents Upload",
+         "section":"1",
+         "sectionName":"Documents",
          "isbackendRequired":"true"
       },
       "immunizationNameVeterinaryDoctor":{
@@ -207,16 +207,16 @@
          "type":"text",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z ]{1,250}$",
-         "displayName":"Immunization Name Veterinary Doctor",
+         "displayName":"Name of Veterinary Doctor",
          "inputType":"textbox",
          "value":"",
          "displaySequence":"1",
          "isMasterDataRequired":"false",
          "moduleName":"",
-         "pageNo":"1",
+         "pageNo":"2",
          "pageName":"Page 1",
-         "section":"2",
-         "sectionName":"Doctor Detail",
+         "section":"1",
+         "sectionName":"Immunization Record",
          "isbackendRequired":"true"
       },
       "veterinaryCouncilRegistrationNo":{
@@ -230,10 +230,10 @@
          "displaySequence":"2",
          "isMasterDataRequired":"false",
          "moduleName":"",
-         "pageNo":"1",
+         "pageNo":"2",
          "pageName":"Page 1",
-         "section":"2",
-         "sectionName":"Doctor Detail",
+         "section":"1",
+         "sectionName":"Immunization Record",
          "isbackendRequired":"true"
       },
       "immunizationContactDetail":{
@@ -247,10 +247,10 @@
          "displaySequence":"3",
          "isMasterDataRequired":"false",
          "moduleName":"",
-         "pageNo":"1",
+         "pageNo":"2",
          "pageName":"Page 1",
-         "section":"2",
-         "sectionName":"Doctor Detail",
+         "section":"1",
+         "sectionName":"Immunization Record",
          "isbackendRequired":"true"
       },
       "immunizationClinicNo":{
@@ -264,10 +264,10 @@
          "displaySequence":"4",
          "isMasterDataRequired":"false",
          "moduleName":"",
-         "pageNo":"1",
+         "pageNo":"2",
          "pageName":"Page 1",
-         "section":"2",
-         "sectionName":"Doctor Detail",
+         "section":"1",
+         "sectionName":"Immunization Record",
          "isbackendRequired":"true"
       },
       "immunizationSector":{
@@ -275,7 +275,7 @@
          "type":"number",
          "mandatory":"false",
          "validateRegularExp":"^[a-zA-Z ]{1,250}$",
-         "displayName":"Immunization Sector",
+         "displayName":"Sector",
          "inputType":"dropdown",
          "dropdownData":[
 
@@ -284,10 +284,10 @@
          "displaySequence":"5",
          "isMasterDataRequired":"true",
          "moduleName":"immunizationSector",
-         "pageNo":"1",
+         "pageNo":"2",
          "pageName":"Page 1",
-         "section":"2",
-         "sectionName":"Doctor Detail",
+         "section":"1",
+         "sectionName":"Immunization Record",
          "isbackendRequired":"true"
       },
       "remarks":{
@@ -304,7 +304,7 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"4",
-         "sectionName":"Remarks Detail",
+         "sectionName":"Remark Details",
          "isbackendRequired":"false"
       }
    },
@@ -326,7 +326,7 @@
          "pageName":"Page 1",
          "moduleName":"typeOfApplicant",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "purposeOfRoadCutting":{
@@ -334,7 +334,7 @@
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z ]{1,250}$",
-         "displayName":"Purpose Of RoadCutting",
+         "displayName":"Purpose Of Road Cutting",
          "inputType":"dropdown",
          "dropdownData":[
 
@@ -346,7 +346,7 @@
          "pageName":"Page 1",
          "moduleName":"purposeOfRoadCutting",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "applicantName":{
@@ -363,7 +363,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "division":{
@@ -380,7 +380,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "ward":{
@@ -397,7 +397,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "sector":{
@@ -417,7 +417,7 @@
          "pageName":"Page 1",
          "moduleName":"sector",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "requestedLocation":{
@@ -434,7 +434,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "landmark":{
@@ -451,7 +451,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "length":{
@@ -471,7 +471,7 @@
          "pageName":"Page 1",
          "moduleName":"length",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "width":{
@@ -488,7 +488,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "uploadDocuments":{
@@ -501,11 +501,11 @@
          "value":"",
          "displaySequence":"11",
          "isMasterDataRequired":"false",
-         "pageNo":"1",
-         "pageName":"Page 1",
+         "pageNo":"2",
+         "pageName":"Page 2",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Documents",
          "isbackendRequired":"true"
       },
       "remarks":{
@@ -522,7 +522,7 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"2",
-         "sectionName":"Remarks Detail",
+         "sectionName":"Remark Details",
          "isbackendRequired":"false"
       }
    },
@@ -541,7 +541,7 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"Section1",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "fatherHusbandName":{
@@ -552,13 +552,13 @@
          "displayName":"Father/Husband Name",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"1",
+         "displaySequence":"2",
          "isMasterDataRequired":"false",
          "pageNo":"1",
          "pageName":"Page 1",
          "moduleName":"",
-         "section":"2",
-         "sectionName":"Section2",
+         "section":"1",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "houseNo":{
@@ -569,13 +569,13 @@
          "displayName":"House No",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"1",
+         "displaySequence":"3",
          "isMasterDataRequired":"false",
          "pageNo":"1",
          "pageName":"Page 1",
          "moduleName":"",
-         "section":"3",
-         "sectionName":"Section3",
+         "section":"1",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "division":{
@@ -586,13 +586,13 @@
          "displayName":"Division/Sector/ward/Shop No",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"2",
+         "displaySequence":"4",
          "isMasterDataRequired":"false",
          "pageNo":"1",
          "pageName":"Page 1",
          "moduleName":"",
-         "section":"2",
-         "sectionName":"Section2",
+         "section":"1",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "nocSought":{
@@ -606,13 +606,13 @@
 
          ],
          "value":"",
-         "displaySequence":"1",
+         "displaySequence":"5",
          "isMasterDataRequired":"true",
          "pageNo":"1",
          "pageName":"Page 1",
          "moduleName":"nocSought",
-         "section":"4",
-         "sectionName":"Section14",
+         "section":"1",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "uploadDocuments":{
@@ -623,13 +623,13 @@
          "displayName":"Upload Documents",
          "inputType":"file",
          "value":"",
-         "displaySequence":"2",
+         "displaySequence":"1",
          "isMasterDataRequired":"false",
-         "pageNo":"1",
-         "pageName":"Page 1",
+         "pageNo":"2",
+         "pageName":"Page 2",
          "moduleName":"",
-         "section":"4",
-         "sectionName":"Section4",
+         "section":"1",
+         "sectionName":"Documents",
          "isbackendRequired":"true"
       },
       "remarks":{
@@ -646,7 +646,7 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"5",
-         "sectionName":"Remarks Detail",
+         "sectionName":"Remark Details",
          "isbackendRequired":"false"
       }
    },
@@ -668,7 +668,7 @@
          "pageName":"Page 1",
          "moduleName":"typeOfApplicant",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "applicantName":{
@@ -685,15 +685,15 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
-      "address":{
-         "fieldName":"address",
+      "tan":{
+         "fieldName":"tan",
          "type":"text",
          "mandatory":"true",
          "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\"]*$",
-         "displayName":"Address",
+         "displayName":"TAN No.",
          "inputType":"textbox",
          "value":"",
          "displaySequence":"3",
@@ -702,7 +702,58 @@
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
+         "isbackendRequired":"true"
+      },
+      "pan":{
+         "fieldName":"pan",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\"]*$",
+         "displayName":"PAN No.",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"4",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Applicant Details",
+         "isbackendRequired":"true"
+      },
+      "cin":{
+         "fieldName":"cin",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\"]*$",
+         "displayName":"CIN No.",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"5",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Applicant Details",
+         "isbackendRequired":"true"
+      },
+      "gstin":{
+         "fieldName":"gstin",
+         "type":"text",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\"]*$",
+         "displayName":"GSTIN No.",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"6",
+         "isMasterDataRequired":"false",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "mobileNo":{
@@ -713,13 +764,13 @@
          "displayName":"Mobile No",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"4",
+         "displaySequence":"7",
          "isMasterDataRequired":"false",
          "pageNo":"1",
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "emailId":{
@@ -730,13 +781,13 @@
          "displayName":"Email Id",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"5",
+         "displaySequence":"8",
          "isMasterDataRequired":"false",
          "pageNo":"1",
          "pageName":"Page 1",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
       "typeOfAdvertisement":{
@@ -750,13 +801,13 @@
 
          ],
          "value":"",
-         "displaySequence":"6",
+         "displaySequence":"1",
          "isMasterDataRequired":"true",
-         "pageNo":"1",
-         "pageName":"Page 1",
+         "pageNo":"2",
+         "pageName":"Page 2",
          "moduleName":"typeOfAdvertisement",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
       "subTypeOfAdvertisement":{
@@ -770,13 +821,13 @@
 
          ],
          "value":"",
-         "displaySequence":"7",
+         "displaySequence":"2",
          "isMasterDataRequired":"true",
-         "pageNo":"1",
-         "pageName":"Page 1",
+         "pageNo":"2",
+         "pageName":"Page 2",
          "moduleName":"subTypeOfAdvertisement",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
       "duration":{
@@ -790,13 +841,13 @@
 
          ],
          "value":"",
-         "displaySequence":"8",
+         "displaySequence":"3",
          "isMasterDataRequired":"false",
-         "pageNo":"1",
-         "pageName":"Page 1",
+         "pageNo":"2",
+         "pageName":"Page 2",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
       "fromDate":{
@@ -804,16 +855,16 @@
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$",
-         "displayName":"From Date",
+         "displayName":"From Date Period of Display",
          "inputType":"dropdown",
          "value":"",
-         "displaySequence":"9",
+         "displaySequence":"4",
          "isMasterDataRequired":"false",
-         "pageNo":"1",
-         "pageName":"Page 1",
+         "pageNo":"2",
+         "pageName":"Page 2",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
       "toDate":{
@@ -821,33 +872,104 @@
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$",
-         "displayName":"To Date",
+         "displayName":"To Date Period of Display",
          "inputType":"toDate",
+         "value":"",
+         "displaySequence":"5",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "locationOfAdvertisement":{
+         "fieldName":"locationOfAdvertisement",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"[a-zA-Z0-9 ]++$",
+         "displayName":"Location of Advertisement",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"6",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "landmark":{
+         "fieldName":"landmark",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"[a-zA-Z0-9 ]++$",
+         "displayName":"Landmark",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"7",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "sector":{
+         "fieldName":"sector",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"[a-zA-Z0-9 ]++$",
+         "displayName":"Sector",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"8",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "village":{
+         "fieldName":"village",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[a-zA-Z ]++$",
+         "displayName":"Sub Sector/Village",
+         "inputType":"dropdown",
+         "dropdownData":[
+
+         ],
+         "value":"",
+         "displaySequence":"9",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "advertisementMatterDescription":{
+         "fieldName":"advertisementMatterDescription",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"[a-zA-Z0-9 ]++$",
+         "displayName":"Advertisement Matter Description",
+         "inputType":"textbox",
          "value":"",
          "displaySequence":"10",
          "isMasterDataRequired":"false",
-         "pageNo":"1",
-         "pageName":"Page 1",
+         "pageNo":"2",
+         "pageName":"Page 2",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
-         "isbackendRequired":"true"
-      },
-      "noOfDayWeekMonthsYears":{
-         "fieldName":"noOfDayWeekMonthsYears",
-         "type":"text",
-         "mandatory":"false",
-         "validateRegularExp":"[0-9]++$",
-         "displayName":"No. of day/week/months/Years",
-         "inputType":"textbox",
-         "value":"",
-         "displaySequence":"11",
-         "isMasterDataRequired":"false",
-         "pageNo":"1",
-         "pageName":"Page 1",
-         "moduleName":"",
-         "section":"1",
-         "sectionName":"",
+         "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
       "space":{
@@ -858,30 +980,33 @@
          "displayName":"Enter space (In Sq. ft.)",
          "inputType":"textbox",
          "value":"",
-         "displaySequence":"12",
-         "isMasterDataRequired":"false",
-         "pageNo":"1",
-         "pageName":"Page 1",
-         "moduleName":"",
-         "section":"1",
-         "sectionName":"",
-         "isbackendRequired":"true"
-      },
-      "fee":{
-         "fieldName":"fee",
-         "type":"number",
-         "mandatory":"true",
-         "validateRegularExp":"[-+]?[0-9]*\\.?[0-9]*",
-         "displayName":"Fee",
-         "inputType":"textbox",
-         "value":"",
          "displaySequence":"11",
          "isMasterDataRequired":"false",
-         "pageNo":"1",
-         "pageName":"Page 1",
+         "pageNo":"2",
+         "pageName":"Page 2",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "exemptedCategory":{
+         "fieldName":"exemptedCategory",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[a-zA-Z0-9 ]++$",
+         "displayName":"Exempted Category",
+         "inputType":"dropdown",
+         "dropdownData":[
+
+         ],
+         "value":"",
+         "displaySequence":"12",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
       "date":{
@@ -894,11 +1019,28 @@
          "value":"",
          "displaySequence":"13",
          "isMasterDataRequired":"false",
-         "pageNo":"1",
-         "pageName":"Page 1",
+         "pageNo":"2",
+         "pageName":"Page 2",
          "moduleName":"",
          "section":"1",
-         "sectionName":"",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "uploadDocuments":{
+         "fieldName":"uploadDocuments",
+         "type":"jsonArray",
+         "mandatory":"true",
+         "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+         "displayName":"Upload Documents",
+         "inputType":"file",
+         "value":"",
+         "displaySequence":"1",
+         "isMasterDataRequired":"false",
+         "pageNo":"3",
+         "pageName":"Page 3",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Documents",
          "isbackendRequired":"true"
       },
       "remarks":{
@@ -915,7 +1057,7 @@
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"2",
-         "sectionName":"Remarks Detail",
+         "sectionName":"Remark Details",
          "isbackendRequired":"false"
       }
    }
