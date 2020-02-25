@@ -115,8 +115,24 @@
             "amount":{
                "fieldName":"amount",
                "mandatory":"false",
-               "validateRegularExp":"^[0-9]+$",
+               "validateRegularExp":"^[0-9 ]+$",
                "displayName":"Estimated Amount",
+               "inputType":"text",
+               "value":""
+            },
+            "gstAmount":{
+               "fieldName":"gstAmount",
+               "mandatory":"false",
+               "validateRegularExp":"^[0-9 ]+$",
+               "displayName":"GST Amount",
+               "inputType":"text",
+               "value":""
+            },
+            "performanceBankGuaranteeCharges":{
+               "fieldName":"performanceBankGuaranteeCharges",
+               "mandatory":"false",
+               "validateRegularExp":"^[0-9 ]+$",
+               "displayName":"Performance Bank Guarantee Charges",
                "inputType":"text",
                "value":""
             }
