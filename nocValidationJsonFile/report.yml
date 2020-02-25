@@ -68,7 +68,6 @@ ReportDefinitions:
   query:  select ena.noc_number as noc_number,ena.applicant_name as applicant_name,  ena.applied_date as applied_date,  ena.application_type as application_type,  ena.application_status as ena_application_status,  enar.application_status as enar_application_status,  enar.remark as remark, enar.remark_by as remark_by  from egpm_noc_application ena inner join egpm_noc_application_remark enar on ena.application_uuid=enar.application_uuid
 
 - reportName: MISSummaryReport
-  decryptionPathId: MISSummaryReport
   summary: Summary report
   version: 1.0.0
   moduleName: egov-opmsService
@@ -116,7 +115,6 @@ ReportDefinitions:
   query:  select distinct ena.application_type as applcationType,ena.applied_date as applied_date,(select count(ena1.application_uuid) from  egpm_noc_application ena1 where ena1.application_status='APPLIED' and ena.application_type=ena1.application_type) as totalNoOfApplicationReceived,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as noOfApplicationProcessed,(select count(ena3.application_uuid) from  egpm_noc_application ena3 where ena3.application_status='PENDING' and ena.application_type=ena3.application_type) as noOfApplicationPending,(select count(ena4.application_uuid) from  egpm_noc_application ena4 where ena4.application_status='REJECT' and ena.application_type=ena4.application_type) as noOfApplicationRejected from egpm_noc_application ena 
   
 reportName: RevenueCollectionReportApplicationTypeWise
-  decryptionPathId: RevenueCollectionReportApplicationTypeWise
   summary: Revenue Collection report application type wise
   version: 1.0.0
   moduleName: egov-opmsService
@@ -159,7 +157,6 @@ reportName: RevenueCollectionReportApplicationTypeWise
   query:  select distinct ena.application_type,ena.applied_date as applied_date,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as totalNoOfApplicationApproved,(select sum(COALESCE(ena2.amount, 0)) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as revenueCollected from egpm_noc_application ena 
   
 reportName: RevenueCollectionReportSectorWise
-  decryptionPathId: RevenueCollectionReportSectorWise
   summary: Revenue Collection report Sector Wise
   version: 1.0.0
   moduleName: egov-opmsService
