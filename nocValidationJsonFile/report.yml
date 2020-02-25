@@ -114,7 +114,7 @@ ReportDefinitions:
     reportTitle: reports.tl.MISSummaryReport.title
   query:  select distinct ena.application_type as applcationType,ena.applied_date as applied_date,(select count(ena1.application_uuid) from  egpm_noc_application ena1 where ena1.application_status='APPLIED' and ena.application_type=ena1.application_type) as totalNoOfApplicationReceived,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as noOfApplicationProcessed,(select count(ena3.application_uuid) from  egpm_noc_application ena3 where ena3.application_status='PENDING' and ena.application_type=ena3.application_type) as noOfApplicationPending,(select count(ena4.application_uuid) from  egpm_noc_application ena4 where ena4.application_status='REJECT' and ena.application_type=ena4.application_type) as noOfApplicationRejected from egpm_noc_application ena 
   
-reportName: RevenueCollectionReportApplicationTypeWise
+- reportName: RevenueCollectionReportApplicationTypeWise
   summary: Revenue Collection report application type wise
   version: 1.0.0
   moduleName: egov-opmsService
@@ -156,7 +156,7 @@ reportName: RevenueCollectionReportApplicationTypeWise
     reportTitle: reports.tl.RevenueCollectionReportApplicationTypeWise.title
   query:  select distinct ena.application_type,ena.applied_date as applied_date,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as totalNoOfApplicationApproved,(select sum(COALESCE(ena2.amount, 0)) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as revenueCollected from egpm_noc_application ena 
   
-reportName: RevenueCollectionReportSectorWise
+- reportName: RevenueCollectionReportSectorWise
   summary: Revenue Collection report Sector Wise
   version: 1.0.0
   moduleName: egov-opmsService
