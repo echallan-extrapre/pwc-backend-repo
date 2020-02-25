@@ -66,28 +66,148 @@ ReportDefinitions:
   additionalConfig:
     reportTitle: reports.tl.SampleRejectNOCReport.title
   query:  select ena.noc_number as noc_number,ena.applicant_name as applicant_name,  ena.applied_date as applied_date,  ena.application_type as application_type,  ena.application_status as ena_application_status,  enar.application_status as enar_application_status,  enar.remark as remark, enar.remark_by as remark_by  from egpm_noc_application ena inner join egpm_noc_application_remark enar on ena.application_uuid=enar.application_uuid
-  
-- reportName: SampleNOCReport
-  decryptionPathId: SampleNOCReport
-  summary: SampleNOCReport
+
+- reportName: MISSummaryReport
+  decryptionPathId: MISSummaryReport
+  summary: Summary report
   version: 1.0.0
   moduleName: egov-opmsService
   sourceColumns:
-  - name: application_uuid
-    label: report.tl.application_uuid
+  - name: applcationType
+    label: report.tl.applcationType
     type: string
     source: tl
     total: false
-  - name: noc_number
-    label: report.tl.noc_number
+  - name: totalNoOfApplicationReceived
+    label: report.tl.totalNoOfApplicationReceived
     type: string
     source: tl
     total: false
-  - name: amount
-    label: report.tl.amount
+  - name: noOfApplicationProcessed
+    label: report.tl.noOfApplicationProcessed
     type: string
     source: tl
-    total: true
+    total: false
+  - name: noOfApplicationPending
+    label: report.tl.noOfApplicationPending
+    type: string
+    source: tl
+    total: false
+  - name: noOfApplicationRejected
+    label: report.tl.noOfApplicationRejected
+    type: string
+    source: tl
+    total: false
+  searchParams:
+  - name: fromDate
+    label: reports.tl.fromDate
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND applied_date >= $fromDate
+  - name: toDate
+    label: reports.tl.toDate
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND applied_date <= $toDate
   additionalConfig:
-    reportTitle: reports.tl.SampleNOCReport.title
-  query:  SELECT application_uuid, noc_number, amount FROM public.egpm_noc_application
+    reportTitle: reports.tl.MISSummaryReport.title
+  query:  select distinct ena.application_type as applcationType,ena.applied_date as applied_date,(select count(ena1.application_uuid) from  egpm_noc_application ena1 where ena1.application_status='APPLIED' and ena.application_type=ena1.application_type) as totalNoOfApplicationReceived,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as noOfApplicationProcessed,(select count(ena3.application_uuid) from  egpm_noc_application ena3 where ena3.application_status='PENDING' and ena.application_type=ena3.application_type) as noOfApplicationPending,(select count(ena4.application_uuid) from  egpm_noc_application ena4 where ena4.application_status='REJECT' and ena.application_type=ena4.application_type) as noOfApplicationRejected from egpm_noc_application ena 
+  
+reportName: RevenueCollectionReportApplicationTypeWise
+  decryptionPathId: RevenueCollectionReportApplicationTypeWise
+  summary: Revenue Collection report application type wise
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: applcationType
+    label: report.tl.applcationType
+    type: string
+    source: tl
+    total: false
+  - name: totalNoOfApplicationApproved
+    label: report.tl.totalNoOfApplicationApproved
+    type: string
+    source: tl
+    total: false
+  - name: revenueCollected
+    label: report.tl.revenueCollected
+    type: string
+    source: tl
+    total: false
+  - name: totalNoApplicationApprovedWithNilCharges
+    label: report.tl.totalNoApplicationApprovedWithNilCharges
+    type: string
+    source: tl
+    total: false
+  searchParams:
+  - name: fromDate
+    label: reports.tl.fromDate
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND applied_date >= $fromDate
+  - name: toDate
+    label: reports.tl.toDate
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND applied_date <= $toDate
+  additionalConfig:
+    reportTitle: reports.tl.RevenueCollectionReportApplicationTypeWise.title
+  query:  select distinct ena.application_type,ena.applied_date as applied_date,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as totalNoOfApplicationApproved,(select sum(COALESCE(ena2.amount, 0)) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as revenueCollected from egpm_noc_application ena 
+  
+reportName: RevenueCollectionReportSectorWise
+  decryptionPathId: RevenueCollectionReportSectorWise
+  summary: Revenue Collection report Sector Wise
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: applcationType
+    label: report.tl.applcationType
+    type: string
+    source: tl
+    total: false
+ - name: sector
+    label: report.tl.sector
+    type: string
+    source: tl
+    total: false
+  - name: totalNoOfApplicationApproved
+    label: report.tl.totalNoOfApplicationApproved
+    type: string
+    source: tl
+    total: false
+  - name: revenueCollected
+    label: report.tl.revenueCollected
+    type: string
+    source: tl
+    total: false
+  - name: totalNoApplicationApprovedWithNilCharges
+    label: report.tl.totalNoApplicationApprovedWithNilCharges
+    type: string
+    source: tl
+    total: false
+  searchParams:
+  - name: fromDate
+    label: reports.tl.fromDate
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND applied_date >= $fromDate
+  - name: toDate
+    label: reports.tl.toDate
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND applied_date <= $toDate
+  - name: sector
+    label: reports.tl.sector
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND sector in($sector)
+  additionalConfig:
+    reportTitle: reports.tl.RevenueCollectionReportSectorWise.title
+  query:  select distinct ena.application_type,ena.applied_date as applied_date, ena.sector as sector,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as totalNoOfApplicationApproved,(select sum(COALESCE(ena2.amount, 0)) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as revenueCollected from egpm_noc_application ena 
