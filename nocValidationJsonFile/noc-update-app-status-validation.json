@@ -11,6 +11,14 @@
                "displaySequence":"1",
                "value":""
             },
+            "badgeNumber":{
+               "fieldName":"badgeNumber",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Badge Number",
+               "inputType":"text",
+               "value":""
+            },
             "uploadDocuments":{
                "fieldName":"uploadDocuments",
                "mandatory":"true",
@@ -30,6 +38,14 @@
                "inputType":"text",
                "value":""
             },
+            "badgeNumber":{
+               "fieldName":"badgeNumber",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Badge Number",
+               "inputType":"text",
+               "value":""
+            },
             "uploadDocuments":{
                "fieldName":"uploadDocuments",
                "mandatory":"true",
@@ -43,7 +59,14 @@
       },
       "MOH":{
          "APPROVE":{
-
+            "badgeNumber":{
+               "fieldName":"badgeNumber",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Badge Number",
+               "inputType":"text",
+               "value":""
+            }
          },
          "REJECT":{
             "remarks":{
@@ -51,6 +74,14 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
+               "inputType":"text",
+               "value":""
+            },
+            "badgeNumber":{
+               "fieldName":"badgeNumber",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Badge Number",
                "inputType":"text",
                "value":""
             },
@@ -72,6 +103,14 @@
                "displayName":"Remark",
                "inputType":"text",
                "displaySequence":"1",
+               "value":""
+            },
+            "badgeNumber":{
+               "fieldName":"badgeNumber",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Badge Number",
+               "inputType":"text",
                "value":""
             },
             "uploadDocuments":{
