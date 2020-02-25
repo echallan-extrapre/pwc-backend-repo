@@ -166,7 +166,7 @@ ReportDefinitions:
     type: string
     source: tl
     total: false
- - name: sector
+  - name: sector
     label: report.tl.sector
     type: string
     source: tl
