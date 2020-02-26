@@ -306,6 +306,23 @@
          "section":"4",
          "sectionName":"Remark Details",
          "isbackendRequired":"false"
+      },
+	  "fees":{
+         "fieldName":"fees",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"",
+         "displayName":"Permission to Keep Pet Dog Fees",
+         "inputType":"object",
+         "value":"0.0",
+         "displaySequence":"1",
+         "isMasterDataRequired":"false",
+         "moduleName":"immunizationSector",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"0",
+         "sectionName":"Fees Details",
+         "isbackendRequired":"false"
       }
    },
    "ROADCUTNOC":{
