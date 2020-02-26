@@ -98,12 +98,6 @@ ReportDefinitions:
     source: tl
     total: false
   searchParams:
-  - name: fromDate
-    label: reports.tl.fromDate
-    type: epoch
-    source: tl
-    isMandatory: false
-    searchClause: AND applied_date >= $fromDate
   - name: toDate
     label: reports.tl.toDate
     type: epoch
@@ -112,7 +106,7 @@ ReportDefinitions:
     searchClause: AND applied_date <= $toDate
   additionalConfig:
     reportTitle: reports.tl.MISSummaryReport.title
-  query:  select distinct ena.application_type as applcationType,(select count(ena1.application_uuid) from  egpm_noc_application ena1 where ena1.application_status='APPLIED' and ena.application_type=ena1.application_type) as totalNoOfApplicationReceived,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as noOfApplicationProcessed,(select count(ena3.application_uuid) from  egpm_noc_application ena3 where ena3.application_status='PENDING' and ena.application_type=ena3.application_type) as noOfApplicationPending,(select count(ena4.application_uuid) from  egpm_noc_application ena4 where ena4.application_status='REJECT' and ena.application_type=ena4.application_type) as noOfApplicationRejected from egpm_noc_application ena where TO_DATE(ena.applied_date::date::text, 'YYYY/MM/DD') >=TO_DATE($fromDate::date::text, 'YYYY/MM/DD') ;
+  query:  select distinct ena.application_type as applcationType,(select count(ena1.application_uuid) from  egpm_noc_application ena1 where ena1.application_status='APPLIED' and ena.application_type=ena1.application_type) as totalNoOfApplicationReceived,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as noOfApplicationProcessed,(select count(ena3.application_uuid) from  egpm_noc_application ena3 where ena3.application_status='PENDING' and ena.application_type=ena3.application_type) as noOfApplicationPending,(select count(ena4.application_uuid) from  egpm_noc_application ena4 where ena4.application_status='REJECT' and ena.application_type=ena4.application_type) as noOfApplicationRejected from egpm_noc_application ena where TO_DATE(ena.applied_date::date::text, 'YYYY/MM/DD') >=TO_DATE($fromDate::date::text, 'YYYY/MM/DD') 
   
 - reportName: RevenueCollectionReportApplicationTypeWise
   summary: Revenue Collection report application type wise
