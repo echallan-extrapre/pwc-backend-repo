@@ -35,3 +35,10 @@ ColumnMaps:
      emailSubject: Application Required Information
      template: Dear COMMISSIONER<br/><p>You are requested to provide additional clarification as requested by the Department against your application id [:applicationId:] for permission of Keeping pets. Please login to MCC portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: ""
+  
+   - applicationType: ADVERTISEMENTNOC
+     status: [REASSIGN]
+     roles: [JE,SUPERINTENDENT,COMMISSIONER]
+     emailSubject:Revised Fees For Advertisement 
+     template: Respected Sir/ Mam,<br/><p>This is to inform you that advertisement fees has been revised in the Chandigarh Municipality portal. Please visit MCC Chandigarh portal for further details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     smsTemplate: ""
