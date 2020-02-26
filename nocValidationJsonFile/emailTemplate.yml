@@ -30,7 +30,7 @@ ColumnMaps:
      smsTemplate: Dear Applicant, you are requested to provide clarification for your application id [:applicationId:] for permission of Keeping pets. Please visit MCC portal for details.
      
    - applicationType: PETNOC
-     status: [REASSIGN]
+     status: [WITHDRAW]
      roles: [COMMISSIONER]
      emailSubject: Application Required Information
      template: Dear COMMISSIONER<br/><p>You are requested to provide additional clarification as requested by the Department against your application id [:applicationId:] for permission of Keeping pets. Please login to MCC portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
