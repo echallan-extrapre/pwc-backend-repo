@@ -7,7 +7,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "displaySequence":"1",
                "value":""
             },
@@ -16,7 +16,7 @@
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Badge Number",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -35,7 +35,7 @@
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "badgeNumber":{
@@ -43,7 +43,7 @@
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Badge Number",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -64,7 +64,7 @@
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Badge Number",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             }
          },
@@ -74,7 +74,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "badgeNumber":{
@@ -82,7 +82,7 @@
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Badge Number",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -101,7 +101,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "displaySequence":"1",
                "value":""
             },
@@ -110,7 +110,7 @@
                "mandatory":"false",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Badge Number",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -138,7 +138,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "displaySequence":"1",
                "value":""
             },
@@ -156,7 +156,7 @@
                "mandatory":"false",
                "validateRegularExp":"^[0-9 ]+$",
                "displayName":"Estimated Amount",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "gstAmount":{
@@ -164,7 +164,7 @@
                "mandatory":"false",
                "validateRegularExp":"^[0-9 ]+$",
                "displayName":"GST Amount",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "performanceBankGuaranteeCharges":{
@@ -172,7 +172,7 @@
                "mandatory":"false",
                "validateRegularExp":"^[0-9 ]+$",
                "displayName":"Performance Bank Guarantee Charges",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             }
          },
@@ -182,7 +182,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -203,7 +203,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "displaySequence":"1",
                "value":""
             },
@@ -223,7 +223,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -247,7 +247,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "displaySequence":"1",
                "value":""
             },
@@ -267,7 +267,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -286,7 +286,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -307,7 +307,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "displaySequence":"1",
                "value":""
             },
@@ -327,7 +327,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -351,7 +351,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -370,7 +370,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -398,7 +398,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "displaySequence":"1",
                "value":""
             },
@@ -418,7 +418,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -438,7 +438,7 @@
             "mandatory":"true",
             "validateRegularExp":"^[a-zA-Z0-9 ]+$",
             "displayName":"Remark",
-            "inputType":"text",
+            "inputType":"textbox",
             "value":""
          }
       },
@@ -448,7 +448,7 @@
             "mandatory":"false",
             "validateRegularExp":"^[a-zA-Z0-9 ]+$",
             "displayName":"Remark",
-            "inputType":"text",
+            "inputType":"textbox",
             "value":""
          }
       },
@@ -459,7 +459,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "displaySequence":"1",
                "value":""
             },
@@ -479,7 +479,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -503,7 +503,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -522,7 +522,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -550,7 +550,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             }
          }
@@ -562,7 +562,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "displaySequence":"1",
                "value":""
             },
@@ -582,7 +582,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -603,7 +603,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "displaySequence":"1",
                "value":""
             },
@@ -623,7 +623,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -644,7 +644,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "displaySequence":"1",
                "value":""
             },
@@ -664,7 +664,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -688,7 +688,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
@@ -707,7 +707,7 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"text",
+               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
