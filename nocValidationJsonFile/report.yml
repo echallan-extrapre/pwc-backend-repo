@@ -1,72 +1,4 @@
 ReportDefinitions:
-- reportName: SampleRejectNOCReport
-  summary: SampleRejectNOCReport
-  version: 1.0.0
-  moduleName: egov-opmsService
-  sourceColumns:
-  - name: noc_number
-    label: report.tl.noc_number
-    type: string
-    source: tl
-    total: false
-  - name: applicant_name
-    label: report.tl.applicant_name
-    type: string
-    source: tl
-    total: false
-  - name: applied_date
-    label: report.tl.applied_date
-    type: string
-    source: tl
-    total: false
-  - name: application_type
-    label: report.tl.application_type
-    type: string
-    source: tl
-    total: false
-  - name: ena_application_status
-    label: report.tl.ena_application_status
-    type: string
-    source: tl
-    total: false
-  - name: enar_application_status
-    label: report.tl.enar_application_status
-    type: string
-    source: tl
-    total: false
-  - name: remark
-    label: report.tl.remark
-    type: string
-    source: tl
-    total: false
-  - name: remark_by
-    label: report.tl.remark_by
-    type: string
-    source: tl
-    total: false
-  searchParams:
-  - name: fromDate
-    label: reports.tl.fromDate
-    type: epoch
-    source: tl
-    isMandatory: false
-    searchClause: AND applied_date >= $fromDate
-  - name: toDate
-    label: reports.tl.toDate
-    type: epoch
-    source: tl
-    isMandatory: false
-    searchClause: AND applied_date <= $toDate
-  - name: application_type
-    label: reports.tl.application_type
-    type: epoch
-    source: tl
-    isMandatory: false
-    searchClause: AND application_type in ($application_type)
-  additionalConfig:
-    reportTitle: reports.tl.SampleRejectNOCReport.title
-  query:  select ena.noc_number as noc_number,ena.applicant_name as applicant_name,  ena.applied_date as applied_date,  ena.application_type as application_type,  ena.application_status as ena_application_status,  enar.application_status as enar_application_status,  enar.remark as remark, enar.remark_by as remark_by  from egpm_noc_application ena inner join egpm_noc_application_remark enar on ena.application_uuid=enar.application_uuid
-
 - reportName: MISSummaryReport
   summary: Summary report
   version: 1.0.0
@@ -97,16 +29,9 @@ ReportDefinitions:
     type: string
     source: tl
     total: false
-  searchParams:
-  - name: toDate
-    label: reports.tl.toDate
-    type: epoch
-    source: tl
-    isMandatory: false
-    searchClause: AND applied_date <= $toDate
   additionalConfig:
     reportTitle: reports.tl.MISSummaryReport.title
-  query:  select distinct ena.application_type as applcationType,(select count(ena1.application_uuid) from  egpm_noc_application ena1 where ena1.application_status='APPLIED' and ena.application_type=ena1.application_type) as totalNoOfApplicationReceived,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as noOfApplicationProcessed,(select count(ena3.application_uuid) from  egpm_noc_application ena3 where ena3.application_status='PENDING' and ena.application_type=ena3.application_type) as noOfApplicationPending,(select count(ena4.application_uuid) from  egpm_noc_application ena4 where ena4.application_status='REJECT' and ena.application_type=ena4.application_type) as noOfApplicationRejected from egpm_noc_application ena where TO_DATE(ena.applied_date::date::text, 'YYYY/MM/DD') >=TO_DATE($fromDate::date::text, 'YYYY/MM/DD') 
+  query:  select distinct ena.application_type as applcationType,(select count(ena1.application_uuid) from  egpm_noc_application ena1 where ena1.application_status='APPLIED' and ena.application_type=ena1.application_type) as totalNoOfApplicationReceived,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as noOfApplicationProcessed,(select count(ena3.application_uuid) from  egpm_noc_application ena3 where ena3.application_status='PENDING' and ena.application_type=ena3.application_type) as noOfApplicationPending,(select count(ena4.application_uuid) from  egpm_noc_application ena4 where ena4.application_status='REJECT' and ena.application_type=ena4.application_type) as noOfApplicationRejected from egpm_noc_application ena where TO_DATE(ena.applied_date::date::text, 'YYYY/MM/DD') >=TO_DATE($fromDate::date::text, 'YYYY/MM/DD') and TO_DATE(ena.applied_date::date::text, 'YYYY/MM/DD') <=TO_DATE($toDate::date::text, 'YYYY/MM/DD') 
   
 - reportName: RevenueCollectionReportApplicationTypeWise
   summary: Revenue Collection report application type wise
@@ -255,7 +180,7 @@ ReportDefinitions:
     reportTitle: reports.tl.RevenueCollectionReportMonthWise.title
   query:  select distinct ena.application_type,ena.applied_date as applied_date, ena.sector as sector,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as totalNoOfApplicationApproved,(select sum(COALESCE(ena2.amount, 0)) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as revenueCollected from egpm_noc_application ena 
   
-reportName: ApplicationProcessingTimeReport
+- reportName: ApplicationProcessingTimeReport
   summary: Application processing time report
   version: 1.0.0
   moduleName: egov-opmsService
