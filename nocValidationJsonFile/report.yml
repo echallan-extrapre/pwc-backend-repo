@@ -254,3 +254,45 @@ ReportDefinitions:
   additionalConfig:
     reportTitle: reports.tl.RevenueCollectionReportMonthWise.title
   query:  select distinct ena.application_type,ena.applied_date as applied_date, ena.sector as sector,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as totalNoOfApplicationApproved,(select sum(COALESCE(ena2.amount, 0)) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as revenueCollected from egpm_noc_application ena 
+  
+reportName: ApplicationProcessingTimeReport
+  summary: Application processing time report
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: applcationType
+    label: report.tl.applcationType
+    type: string
+    source: tl
+    total: false
+  - name: avgTimeTakenToProcessRequest
+    label: report.tl.avgTimeTakenToProcessRequest
+    type: string
+    source: tl
+    total: false
+  - name: pendingMoreThan30Days
+    label: report.tl.pendingMoreThan30Days
+    type: string
+    source: tl
+    total: false
+  - name: pendingMoreThan10AndLessThan30Days
+    label: report.tl.pendingMoreThan10AndLessThan30Days
+    type: string
+    source: tl
+    total: false
+  searchParams:
+  - name: fromDate
+    label: reports.tl.fromDate
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND applied_date >= $fromDate
+  - name: toDate
+    label: reports.tl.toDate
+    type: epoch
+    source: tl
+    isMandatory: false
+    searchClause: AND applied_date <= $toDate
+  additionalConfig:
+    reportTitle: reports.tl.ApplicationProcessingTimeReport.title
+  query:  select distinct ena.application_type,(select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as avgTimeTakenToProcessRequest,(select sum(COALESCE(ena2.amount, 0)) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type) as pendingMoreThan30Days from egpm_noc_application ena 
