@@ -102,3 +102,37 @@ ReportDefinitions:
   additionalConfig:
     reportTitle: reports.tl.RevenueCollectionReportSectorWise.title
   query:  select distinct ena.application_type,ena.sector,CASE    WHEN ena.application_type = 'PETNOC' THEN (select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type and ena.sector=ena2.sector)    WHEN ena.application_type = 'SELLMEATNOC' THEN (select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type and ena.sector=ena2.sector)    WHEN ena.application_type = 'ROADCUTNOC' THEN (select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type and ena.sector=ena2.sector)    WHEN ena.application_type = 'ADVERTISEMENTNOC' THEN (select count(ena2.application_uuid) from  egpm_noc_application ena2 where ena2.application_status='APPROVE' and ena.application_type=ena2.application_type and ena.sector=ena2.sector)END AS noOfApplicationProcessed,CASE    WHEN ena.application_type = 'PETNOC' THEN (select sum(COALESCE(ena2.amount, 0)) from  egpm_noc_application ena2 where  ena.application_type=ena2.application_type and ena.sector=ena2.sector)    WHEN ena.application_type = 'SELLMEATNOC' THEN (select sum(COALESCE(ena2.amount, 0)) from  egpm_noc_application ena2 where  ena.application_type=ena2.application_type and ena.sector=ena2.sector)    WHEN ena.application_type = 'ROADCUTNOC' THEN (select sum(COALESCE(ena2.amount, 0)) from  egpm_noc_application ena2 where  ena.application_type=ena2.application_type and ena.sector=ena2.sector)    WHEN ena.application_type = 'ADVERTISEMENTNOC' THEN (select sum(COALESCE(ena2.amount, 0)) from  egpm_noc_application ena2 where  ena.application_type=ena2.application_type and ena.sector=ena2.sector)END AS revenueCollected,CASE    WHEN ena.application_type = 'PETNOC' THEN (select count(ena2.application_uuid) from  egpm_noc_application ena2,egpm_noc_application_detail enad where ena2.application_uuid=enad.application_uuid and COALESCE((enad.application_detail -> 'exemptedCategory')::TEXT::boolean, 0::boolean)=1::boolean and ena.application_type=ena2.application_type and ena.sector=ena2.sector)    WHEN ena.application_type = 'SELLMEATNOC' THEN (select count(ena2.application_uuid) from  egpm_noc_application ena2,egpm_noc_application_detail enad where ena2.application_uuid=enad.application_uuid and COALESCE((enad.application_detail -> 'exemptedCategory')::TEXT::boolean, 0::boolean)=1::boolean and ena.application_type=ena2.application_type and ena.sector=ena2.sector)    WHEN ena.application_type = 'ROADCUTNOC' THEN (select count(ena2.application_uuid) from  egpm_noc_application ena2,egpm_noc_application_detail enad where ena2.application_uuid=enad.application_uuid and COALESCE((enad.application_detail -> 'exemptedCategory')::TEXT::boolean, 0::boolean)=1::boolean and ena.application_type=ena2.application_type and ena.sector=ena2.sector)    WHEN ena.application_type = 'ADVERTISEMENTNOC' THEN (select count(ena2.application_uuid) from  egpm_noc_application ena2,egpm_noc_application_detail enad where ena2.application_uuid=enad.application_uuid and COALESCE((enad.application_detail -> 'exemptedCategory')::TEXT::boolean, 0::boolean)=1::boolean and ena.application_type=ena2.application_type and ena.sector=ena2.sector)END AS totalNoApplicationApprovedWithNilCharges from egpm_noc_application ena WHERE TO_DATE(ena.applied_date::date::text, 'YYYY/MM/DD') >=TO_DATE($fromDate, 'DD/MM/YYYY')AND TO_DATE(ena.applied_date::date::text, 'YYYY/MM/DD') <=TO_DATE($toDate, 'DD/MM/YYYY') 
+  
+- reportName: RevenueCollectionReportMonthWise
+  summary: Revenue Collection report Month Wise
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: application_type
+    label: report.tl.application_type
+    type: string
+    source: tl
+    total: false
+  - name: YearMonth
+    label: report.tl.YearMonth
+    type: string
+    source: tl
+    total: false
+  - name: approve
+    label: report.tl.approve
+    type: string
+    source: tl
+    total: false
+  - name: rev
+    label: report.tl.rev
+    type: string
+    source: tl
+    total: false
+  - name: exempted
+    label: report.tl.exempted
+    type: string
+    source: tl
+    total: false
+  additionalConfig:
+    reportTitle: reports.tl.RevenueCollectionReportMonthWise.title
+  query:  Select application_type, YearMonth, rev,approve, exempted from  (Select ab.application_type, max(ab.actualDate) actualDate, to_char(max(ab.actualDate)::date, 'YYYY-MON') YearMonth,ab.years, ab.months, sum(ab.rev) rev ,sum(ab.approve) approve, sum(ab.exempted) exemptedfrom(select ena2.application_type, max(ena2.applied_date) actualDate, max(EXTRACT(YEAR FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD'))) years, max(EXTRACT(MONTH FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD'))) months, sum(COALESCE(ena2.amount, 0)) rev ,0 approve, 0 exemptedfrom egpm_noc_application ena2 group by ena2.application_type, EXTRACT(YEAR FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD')), EXTRACT(MONTH FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD'))union select ena2.application_type, max(ena2.applied_date) actualDate, max(EXTRACT(YEAR FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD'))) years, max(EXTRACT(MONTH FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD'))) months, 0 rev , count(ena2.application_uuid) approve, 0 exemptedfrom egpm_noc_application ena2 where ena2.application_status='APPROVE'group by ena2.application_type, EXTRACT(YEAR FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD')), EXTRACT(MONTH FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD'))union select ena2.application_type, max(ena2.applied_date) actualDate, max(EXTRACT(YEAR FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD'))) years, max(EXTRACT(MONTH FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD'))) months,0 rev , 0 approve, count(ena2.application_uuid) exemptedfrom egpm_noc_application ena2 inner join egpm_noc_application_detail ena1 on ena2.application_uuid = ena1.application_uuidwhere COALESCE((ena1.application_detail -> 'exemptedCategory')::TEXT::boolean, 0::boolean)=1::boolean and ena2.application_type in ('ROADCUTNOC','ADVERTISEMENTNOC')group by ena2.application_type, EXTRACT(YEAR FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD')), EXTRACT(MONTH FROM TO_DATE(ena2.applied_date::date::text, 'YYYY/MM/DD'))) ab where to_char( ab.actualDate::date, 'YYYY-MM-DD') between to_char( CONCAT($fromYear,'-04-01')::date, 'YYYY-MM-DD') and to_char(CONCAT($toYear,'-03-31')::date, 'YYYY-MM-DD') and ab.months in ($months)group by ab.application_type, ab.years, ab.months) abb
