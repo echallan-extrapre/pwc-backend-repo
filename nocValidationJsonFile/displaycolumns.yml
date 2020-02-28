@@ -75,4 +75,3 @@ ColumnMaps:
      
  certificateConfig:
    - applicationType: PETNOC
-     dataQuery: SELECT concat(concat(concat(concat(ab.applicant_name,', '), ab.house_number),', '),ab.sector) as "applicantNameAddress",ab.noc_number as "applicationId",TO_CHAR(ab.applied_date::DATE, 'DD-MM-YYYY') as "applicationDate",TO_CHAR(TO_TIMESTAMP(cdd.created_time / 1000), 'DD-MM-YYYY') as "approveDate"  FROM public.egpm_noc_application ab left join public.egpm_noc_application_remark cd on ab.application_uuid=cd.application_uuid and cd.application_status = 'INITIATE' left join public.egpm_noc_application_remark cdd on ab.application_uuid=cdd.application_uuid and cdd.application_status = 'APPROVE' where ab.noc_number=? and ab.application_type ='PETNOC'
