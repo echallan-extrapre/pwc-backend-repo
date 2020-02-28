@@ -615,6 +615,16 @@
                "displaySequence":"2",
                "value":""
             }
+         },
+         "WITHDRAWAPPROVAL":{
+            "Amount":{
+               "fieldName":"Amount",
+               "mandatory":"false",
+               "validateRegularExp":"^[0-9 ]+$",
+               "displayName":"Amount",
+               "inputType":"textbox",
+               "value":""
+            }
          }
       },
       "SUPERINTENDENT":{
@@ -695,6 +705,16 @@
                "displayName":"Upload Documents",
                "inputType":"file",
                "displaySequence":"2",
+               "value":""
+            }
+         },
+         "WITHDRAWAPPROVAL":{
+            "Amount":{
+               "fieldName":"Amount",
+               "mandatory":"false",
+               "validateRegularExp":"^[0-9 ]+$",
+               "displayName":"Amount",
+               "inputType":"textbox",
                "value":""
             }
          }
