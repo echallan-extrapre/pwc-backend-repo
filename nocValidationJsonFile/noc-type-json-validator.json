@@ -1010,7 +1010,7 @@
          "fieldName":"space",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"[-+]?[0-9]*\\.?[0-9]*",
+         "validateRegularExp":"[0-9]++$",
          "displayName":"Enter space (In Sq. ft.)",
          "inputType":"textbox",
          "value":"",
