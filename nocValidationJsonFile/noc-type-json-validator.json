@@ -541,6 +541,23 @@
          "section":"2",
          "sectionName":"Remark Details",
          "isbackendRequired":"false"
+      },
+	"fees":{
+         "fieldName":"fees",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"",
+         "displayName":"Permission to Keep Pet Dog Fees",
+         "inputType":"Display",
+         "value":"0.0",
+         "displaySequence":"1",
+         "isMasterDataRequired":"false",
+         "moduleName":"fees",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "section":"0",
+         "sectionName":"Fees Details",
+         "isbackendRequired":"false"
       }
    },
    "SELLMEATNOC":{
