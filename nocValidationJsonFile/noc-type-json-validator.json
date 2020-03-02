@@ -665,23 +665,6 @@
          "section":"1",
          "sectionName":"Documents",
          "isbackendRequired":"true"
-      },
-      "remarks":{
-         "fieldName":"remarks",
-         "type":"text",
-         "mandatory":"false",
-         "validateRegularExp":"",
-         "displayName":"Remarks",
-         "inputType":"object",
-         "value":"",
-         "displaySequence":"1",
-         "isMasterDataRequired":"false",
-         "moduleName":"immunizationSector",
-         "pageNo":"1",
-         "pageName":"Page 1",
-         "section":"5",
-         "sectionName":"Remark Details",
-         "isbackendRequired":"false"
       }
    },
    "ADVERTISEMENTNOC":{
