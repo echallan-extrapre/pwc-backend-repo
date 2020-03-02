@@ -467,7 +467,7 @@
          }
       },
       "SUPERINTENDENT":{
-         "FORWARD":{
+         "PENDINGAPPROVAL":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
