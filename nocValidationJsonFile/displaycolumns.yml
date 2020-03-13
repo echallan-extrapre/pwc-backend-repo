@@ -1,5 +1,5 @@
 ColumnMaps:
- tenantId: [CH]
+ tenantId: [ch]
  columnConfig:
    - applicationType: PETNOC
      roles: [SI]
