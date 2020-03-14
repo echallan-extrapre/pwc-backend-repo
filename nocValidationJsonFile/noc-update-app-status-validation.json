@@ -50,7 +50,7 @@
          }
       },
       "MOH":{
-         "APPROVE":{
+         "APPROVED":{
            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -68,7 +68,7 @@
                "value":""
             }
          },
-         "REJECT":{
+         "REJECTED":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -87,7 +87,7 @@
                "value":""
             }
          },
-         "REASSIGN":{
+         "REASSIGNTOSI":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
