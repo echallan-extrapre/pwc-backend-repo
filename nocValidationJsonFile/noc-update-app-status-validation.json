@@ -30,6 +30,14 @@
                "inputType":"textbox",
                "value":""
             },
+            "badgeNumber":{
+               "fieldName":"badgeNumber",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Badge Number",
+               "inputType":"textbox",
+               "value":""
+            },
             "uploadDocuments":{
                "fieldName":"uploadDocuments",
                "mandatory":"true",
@@ -48,6 +56,14 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
+               "inputType":"textbox",
+               "value":""
+            },
+            "badgeNumber":{
+               "fieldName":"badgeNumber",
+               "mandatory":"false",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Badge Number",
                "inputType":"textbox",
                "value":""
             }
