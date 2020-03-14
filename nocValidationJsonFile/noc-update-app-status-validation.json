@@ -11,14 +11,6 @@
                "displaySequence":"1",
                "value":""
             },
-            "badgeNumber":{
-               "fieldName":"badgeNumber",
-               "mandatory":"false",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Badge Number",
-               "inputType":"textbox",
-               "value":""
-            },
             "uploadDocuments":{
                "fieldName":"uploadDocuments",
                "mandatory":"true",
@@ -38,14 +30,6 @@
                "inputType":"textbox",
                "value":""
             },
-            "badgeNumber":{
-               "fieldName":"badgeNumber",
-               "mandatory":"false",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Badge Number",
-               "inputType":"textbox",
-               "value":""
-            },
             "uploadDocuments":{
                "fieldName":"uploadDocuments",
                "mandatory":"true",
@@ -59,11 +43,11 @@
       },
       "MOH":{
          "APPROVE":{
-            "badgeNumber":{
-               "fieldName":"badgeNumber",
-               "mandatory":"false",
+           "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Badge Number",
+               "displayName":"Remark",
                "inputType":"textbox",
                "value":""
             }
@@ -74,14 +58,6 @@
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
                "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "badgeNumber":{
-               "fieldName":"badgeNumber",
-               "mandatory":"false",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Badge Number",
                "inputType":"textbox",
                "value":""
             },
@@ -103,14 +79,6 @@
                "displayName":"Remark",
                "inputType":"textbox",
                "displaySequence":"1",
-               "value":""
-            },
-            "badgeNumber":{
-               "fieldName":"badgeNumber",
-               "mandatory":"false",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Badge Number",
-               "inputType":"textbox",
                "value":""
             },
             "uploadDocuments":{
