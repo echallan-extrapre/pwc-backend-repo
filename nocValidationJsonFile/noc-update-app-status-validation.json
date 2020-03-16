@@ -1,762 +1,759 @@
 {
-   "PETNOC":{
-      "SI":{
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "displaySequence":"1",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "FORWARD":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"false",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "badgeNumber":{
-               "fieldName":"badgeNumber",
-               "mandatory":"false",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Badge Number",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "MOH":{
-         "APPROVED":{
-           "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "badgeNumber":{
-               "fieldName":"badgeNumber",
-               "mandatory":"false",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Badge Number",
-               "inputType":"textbox",
-               "value":""
-            }
-         },
-         "REJECTED":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REASSIGNTOSI":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "displaySequence":"1",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "SYSTEM_PAYMENT":{
-         "PAID":{
+	"PETNOC": {
+		"SI": {
+			"REASSIGN": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"displaySequence": "1",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"FORWARD": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "false",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"badgeNumber": {
+					"fieldName": "badgeNumber",
+					"mandatory": "false",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Badge Number",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"MOH": {
+			"APPROVED": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"badgeNumber": {
+					"fieldName": "badgeNumber",
+					"mandatory": "false",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Badge Number",
+					"inputType": "textbox",
+					"value": ""
+				}
+			},
+			"REJECTED": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REASSIGNTOSI": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"displaySequence": "1",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"SYSTEM_PAYMENT": {
+			"PAID": {
 
-         }
-      }
-   },
-   "ROADCUTNOC":{
-      "JE":{
-         "FORWARD":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "displaySequence":"1",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            },
-            "amount":{
-               "fieldName":"amount",
-               "mandatory":"false",
-               "validateRegularExp":"^[0-9 ]+$",
-               "displayName":"Estimated Amount",
-               "inputType":"textbox",
-               "value":""
-            },
-            "gstAmount":{
-               "fieldName":"gstAmount",
-               "mandatory":"false",
-               "validateRegularExp":"^[0-9 ]+$",
-               "displayName":"GST Amount",
-               "inputType":"textbox",
-               "value":""
-            },
-            "performanceBankGuaranteeCharges":{
-               "fieldName":"performanceBankGuaranteeCharges",
-               "mandatory":"false",
-               "validateRegularExp":"^[0-9 ]+$",
-               "displayName":"Performance Bank Guarantee Charges",
-               "inputType":"textbox",
-               "value":""
-            }
-         },
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "SDO":{
-         "FORWARD":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "displaySequence":"1",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "EE":{
-         "APPROVE":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            }
-         },
-         "FORWARD":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "displaySequence":"1",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REJECT":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "SE":{
-         "FORWARD":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "displaySequence":"1",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "CE":{
-         "APPROVE":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            }
-         },
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REJECT":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "SYSTEM_PAYMENT":{
-         "PAID":{
+			}
+		}
+	},
+	"ROADCUTNOC": {
+		"JE": {
+			"REVIEWSDO": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"displaySequence": "1",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				},
+				"amount": {
+					"fieldName": "amount",
+					"mandatory": "false",
+					"validateRegularExp": "^[0-9 ]+$",
+					"displayName": "Estimated Amount",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"gstAmount": {
+					"fieldName": "gstAmount",
+					"mandatory": "false",
+					"validateRegularExp": "^[0-9 ]+$",
+					"displayName": "GST Amount",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"performanceBankGuaranteeCharges": {
+					"fieldName": "performanceBankGuaranteeCharges",
+					"mandatory": "false",
+					"validateRegularExp": "^[0-9 ]+$",
+					"displayName": "Performance Bank Guarantee Charges",
+					"inputType": "textbox",
+					"value": ""
+				}
+			},
+			"REASSIGN": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"SDO": {
+			"REVIEWOFEE": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"displaySequence": "1",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REASSIGNTOJE": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"EE": {
+			"APPROVED": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				}
+			},
+			"REVIEWOFSE": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"displaySequence": "1",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REASSIGNTOSDO": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REJECTED": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"SE": {
+			"PENDINGAPRROVAL": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"displaySequence": "1",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REASSIGNTOEE": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"CE": {
+			"APPROVED": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				}
+			},
+			"REASSIGNTOSE": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REJECTED": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"SYSTEM_PAYMENT": {
+			"PAID": {
 
-         }
-      }
-   },
-   "SELLMEATNOC":{
-      "SI":{
-         "REVIEWOFSUPERINTENDENT":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "displaySequence":"1",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "REJECTED":{
-         "remarks":{
-            "fieldName":"remarks",
-            "mandatory":"true",
-            "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-            "displayName":"Remark",
-            "inputType":"textbox",
-            "value":""
-         }
-      },
-      "FORWARD":{
-         "remarks":{
-            "fieldName":"remarks",
-            "mandatory":"false",
-            "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-            "displayName":"Remark",
-            "inputType":"textbox",
-            "value":""
-         }
-      },
-      "SUPERINTENDENT":{
-         "PENDINGAPPROVAL":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "displaySequence":"1",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REASSIGNTOSI":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "MOH":{
-         "APPROVED":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            }
-         },
-         "REASSIGNTOSUPERINTENDENT":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REJECTED":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "SYSTEM_PAYMENT":{
-         "PAID":{
+			}
+		}
+	},
+	"SELLMEATNOC": {
+		"SI": {
+			"REVIEWOFSUPERINTENDENT": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"displaySequence": "1",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REASSIGN": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"REJECTED": {
+			"remarks": {
+				"fieldName": "remarks",
+				"mandatory": "true",
+				"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+				"displayName": "Remark",
+				"inputType": "textbox",
+				"value": ""
+			}
+		},
+		"FORWARD": {
+			"remarks": {
+				"fieldName": "remarks",
+				"mandatory": "false",
+				"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+				"displayName": "Remark",
+				"inputType": "textbox",
+				"value": ""
+			}
+		},
+		"SUPERINTENDENT": {
+			"PENDINGAPPROVAL": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"displaySequence": "1",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REASSIGNTOSI": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"MOH": {
+			"APPROVED": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				}
+			},
+			"REASSIGNTOSUPERINTENDENT": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REJECTED": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"SYSTEM_PAYMENT": {
+			"PAID": {
 
-         }
-      }
-   },
-   "ADVERTISEMENTNOC":{
-      "CITIZEN":{
-         "WITHDRAW":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            }
-         }
-      },
-      "JEX":{
-         "FORWARD":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "displaySequence":"1",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "WITHDRAWAPPROVAL":{
-            "Amount":{
-               "fieldName":"Amount",
-               "mandatory":"false",
-               "validateRegularExp":"^[0-9 ]+$",
-               "displayName":"Amount",
-               "inputType":"textbox",
-               "value":""
-            }
-         }
-      },
-      "SUPERINTENDENT":{
-         "FORWARD":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "displaySequence":"1",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "OSD":{
-         "FORWARD":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "displaySequence":"1",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "WITHDRAWAPPROVAL":{
-            "Amount":{
-               "fieldName":"Amount",
-               "mandatory":"false",
-               "validateRegularExp":"^[0-9 ]+$",
-               "displayName":"Amount",
-               "inputType":"textbox",
-               "value":""
-            }
-         }
-      },
-      "COMMISSIONER":{
-         "APPROVE":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            }
-         },
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REJECT":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         }
-      },
-      "SYSTEM_PAYMENT":{
-         "PAID":{
+			}
+		}
+	},
+	"ADVERTISEMENTNOC": {
+		"CITIZEN": {
+			"WITHDRAW": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				}
+			}
+		},
+		"JEX": {
+			"REVIEWOFSUPERINTENDENT": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"displaySequence": "1",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REASSIGN": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"WITHDRAWAPPROVAL": {
+				"Amount": {
+					"fieldName": "Amount",
+					"mandatory": "false",
+					"validateRegularExp": "^[0-9 ]+$",
+					"displayName": "Amount",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				}
+			}
+		},
+		"SUPERINTENDENT": {
+			"REVIEWOFOSD": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"displaySequence": "1",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REASSIGNTOJEX": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"OSD": {
+			"PENDINGAPPROVAL": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"displaySequence": "1",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"REASSIGNTOSUPERINTENDENT": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			},
+			"WITHDRAWAPPROVAL": {
+				"Amount": {
+					"fieldName": "Amount",
+					"mandatory": "false",
+					"validateRegularExp": "^[0-9 ]+$",
+					"displayName": "Amount",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				}
+			}
+		},
+		"COMMISSIONER": {
+			"APPROVED": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				}
+			},
+			"REJECTED": {
+				"remarks": {
+					"fieldName": "remarks",
+					"mandatory": "true",
+					"validateRegularExp": "^[a-zA-Z0-9 ]+$",
+					"displayName": "Remark",
+					"inputType": "textbox",
+					"value": ""
+				},
+				"uploadDocuments": {
+					"fieldName": "uploadDocuments",
+					"mandatory": "true",
+					"validateRegularExp": "\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
+					"displayName": "Upload Documents",
+					"inputType": "file",
+					"displaySequence": "2",
+					"value": ""
+				}
+			}
+		},
+		"SYSTEM_PAYMENT": {
+			"PAID": {
 
-         }
-      }
-   }
+			}
+		}
+	}
 }
