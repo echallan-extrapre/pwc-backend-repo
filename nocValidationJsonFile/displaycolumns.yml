@@ -3,11 +3,11 @@ ColumnMaps:
  columnConfig:
    - applicationType: PETNOC
      roles: [SI]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='PETNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='PETNOC' AND EA.application_status in ('PAID') AND ED.is_active=TRUE AND EA.is_active=TRUE
 
    - applicationType: PETNOC
      roles: [MOH]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='PETNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='PETNOC' AND EA.application_status in ('FORWARD') AND ED.is_active=TRUE AND EA.is_active=TRUE
  
    - applicationType: PETNOC
      roles: [CITIZEN]
@@ -15,15 +15,15 @@ ColumnMaps:
    
    - applicationType: SELLMEATNOC
      roles: [SI]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='SELLMEATNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='SELLMEATNOC' AND EA.application_status in ('INITIATED','REASSIGNTOSI','PAID','RESENT') AND ED.is_active=TRUE AND EA.is_active=TRUE
 
    - applicationType: SELLMEATNOC
      roles: [SUPERINTENDENT]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='SELLMEATNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='SELLMEATNOC' AND EA.application_status in ('REVIEWOFSUPERINTENDENT') AND ED.is_active=TRUE AND EA.is_active=TRUE
      
    - applicationType: SELLMEATNOC
      roles: [MOH]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='SELLMEATNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='SELLMEATNOC' AND EA.application_status in ('PENDINGAPPROVAL') AND ED.is_active=TRUE AND EA.is_active=TRUE
      
    - applicationType: SELLMEATNOC
      roles: [CITIZEN]
@@ -31,23 +31,23 @@ ColumnMaps:
 
    - applicationType: ROADCUTNOC
      roles: [JE]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ROADCUTNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ROADCUTNOC' AND EA.application_status in ('INITIATED','REASSIGNTOJE','RESENT') AND ED.is_active=TRUE AND EA.is_active=TRUE
 
    - applicationType: ROADCUTNOC
      roles: [SDO]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ROADCUTNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ROADCUTNOC' AND EA.application_status in ('REASSIGNTOSDO','REVIEWSDO') AND ED.is_active=TRUE AND EA.is_active=TRUE
 
    - applicationType: ROADCUTNOC
      roles: [EE]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ROADCUTNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ROADCUTNOC' AND EA.application_status in ('REVIEWOFEE','REASSIGNTOEE') AND ED.is_active=TRUE AND EA.is_active=TRUE
 
    - applicationType: ROADCUTNOC
      roles: [SE]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ROADCUTNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ROADCUTNOC' AND EA.application_status in ('REASSIGNTOSE','REVIEWOFSE') AND ED.is_active=TRUE AND EA.is_active=TRUE
      
    - applicationType: ROADCUTNOC
      roles: [CE]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ROADCUTNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ROADCUTNOC' AND EA.application_status in ('PENDINGAPRROVAL') AND ED.is_active=TRUE AND EA.is_active=TRUE
      
    - applicationType: ROADCUTNOC
      roles: [CITIZEN]
@@ -55,19 +55,19 @@ ColumnMaps:
    
    - applicationType: ADVERTISEMENTNOC
      roles: [JEX]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ADVERTISEMENTNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ADVERTISEMENTNOC' AND EA.application_status in ('PAID','WITHDRAW','INITIATED') AND ED.is_active=TRUE AND EA.is_active=TRUE
      
    - applicationType: ADVERTISEMENTNOC
      roles: [SUPERINTENDENT]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ADVERTISEMENTNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ADVERTISEMENTNOC' AND EA.application_status in ('REVIEWOFSUPERINTENDENT','REASSIGNTOSUPERINTENDENT') AND ED.is_active=TRUE AND EA.is_active=TRUE
 
    - applicationType: ADVERTISEMENTNOC
      roles: [OSD]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ADVERTISEMENTNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE     
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ADVERTISEMENTNOC' AND EA.application_status in ('REVIEWOFOSD','FORWARDTOOSD','WITHDRAW') AND ED.is_active=TRUE AND EA.is_active=TRUE     
 
    - applicationType: ADVERTISEMENTNOC
      roles: [COMMISSIONER]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ADVERTISEMENTNOC' AND EA.application_status in ([:applicationStatus:]) AND ED.is_active=TRUE AND EA.is_active=TRUE
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ADVERTISEMENTNOC' AND EA.application_status in ('PENDINGAPPROVAL') AND ED.is_active=TRUE AND EA.is_active=TRUE
 
    - applicationType: ADVERTISEMENTNOC
      roles: [CITIZEN]
