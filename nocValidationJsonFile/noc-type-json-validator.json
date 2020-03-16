@@ -582,7 +582,7 @@
          "fieldName":"division",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+         "validateRegularExp":"^[a-zA-Z0-9  _]+$",
          "displayName":"Division/Sector/ward/Shop No",
          "inputType":"textbox",
          "value":"",
