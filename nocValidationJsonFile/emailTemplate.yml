@@ -2,21 +2,21 @@ ColumnMaps:
  tenantId: [CH]
  columnConfig:
    - applicationType: PETNOC
-     status: [APPROVE]
+     status: [APPROVED]
      roles: [CITIZEN]
      emailSubject: Application Approved
      template: Dear Applicant<br/><p>Your application id - [:applicationId:] for permission for keeping of Pets has been approved. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Your application id [:applicationId:] for permission for Keeping of Pets has been approved. Kindly visit the MMC Chandigarh portal for details.
      
    - applicationType: PETNOC
-     status: [REJECT]
+     status: [REJECTED]
      roles: [CITIZEN]
      emailSubject: Application Rejected
      template: Dear Applicant<br/><p>Your application id - [:applicationId:] for permission for keeping of Pets has been rejected. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Your application id [:applicationId:] for permission for Keeping of Pets has been rejected. Kindly visit the MMC Chandigarh portal for details.
 
    - applicationType: PETNOC
-     status: [INITIATE]
+     status: [INITIATED]
      roles: [CITIZEN]
      emailSubject: Application Submitted
      template: Dear Applicant<br/><p>Thank you for submitting online application for permission of keeping pets at Chandigarh Municipal Corporation portal. Your Application id - [:applicationId:] .You can log on to the MCC Chandigarh portal for further details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
@@ -42,3 +42,10 @@ ColumnMaps:
      emailSubject: Revised Fees For Advertisement 
      template: Respected Sir/ Mam,<br/><p>This is to inform you that advertisement fees has been revised in the Chandigarh Municipality portal. Please visit MCC Chandigarh portal for further details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: ""
+
+   - applicationType: SELLMEATNOC
+     status: [INITIATED]
+     roles: [CITIZEN]
+     emailSubject: Application Submitted
+     template: Dear Applicant<br/><p>Thank you for submitting online application for permission to sell meat at Chandigarh Municipal Corporation portal.Your Application id - [:applicationId:] .You can log on to the MCC Chandigarh portal for further details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     smsTemplate: Dear Applicant, Your application ID - [:applicationId:] has been received for permission to sell meat. Please login to MCC portal for details.
