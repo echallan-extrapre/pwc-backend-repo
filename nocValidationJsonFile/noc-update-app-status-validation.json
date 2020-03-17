@@ -116,7 +116,7 @@
    },
    "ROADCUTNOC":{
       "JE":{
-         "FORWARD":{
+         "REVIEWSDO":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -181,7 +181,7 @@
          }
       },
       "SDO":{
-         "FORWARD":{
+         "REVIEWOFEE":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -201,7 +201,7 @@
                "value":""
             }
          },
-         "REASSIGN":{
+         "REASSIGNTOJE":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -222,7 +222,7 @@
          }
       },
       "EE":{
-         "APPROVE":{
+         "APPROVED":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -232,7 +232,7 @@
                "value":""
             }
          },
-         "FORWARD":{
+         "REVIEWOFSE":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -252,7 +252,7 @@
                "value":""
             }
          },
-         "REASSIGN":{
+         "REASSIGNTOSDO":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -271,7 +271,7 @@
                "value":""
             }
          },
-         "REJECT":{
+         "REJECTED":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -292,7 +292,7 @@
          }
       },
       "SE":{
-         "FORWARD":{
+         "PENDINGAPRROVAL":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -312,7 +312,7 @@
                "value":""
             }
          },
-         "REASSIGN":{
+         "REASSIGNTOEE":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -333,7 +333,7 @@
          }
       },
       "CE":{
-         "APPROVE":{
+         "APPROVED":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -343,7 +343,7 @@
                "value":""
             }
          },
-         "REASSIGN":{
+         "REASSIGNTOSE":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -362,7 +362,7 @@
                "value":""
             }
          },
-         "REJECT":{
+         "REJECTED":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -561,7 +561,7 @@
          }
       },
       "JEX":{
-         "FORWARD":{
+         "REVIEWOFSUPERINTENDENT":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -608,11 +608,19 @@
                "displayName":"Amount",
                "inputType":"textbox",
                "value":""
+            },
+			 "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"textbox",
+               "value":""
             }
          }
       },
       "SUPERINTENDENT":{
-         "FORWARD":{
+         "REVIEWOFOSD":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -632,7 +640,7 @@
                "value":""
             }
          },
-         "REASSIGN":{
+         "REASSIGNTOJEX":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -653,7 +661,7 @@
          }
       },
       "OSD":{
-         "FORWARD":{
+         "PENDINGAPPROVAL":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -673,7 +681,7 @@
                "value":""
             }
          },
-         "REASSIGN":{
+         "REASSIGNTOSUPERINTENDENT":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -700,11 +708,19 @@
                "displayName":"Amount",
                "inputType":"textbox",
                "value":""
+            },
+			 "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"textbox",
+               "value":""
             }
          }
       },
       "COMMISSIONER":{
-         "APPROVE":{
+         "APPROVED":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
@@ -714,26 +730,7 @@
                "value":""
             }
          },
-         "REASSIGN":{
-            "remarks":{
-               "fieldName":"remarks",
-               "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
-               "displayName":"Remark",
-               "inputType":"textbox",
-               "value":""
-            },
-            "uploadDocuments":{
-               "fieldName":"uploadDocuments",
-               "mandatory":"true",
-               "validateRegularExp":"\\[\\{\"fileStoreId\":\"(.*?)\"\\}\\]",
-               "displayName":"Upload Documents",
-               "inputType":"file",
-               "displaySequence":"2",
-               "value":""
-            }
-         },
-         "REJECT":{
+         "REJECTED":{
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
