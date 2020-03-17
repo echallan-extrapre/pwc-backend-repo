@@ -19,9 +19,9 @@
       },
       "houseNo":{
          "fieldName":"houseNo",
-         "type":"number",
+         "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"[0-9]++$",
+         "validateRegularExp":"^[a-zA-Z0-9\\ -,\/ ]*$",
          "displayName":"House No",
          "inputType":"textbox",
          "value":"",
@@ -36,9 +36,9 @@
       },
       "sector":{
          "fieldName":"sector",
-         "type":"number",
+         "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9 ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z0-9- ]*$",
          "displayName":"Sector",
          "inputType":"dropdown",
          "dropdownData":[
@@ -58,7 +58,7 @@
          "fieldName":"nameOfPetDog",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z ]{1,100}$",
          "displayName":"Name of pet dog",
          "inputType":"textbox",
          "value":"",
@@ -75,7 +75,7 @@
          "fieldName":"age",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[0-9-]*$",
+         "validateRegularExp":"^[0-9]*$",
          "displayName":"Age",
          "inputType":"dropdown",
          "dropdownData":[
@@ -93,9 +93,9 @@
       },
       "sex":{
          "fieldName":"sex",
-         "type":"number",
+         "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "validateRegularExp":"^[A-Z]{1,10}$",
          "displayName":"Sex",
          "inputType":"dropdown",
          "dropdownData":[
@@ -113,9 +113,9 @@
       },
       "breed":{
          "fieldName":"breed",
-         "type":"number",
+         "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z ]{1,100}$",
          "displayName":"Breed",
          "inputType":"dropdown",
          "dropdownData":[
@@ -133,9 +133,9 @@
       },
       "color":{
          "fieldName":"color",
-         "type":"number",
+         "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z ]{1,35}$",
          "displayName":"Color",
          "inputType":"dropdown",
          "dropdownData":[
@@ -155,7 +155,7 @@
          "fieldName":"identificationMark",
          "type":"text",
          "mandatory":"false",
-         "validateRegularExp":"^[a-zA-Z0-9]+$",
+         "validateRegularExp":"^[a-zA-Z0-9 ]+$",
          "displayName":"Identification Mark",
          "inputType":"textbox",
          "value":"",
@@ -223,7 +223,7 @@
          "fieldName":"veterinaryCouncilRegistrationNo",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"[0-9]++$",
+         "validateRegularExp":"[a-zA-Z0-9 \/-]++$",
          "displayName":"Veterinary Council Registration No.",
          "inputType":"textbox",
          "value":"",
@@ -255,9 +255,9 @@
       },
       "immunizationClinicNo":{
          "fieldName":"immunizationClinicNo",
-         "type":"number",
+         "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"[0-9]++$",
+         "validateRegularExp":"^[a-zA-Z0-9\\ -,\/ ]*$",
          "displayName":"House/Clinic No",
          "inputType":"textbox",
          "value":"",
@@ -272,9 +272,9 @@
       },
       "immunizationSector":{
          "fieldName":"immunizationSector",
-         "type":"number",
+         "type":"text",
          "mandatory":"false",
-         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z0-9- ]*$",
          "displayName":"Sector",
          "inputType":"dropdown",
          "dropdownData":[
@@ -313,7 +313,7 @@
          "fieldName":"typeOfApplicant",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\" ]*$",
+         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\ -`.+,\" ]*$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
          "dropdownData":[
@@ -333,7 +333,7 @@
          "fieldName":"purposeOfRoadCutting",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z _-]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
          "displayName":"Purpose Of Road Cutting",
          "inputType":"dropdown",
          "dropdownData":[
@@ -1013,7 +1013,7 @@
          "fieldName":"date",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"[0-9]++$",
+         "validateRegularExp":"^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$",
          "displayName":"Date",
          "inputType":"textbox",
          "value":"",
