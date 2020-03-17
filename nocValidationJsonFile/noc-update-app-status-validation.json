@@ -601,7 +601,7 @@
             }
          },
          "WITHDRAWAPPROVAL":{
-            "Amount":{
+            "amount":{
                "fieldName":"Amount",
                "mandatory":"false",
                "validateRegularExp":"^[0-9 ]+$",
@@ -701,7 +701,7 @@
             }
          },
          "WITHDRAWAPPROVAL":{
-            "Amount":{
+            "amount":{
                "fieldName":"Amount",
                "mandatory":"false",
                "validateRegularExp":"^[0-9 ]+$",
