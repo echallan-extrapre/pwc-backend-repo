@@ -441,7 +441,7 @@
          "fieldName":"landmark",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9]+$",
+         "validateRegularExp":"^[a-zA-Z0-9 ]+$",
          "displayName":"Landmark",
          "inputType":"textbox",
          "value":"",
