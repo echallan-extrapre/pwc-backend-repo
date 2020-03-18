@@ -83,7 +83,7 @@ ColumnMaps:
      roles: [CITIZEN]
      emailSubject: Application Rejected
      template: Dear Applicant<br/><p> Dear Applicant<br/><p>Your application ID - [:applicationId:] for Permission for Road Cut is under processing. Kindly pay the requisite Road cut charges amounting to Rs. <> including GST and bank guarantee by visiting MMC Chandigarh portal.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
-     smsTemplate:Dear Applicant, as per your application ID - [:applicationId:] for road cut permission is under processing, Kindly pay Rs. [:fees:] at MCC Chandigarh portal for approval.
+     smsTemplate: Dear Applicant, as per your application ID - [:applicationId:] for road cut permission is under processing, Kindly pay Rs. [:fees:] at MCC Chandigarh portal for approval.
  
    - applicationType: ADVERTISEMENTNOC
      status: [UPDATE]
