@@ -91,42 +91,42 @@ ColumnMaps:
      emailSubject: Revised Fees For Advertisement 
      template: Respected Sir/ Mam,<br/><p>This is to inform you that advertisement fees has been revised in the Chandigarh Municipality portal. Please visit MCC Chandigarh portal for further details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: ""
-
+     
    - applicationType: ADVERTISEMENTNOC
      status: [APPROVED]
      roles: [CITIZEN]
      emailSubject: Application Approved
      template: Dear Applicant<br/><p>, Your application id - [:applicationId:]  for Permission for Advertisement has been approved. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, Your application id [:applicationId:] for Permission for Advertisement has been approved. Kindly visit the MMC Chandigarh portal for details.
-	 
+   
    - applicationType: ADVERTISEMENTNOC
      status: [REJECTED]
      roles: [CITIZEN]
      emailSubject: Application Rejected
      template: Dear Applicant<br/><p>, Your application id - [:applicationId:]  for Permission for Advertisement has been rejected. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
-     smsTemplate: Dear Applicant, Your application id [:applicationId:] for Permission for Advertisement has been rejected. Kindly visit the MMC Chandigarh portal for details.
-	 
+     smsTemplate: Dear Applicant, Your application id [:applicationId:] for Permission for Advertisement has been rejected. Kindly visit the MMC Chandigarh portal for details. 
+
    - applicationType: ADVERTISEMENTNOC
      status: [INITIATED]
      roles: [CITIZEN]
      emailSubject: Application Submitted
      template: Dear Applicant<br/><p>Thank you for submitting online application for Permission for Advertisement at Chandigarh Municipal Corporation portal. Your Application id - [:applicationId:] .You can log on to the MCC Chandigarh portal for further details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, Your application ID - [:applicationId:]  has been received for Permission for Advertisement. Please login to MCC portal for details.
-	 
+
    - applicationType: ADVERTISEMENTNOC
      status: [REASSIGN]
      roles: [CITIZEN]
      emailSubject: Application Required Information
      template: Dear Applicant<br/><p>You are requested to provide additional clarification as requested by the Department against your application id [:applicationId:] for Permission for Advertisement. Please login to MCC portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, you are requested to provide clarification for your application id [:applicationId:]  for Permission for Advertisement. Please visit MCC portal for details
-	 
+
    - applicationType: ADVERTISEMENTNOC
      status: [WITHDRAW]
      roles: [CITIZEN]
      emailSubject: Application Withdraw Information
      template: 	 Dear Applicant,<br/><p>Withdrawal request has been submitted for your application ID - [:applicationId:] for Permission for Advertisement. Refund amount is in under processing if any. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, Withdrawal request has been submitted for your application ID - [:applicationId:] for Permission for Advertisement. Kindly visit the MMC Chandigarh portal for details.
-    
+
    - applicationType: ADVERTISEMENTNOC
      status: [WITHDRAW]
      roles: [COMMISSIONER]
