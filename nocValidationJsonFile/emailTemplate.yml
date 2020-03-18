@@ -62,7 +62,7 @@ ColumnMaps:
      roles: [CITIZEN]
      emailSubject: Application Submitted
      template: Dear Applicant<br/><p>Thank you for submitting online application for permission for Road Cut at Chandigarh Municipal Corporation portal. Your Application id - [:applicationId:] .You can log on to the MCC Chandigarh portal for further details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
-     smsTemplate:Dear Applicant, Your application ID - [:applicationId:] has been received for permission for Road Cut. Please login to MCC portal for details
+     smsTemplate: Dear Applicant, Your application ID - [:applicationId:] has been received for permission for Road Cut. Please login to MCC portal for details
 	 
    - applicationType: ROADCUTNOC
      status: [REASSIGN]
