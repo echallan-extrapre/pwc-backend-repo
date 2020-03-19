@@ -124,12 +124,12 @@ ColumnMaps:
      status: [WITHDRAW]
      roles: [CITIZEN]
      emailSubject: Application Withdraw Information
-     template: 	 Dear Applicant,<br/><p>Withdrawal request has been submitted for your application ID - [:applicationId:] for Permission for Advertisement. Refund amount is in under processing if any. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant,<br/><p>Withdrawal request has been submitted for your application ID - [:applicationId:] for Permission for Advertisement. Refund amount is in under processing if any. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, Withdrawal request has been submitted for your application ID - [:applicationId:] for Permission for Advertisement. Kindly visit the MMC Chandigarh portal for details.
 
    - applicationType: ADVERTISEMENTNOC
      status: [WITHDRAW]
      roles: [COMMISSIONER]
      emailSubject: Application Withdraw Information
-     template: 	 Respected Sir/ Mam,<br/><p>This is to inform you that Application id -[:applicationId:] for permission of advertisement has been withdrawal by the applicant.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Respected Sir/ Mam,<br/><p>This is to inform you that Application id -[:applicationId:] for permission of advertisement has been withdrawal by the applicant.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: ""
