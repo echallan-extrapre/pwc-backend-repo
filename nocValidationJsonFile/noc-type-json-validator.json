@@ -38,7 +38,7 @@
          "fieldName":"sector",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9- ]*$",
+         "validateRegularExp":"^[a-zA-Z0-9- -]*$",
          "displayName":"Sector",
          "inputType":"dropdown",
          "dropdownData":[
