@@ -993,7 +993,7 @@
          "fieldName":"exemptedCategory",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"[a-zA-Z0-9 ]++$",
+         "validateRegularExp":"[a-zA-Z0-9 -]++$",
          "displayName":"Exempted Category",
          "inputType":"dropdown",
          "dropdownData":[
