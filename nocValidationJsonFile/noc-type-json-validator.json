@@ -794,7 +794,7 @@
          "fieldName":"typeOfAdvertisement",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z _]{1,250}$",
          "displayName":"Type of Advertisement",
          "inputType":"dropdown",
          "dropdownData":[
@@ -814,7 +814,7 @@
          "fieldName":"subTypeOfAdvertisement",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z _]{1,250}$",
          "displayName":"Sub-type of Advertisement",
          "inputType":"dropdown",
          "dropdownData":[
@@ -922,7 +922,7 @@
          "fieldName":"sector",
          "type":"text",
          "mandatory":"false",
-         "validateRegularExp":"[a-zA-Z0-9 ]++$",
+         "validateRegularExp":"[a-zA-Z0-9 -]++$",
          "displayName":"Sector",
          "inputType":"textbox",
          "value":"",
