@@ -814,7 +814,7 @@
          "fieldName":"subTypeOfAdvertisement",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z _]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z0-9 _]{1,250}$",
          "displayName":"Sub-type of Advertisement",
          "inputType":"dropdown",
          "dropdownData":[
