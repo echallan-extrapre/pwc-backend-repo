@@ -313,7 +313,7 @@
          "fieldName":"typeOfApplicant",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"[a-zA-Z ]++$",
+         "validateRegularExp":"[a-zA-Z -_]++$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
          "dropdownData":[
