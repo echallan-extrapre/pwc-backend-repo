@@ -51,7 +51,7 @@
       },
       "MOH":{
          "APPROVED":{
-           "remarks":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -114,8 +114,9 @@
          }
       },
       "CITIZEN":{
-      	 "PAID":{
-	 }
+         "PAID":{
+
+         }
       }
    },
    "ROADCUTNOC":{
@@ -562,6 +563,9 @@
                "inputType":"textbox",
                "value":""
             }
+         },
+         "PAID":{
+
          }
       },
       "JEX":{
@@ -613,7 +617,7 @@
                "inputType":"textbox",
                "value":""
             },
-			 "remarks":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -713,7 +717,7 @@
                "inputType":"textbox",
                "value":""
             },
-			 "remarks":{
+            "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
                "validateRegularExp":"^[a-zA-Z0-9 ]+$",
@@ -757,6 +761,11 @@
       "SYSTEM_PAYMENT":{
          "PAID":{
 
+         },
+         "CITIZEN":{
+            "PAID":{
+
+            }
          }
       }
    }
