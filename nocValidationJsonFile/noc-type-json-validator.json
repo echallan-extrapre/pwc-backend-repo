@@ -939,7 +939,7 @@
          "fieldName":"duration",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"[A-Z]++$",
+         "validateRegularExp":"[A-Za-z]++$",
          "displayName":"Duration",
          "inputType":"dropdown",
          "dropdownData":[
