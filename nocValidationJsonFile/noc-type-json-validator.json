@@ -333,7 +333,7 @@
          "fieldName":"purposeOfRoadCutting",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"[a-zA-Z_- ]++$",
+         "validateRegularExp":"[a-zA-Z-_ ]++$",
          "displayName":"Purpose Of Road Cutting",
          "inputType":"dropdown",
          "dropdownData":[
