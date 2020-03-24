@@ -899,7 +899,7 @@
          "fieldName":"typeOfAdvertisement",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9- _’‘'"]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z0-9- _’‘]{1,250}$",
          "displayName":"Type of Advertisement",
          "inputType":"dropdown",
          "dropdownData":[
