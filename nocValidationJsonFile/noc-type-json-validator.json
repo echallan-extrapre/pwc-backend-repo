@@ -38,7 +38,7 @@
          "fieldName":"sector",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9- ]*$",
+         "validateRegularExp":"^[a-zA-Z0-9-_ ]*$",
          "displayName":"Sector",
          "inputType":"dropdown",
          "dropdownData":[
@@ -75,7 +75,7 @@
          "fieldName":"age",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[0-9]*$",
+         "validateRegularExp":"^[0-9_]*$",
          "displayName":"Age",
          "inputType":"dropdown",
          "dropdownData":[
@@ -95,7 +95,7 @@
          "fieldName":"sex",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[A-Z]{1,10}$",
+         "validateRegularExp":"^[A-Z_]{1,10}$",
          "displayName":"Sex",
          "inputType":"dropdown",
          "dropdownData":[
@@ -115,7 +115,7 @@
          "fieldName":"breed",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,100}$",
+         "validateRegularExp":"^[a-zA-Z_ ]{1,100}$",
          "displayName":"Breed",
          "inputType":"dropdown",
          "dropdownData":[
@@ -135,7 +135,7 @@
          "fieldName":"color",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,35}$",
+         "validateRegularExp":"^[a-zA-Z_ ]{1,35}$",
          "displayName":"Color",
          "inputType":"dropdown",
          "dropdownData":[
@@ -274,7 +274,7 @@
          "fieldName":"immunizationSector",
          "type":"text",
          "mandatory":"false",
-         "validateRegularExp":"^[a-zA-Z0-9- ]*$",
+         "validateRegularExp":"^[a-zA-Z0-9-_ ]*$",
          "displayName":"Sector",
          "inputType":"dropdown",
          "dropdownData":[
@@ -300,7 +300,7 @@
          "value":"",
          "displaySequence":"1",
          "isMasterDataRequired":"false",
-         "moduleName":"immunizationSector",
+         "moduleName":"",
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"4",
@@ -313,7 +313,7 @@
          "fieldName":"typeOfApplicant",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"[a-zA-Z -_]++$",
+         "validateRegularExp":"[a-zA-Z-_ ]++$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
          "dropdownData":[
@@ -333,7 +333,7 @@
          "fieldName":"purposeOfRoadCutting",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"[a-zA-Z _-]++$",
+         "validateRegularExp":"[a-zA-Z_- ]++$",
          "displayName":"Purpose Of Road Cutting",
          "inputType":"dropdown",
          "dropdownData":[
@@ -404,7 +404,7 @@
          "fieldName":"sector",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9- ]*$",
+         "validateRegularExp":"^[a-zA-Z0-9-_ ]*$",
          "displayName":"Sector",
          "inputType":"dropdown",
          "dropdownData":[
@@ -582,7 +582,7 @@
          "fieldName":"division",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9- ]+$",
+         "validateRegularExp":"^[a-zA-Z0-9-_ ]+$",
          "displayName":"Division/Sector/ward/Shop No",
          "inputType":"textbox",
          "value":"",
@@ -599,7 +599,7 @@
          "fieldName":"nocSought",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9-\/,() ]*$",
+         "validateRegularExp":"^[a-zA-Z0-9-_\/,() ]*$",
          "displayName":"NOC Sought For",
          "inputType":"dropdown",
          "dropdownData":[
@@ -655,7 +655,7 @@
          "fieldName":"typeOfApplicant",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]*$",
+         "validateRegularExp":"^[a-zA-Z-_ ]*$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
          "dropdownData":[
@@ -756,6 +756,111 @@
          "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
+      "applicantAddress":{
+         "fieldName":"applicantAddress",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"[a-zA-Z0-9-\/, ]++$",
+         "displayName":"Applicant Address",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"7",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "applicantLandmark":{
+         "fieldName":"landmark",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"[a-zA-Z0-9 ]++$",
+         "displayName":"Landmark",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"7",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "applicantDivision":{
+         "fieldName":"applicantDivision",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"[a-zA-Z0-9-\/, ]++$",
+         "displayName":"Applicant Division",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"7",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "applicantWard":{
+         "fieldName":"applicantWard",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"[a-zA-Z0-9-\/, ]++$",
+         "displayName":"Applicant Ward",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"7",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "applicantSector":{
+         "fieldName":"applicantSector",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"[a-zA-Z0-9-_ ]++$",
+         "displayName":"Applicant Sector",
+         "inputType":"textbox",
+         "value":"",
+         "displaySequence":"8",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
+      "applicantVillageSuSector":{
+         "fieldName":"applicantVillageSuSector",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"[a-zA-Z-_ ]++$",
+         "displayName":"Applicant Sub Sector/Village",
+         "inputType":"dropdown",
+         "dropdownData":[
+
+         ],
+         "value":"",
+         "displaySequence":"9",
+         "isMasterDataRequired":"false",
+         "pageNo":"2",
+         "pageName":"Page 2",
+         "moduleName":"",
+         "section":"1",
+         "sectionName":"Advertisement Details",
+         "isbackendRequired":"true"
+      },
       "mobileNo":{
          "fieldName":"mobileNo",
          "type":"number",
@@ -794,7 +899,7 @@
          "fieldName":"typeOfAdvertisement",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9 ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z0-9-_ ]{1,250}$",
          "displayName":"Type of Advertisement",
          "inputType":"dropdown",
          "dropdownData":[
@@ -814,7 +919,7 @@
          "fieldName":"subTypeOfAdvertisement",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9 ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z0-9-_ ]{1,250}$",
          "displayName":"Sub-type of Advertisement",
          "inputType":"dropdown",
          "dropdownData":[
@@ -850,8 +955,8 @@
          "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
-      "fromDate":{
-         "fieldName":"fromDate",
+      "fromDateToDisplay":{
+         "fieldName":"fromDateToDisplay",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"\\d{4}-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])*",
@@ -867,8 +972,8 @@
          "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
-      "toDate":{
-         "fieldName":"toDate",
+      "toDateToDisplay":{
+         "fieldName":"toDateToDisplay",
          "type":"number",
          "mandatory":"true",
          "validateRegularExp":"\\d{4}-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])*",
@@ -901,12 +1006,12 @@
          "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
-      "landmark":{
-         "fieldName":"landmark",
+      "advertisementLandmark":{
+         "fieldName":"advertisementLandmark",
          "type":"text",
          "mandatory":"false",
          "validateRegularExp":"[a-zA-Z0-9 ]++$",
-         "displayName":"Landmark",
+         "displayName":"Advertisement Landmark",
          "inputType":"textbox",
          "value":"",
          "displaySequence":"7",
@@ -918,12 +1023,12 @@
          "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
-      "sector":{
-         "fieldName":"sector",
+      "advertisementSector":{
+         "fieldName":"advertisementSector",
          "type":"text",
          "mandatory":"false",
-         "validateRegularExp":"[a-zA-Z0-9- ]++$",
-         "displayName":"Sector",
+         "validateRegularExp":"[a-zA-Z0-9-_ ]++$",
+         "displayName":"Advertisement Sector",
          "inputType":"textbox",
          "value":"",
          "displaySequence":"8",
@@ -935,18 +1040,15 @@
          "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
-      "village":{
-         "fieldName":"village",
-         "type":"number",
-         "mandatory":"true",
-         "validateRegularExp":"[a-zA-Z ]++$",
-         "displayName":"Sub Sector/Village",
-         "inputType":"dropdown",
-         "dropdownData":[
-
-         ],
+      "advertisementVillageSubSector":{
+         "fieldName":"advertisementVillageSubSector",
+         "type":"text",
+         "mandatory":"false",
+         "validateRegularExp":"[a-zA-Z0-9-_ ]++$",
+         "displayName":"Advertisement Village/Sub Sector",
+         "inputType":"textbox",
          "value":"",
-         "displaySequence":"9",
+         "displaySequence":"8",
          "isMasterDataRequired":"false",
          "pageNo":"2",
          "pageName":"Page 2",
@@ -1053,7 +1155,7 @@
          "value":"",
          "displaySequence":"1",
          "isMasterDataRequired":"false",
-         "moduleName":"immunizationSector",
+         "moduleName":"",
          "pageNo":"1",
          "pageName":"Page 1",
          "section":"2",
