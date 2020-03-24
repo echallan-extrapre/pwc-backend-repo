@@ -312,8 +312,8 @@
       "typeOfApplicant":{
          "fieldName":"typeOfApplicant",
          "type":"number",
-         "mandatory":"true",
-         "validateRegularExp":"[a-zA-Z-_ "']++$",
+         "mandatory":"false",
+         "validateRegularExp":"[a-zA-Z-_ ]++$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
          "dropdownData":[
@@ -898,7 +898,7 @@
       "typeOfAdvertisement":{
          "fieldName":"typeOfAdvertisement",
          "type":"number",
-         "mandatory":"true",
+         "mandatory":"false",
          "validateRegularExp":"^[a-zA-Z0-9- _’‘]{1,250}$",
          "displayName":"Type of Advertisement",
          "inputType":"dropdown",
