@@ -75,7 +75,7 @@
          "fieldName":"age",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[0-9_]*$",
+         "validateRegularExp":"^[0-9-_]*$",
          "displayName":"Age",
          "inputType":"dropdown",
          "dropdownData":[
@@ -95,7 +95,7 @@
          "fieldName":"sex",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[A-Z_]{1,10}$",
+         "validateRegularExp":"^[A-Z-_]{1,10}$",
          "displayName":"Sex",
          "inputType":"dropdown",
          "dropdownData":[
@@ -115,7 +115,7 @@
          "fieldName":"breed",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z_ ]{1,100}$",
+         "validateRegularExp":"^[a-zA-Z-_ ]{1,100}$",
          "displayName":"Breed",
          "inputType":"dropdown",
          "dropdownData":[
@@ -135,7 +135,7 @@
          "fieldName":"color",
          "type":"text",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z_ ]{1,35}$",
+         "validateRegularExp":"^[a-zA-Z-_ ]{1,35}$",
          "displayName":"Color",
          "inputType":"dropdown",
          "dropdownData":[
