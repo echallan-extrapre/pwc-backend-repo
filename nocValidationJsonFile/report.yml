@@ -92,9 +92,16 @@ ReportDefinitions:
     type: string
     source: tl
     total: false
+  searchParams:
+  - name: sector
+    label: reports.tl.sector
+    type: epoch
+    source: tl
+    isMandatory: true
+    searchClause: AND sector in($sector)
   additionalConfig:
     reportTitle: reports.tl.RevenueCollectionReportSectorWise.title
-  query:  SELECT finalResult.application_type AS applcationType, finalResult.sector AS sector, SUM(finalResult.noofapplicationproccessed) AS totalNoOfApplicationApproved, SUM(finalResult.revenuecollected) AS revenueCollected, SUM(finalResult.totalnoapplicationapprovedwithnilcharges) AS totalNoApplicationApprovedWithNilCharges FROM (SELECT a.application_type, a.sector, Count(DISTINCT( a.application_uuid )) noOfApplicationProccessed, SUM(Coalesce(a.amount, 0)) revenueCollected, CASE WHEN Coalesce(Max(( b.application_detail :: jsonb -> 'exemptedCategory' ):: text), '0') <> '1' THEN SUM(Coalesce(a.amount, 0)) ELSE 0 END totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a left join egpm_noc_application_detail b ON a.application_uuid = b.application_uuid WHERE To_date(a.applied_date :: DATE :: text, 'YYYY/MM/DD') >= To_date($fromDate, 'DD/MM/YYYY') AND To_date(a.applied_date :: DATE :: text, 'YYYY/MM/DD') <= To_date($toDate, 'DD/MM/YYYY') AND trim(a.sector)=(CASE WHEN $sector<>'' THEN $sector ELSE trim(a.sector) END) GROUP BY a.application_type, a.sector) finalResult GROUP BY finalResult.application_type, finalResult.sector
+  query:  select finalResult.application_type as applcationType,finalResult.sector as sector, SUM(finalResult.noOfApplicationProccessed) as totalNoOfApplicationApproved,SUM(finalResult.revenueCollected) as revenueCollected , SUM(finalResult.totalNoApplicationApprovedWithNilCharges) as totalNoApplicationApprovedWithNilCharges from(select a.application_type, a.sector,count(distinct(a.application_uuid)) noOfApplicationProccessed,sum(COALESCE(a.amount, 0)) revenueCollected,case when COALESCE(max((b.application_detail::jsonb -> 'exemptedCategory')::TEXT), '0')<>'1' then sum(COALESCE(a.amount, 0)) else 0 end totalNoApplicationApprovedWithNilCharges from egpm_noc_application a left join egpm_noc_application_detail b on a.application_uuid=b.application_uuid where TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') >=TO_DATE($fromDate, 'DD/MM/YYYY') and TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') <=TO_DATE($toDate, 'DD/MM/YYYY') group by a.application_type,a.sector) finalResult group by finalResult.application_type,finalResult.sector
   
 - reportName: RevenueCollectionReportMonthWise
   summary: Revenue Collection report Month Wise
