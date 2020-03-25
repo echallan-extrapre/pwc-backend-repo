@@ -313,7 +313,7 @@
          "fieldName":"typeOfApplicant",
          "type":"number",
          "mandatory":"false",
-         "validateRegularExp":"[a-zA-Z-_ ]++$",
+         "validateRegularExp":"^[a-zA-Z0-9-\/,()_'&.\" ]*$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
          "dropdownData":[
@@ -333,7 +333,7 @@
          "fieldName":"purposeOfRoadCutting",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"[a-zA-Z-_ ]++$",
+         "validateRegularExp":"^[a-zA-Z0-9-\/,()_'&.\" ]*$",
          "displayName":"Purpose Of Road Cutting",
          "inputType":"dropdown",
          "dropdownData":[
