@@ -5,14 +5,14 @@ ColumnMaps:
      status: [APPROVED]
      roles: [CITIZEN]
      emailSubject: Application Approved
-     template: Dear Applicant<br/><p>Your application id - [:applicationId:] for permission for keeping of Pets has been approved. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant,<br/><p>Your application id - [:applicationId:] for permission for keeping of Pets has been approved. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Your application id [:applicationId:] for permission for Keeping of Pets has been approved. Kindly visit the MMC Chandigarh portal for details.
      
    - applicationType: PETNOC
      status: [REJECTED]
      roles: [CITIZEN]
      emailSubject: Application Rejected
-     template: Dear Applicant<br/><p>Your application id - [:applicationId:] for permission for keeping of Pets has been rejected. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant,<br/><p>Your application id - [:applicationId:] for permission for keeping of Pets has been rejected. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Your application id [:applicationId:] for permission for Keeping of Pets has been rejected. Kindly visit the MMC Chandigarh portal for details.
 
    - applicationType: PETNOC
@@ -26,7 +26,7 @@ ColumnMaps:
      status: [REASSIGN]
      roles: [CITIZEN]
      emailSubject: Application Required Information
-     template: Dear Applicant<br/><p>You are requested to provide additional clarification as requested by the Department against your application id [:applicationId:] for permission of Keeping pets. Please login to MCC portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant,<br/><p>You are requested to provide additional clarification as requested by the Department against your application id [:applicationId:] for permission of Keeping pets. Please login to MCC portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, you are requested to provide clarification for your application id [:applicationId:] for permission of Keeping pets. Please visit MCC portal for details.
 
    - applicationType: SELLMEATNOC
@@ -40,49 +40,49 @@ ColumnMaps:
      status: [APPROVED]
      roles: [CITIZEN]
      emailSubject: Application Approved
-     template: Dear Applicant<br/><p>Your application id - [:applicationId:]  for permission to sell meat has been approved. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant,<br/><p>Your application id - [:applicationId:]  for permission to sell meat has been approved. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, Your application ID - [:applicationId:]  for permission to sell meat has been approved. Kindly visit the MMC Chandigarh portal for details.
 
    - applicationType: SELLMEATNOC
      status: [REJECTED]
      roles: [CITIZEN]
      emailSubject: Application Rejected
-     template: Dear Applicant<br/><p>Your application id - [:applicationId:]  for permission to sell meat has been rejected. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant,<br/><p>Your application id - [:applicationId:]  for permission to sell meat has been rejected. Kindly visit the MMC Chandigarh portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, Your application ID - [:applicationId:]  for permission to sell meat has been  rejected. Kindly visit the MMC Chandigarh portal for details..
      
    - applicationType: SELLMEATNOC
      status: [REASSIGN]
      roles: [CITIZEN]
      emailSubject: Application Required Information
-     template: Dear Applicant<br/><p>You are requested to provide additional clarification as requested by the Department against your application id [:applicationId:] for permission to sell meat. Please login to MCC portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant,<br/><p>You are requested to provide additional clarification as requested by the Department against your application id [:applicationId:] for permission to sell meat. Please login to MCC portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, you are requested to provide clarification for your application id [:applicationId:] for permission to sell meat. Please visit MCC portal for details.
  
    - applicationType: ROADCUTNOC
      status: [INITIATED]
      roles: [CITIZEN]
      emailSubject: Application Submitted
-     template: Dear Applicant<br/><p>Thank you for submitting online application for permission for Road Cut at Chandigarh Municipal Corporation portal. Your Application id - [:applicationId:] .You can log on to the MCC Chandigarh portal for further details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant,<br/><p>Thank you for submitting online application for permission for Road Cut at Chandigarh Municipal Corporation portal. Your Application id - [:applicationId:] .You can log on to the MCC Chandigarh portal for further details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, Your application ID - [:applicationId:] has been received for permission for Road Cut. Please login to MCC portal for details
 
    - applicationType: ROADCUTNOC
      status: [REASSIGN]
      roles: [CITIZEN]
      emailSubject: Application Required Information
-     template: Dear Applicant<br/><p>You are requested to provide additional clarification as requested by the Department against your application ID - [:applicationId:] for Permission for Road Cut. Please login to MCC portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant,<br/><p>You are requested to provide additional clarification as requested by the Department against your application ID - [:applicationId:] for Permission for Road Cut. Please login to MCC portal for details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate:  Dear Applicant, you are requested to provide clarification for your application ID - [:applicationId:] for Permission for Road Cut. Please visit MCC portal for details.
 
    - applicationType: ROADCUTNOC
      status: [APPROVED]
      roles: [CITIZEN]
      emailSubject: Application Approved
-     template: Dear Applicant<br/><p>Your application ID - [:applicationId:] for Permission for Road Cut is under processing. Kindly pay the requisite Road cut charges amounting to Rs. [:fees:] including GST and bank guarantee by visiting MMC Chandigarh portal.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant,<br/><p>Your application ID - [:applicationId:] for Permission for Road Cut is under processing. Kindly pay the requisite Road cut charges amounting to Rs. [:fees:] including GST and bank guarantee by visiting MMC Chandigarh portal.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, as per your application ID - [:applicationId:] for road cut permission is under processing, Kindly pay Rs. [:fees:] at MCC Chandigarh portal for approval.
 
    - applicationType: ROADCUTNOC
      status: [REJECTED]
      roles: [CITIZEN]
      emailSubject: Application Rejected
-     template: Dear Applicant<br/><p> Dear Applicant<br/><p>Your application ID - [:applicationId:] for Permission for Road Cut is under processing. Kindly pay the requisite Road cut charges amounting to Rs. <> including GST and bank guarantee by visiting MMC Chandigarh portal.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
+     template: Dear Applicant,br/><p> Dear Applicant<br/><p>Your application ID - [:applicationId:] for Permission for Road Cut is under processing. Kindly pay the requisite Road cut charges amounting to Rs. <> including GST and bank guarantee by visiting MMC Chandigarh portal.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: Dear Applicant, as per your application ID - [:applicationId:] for road cut permission is under processing, Kindly pay Rs. [:fees:] at MCC Chandigarh portal for approval.
  
    - applicationType: ADVERTISEMENTNOC
