@@ -1,34 +1,34 @@
 ReportDefinitions:
 - reportName: MISSummaryReport
-summary: Summary report
-version: 1.0.0
-moduleName: egov-opmsService
-sourceColumns:
-- name: applcationType
-label: report.tl.applcationType
-type: string
-source: tl
-total: false
-- name: totalNoOfApplicationReceived
-label: report.tl.totalNoOfApplicationReceived
-type: string
-source: tl
-total: false
-- name: noOfApplicationProcessed
-label: report.tl.noOfApplicationProcessed
-type: string
-source: tl
-total: false
-- name: noOfApplicationPending
-label: report.tl.noOfApplicationPending
-type: string
-source: tl
-total: false
-- name: noOfApplicationRejected
-label: report.tl.noOfApplicationRejected
-type: string
-source: tl
-total: false
-additionalConfig:
-reportTitle: reports.tl.MISSummaryReport.title
-query: select finalResult.application_type as applcationType, SUM(finalResult.totalApplications) as totalNoOfApplicationReceived, SUM(finalResult.approvedCounter) as noOfApplicationProcessed, SUM(finalResult.rejectedCounter) as noOfApplicationRejected, SUM(finalResult.pendingCounter) as noOfApplicationPending from(select a.application_type, count(1) totalApplications, case when a.application_status ='APPROVE' then count(a.application_uuid) else 0 end approvedCounter, case when a.application_status ='REJECT' then count(a.application_uuid) else 0 end rejectedCounter, case when a.application_status not in ('APPROVE','REJECT') then count(a.application_uuid) else 0 end pendingCounter from egpm_noc_application a where TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') >=TO_DATE($fromDate, 'DD/MM/YYYY') and TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') <=TO_DATE($toDate, 'DD/MM/YYYY') group by a.application_type,a.application_status) finalResult group by finalResult.application_type
+  summary: Summary report
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: applcationType
+    label: report.tl.applcationType
+    type: string
+    source: tl
+    total: false
+  - name: totalNoOfApplicationReceived
+    label: report.tl.totalNoOfApplicationReceived
+    type: string
+    source: tl
+    total: false
+  - name: noOfApplicationProcessed
+    label: report.tl.noOfApplicationProcessed
+    type: string
+    source: tl
+    total: false
+  - name: noOfApplicationPending
+    label: report.tl.noOfApplicationPending
+    type: string
+    source: tl
+    total: false
+  - name: noOfApplicationRejected
+    label: report.tl.noOfApplicationRejected
+    type: string
+    source: tl
+    total: false
+  additionalConfig:
+    reportTitle: reports.tl.MISSummaryReport.title
+  query:  select finalResult.application_type as applcationType, SUM(finalResult.totalApplications) as totalNoOfApplicationReceived, SUM(finalResult.approvedCounter) as noOfApplicationProcessed,	SUM(finalResult.rejectedCounter) as noOfApplicationRejected, SUM(finalResult.pendingCounter) as noOfApplicationPending from(select 	a.application_type, 	count(1) totalApplications,	case when a.application_status ='APPROVE' then count(a.application_uuid) else 0 end approvedCounter,	case when a.application_status ='REJECT' then count(a.application_uuid) else 0 end rejectedCounter,	case when a.application_status not in ('APPROVE','REJECT') then count(a.application_uuid) else 0 end pendingCounter from egpm_noc_application a where TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') >=TO_DATE($fromDate, 'DD/MM/YYYY') and TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') <=TO_DATE($toDate, 'DD/MM/YYYY') group by a.application_type,a.application_status) finalResult group by finalResult.application_type
