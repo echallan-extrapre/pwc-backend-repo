@@ -87,7 +87,7 @@ ColumnMaps:
  
    - applicationType: ADVERTISEMENTNOC
      status: [UPDATE]
-     roles: [JE,SUPERINTENDENT,COMMISSIONER]
+     roles: [JEX,SUPERINTENDENT,COMMISSIONER]
      emailSubject: Revised Fees For Advertisement 
      template: Respected Sir/ Mam,<br/><p>This is to inform you that advertisement fees has been revised in the Chandigarh Municipality portal. Please visit MCC Chandigarh portal for further details.</p><br/>Regards,<br/>Portal Administrator (MCC Chandigarh)
      smsTemplate: ""
