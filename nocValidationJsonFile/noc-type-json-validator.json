@@ -313,7 +313,7 @@
          "fieldName":"typeOfApplicant",
          "type":"number",
          "mandatory":"false",
-         "validateRegularExp":"^[a-zA-Z0-9-\/,()_'&.\" ]*$",
+         "validateRegularExp":"[a-zA-Z-_ ]++$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
          "dropdownData":[
@@ -333,7 +333,7 @@
          "fieldName":"purposeOfRoadCutting",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9-\/,()_'&.\" ]*$",
+         "validateRegularExp":"[a-zA-Z-_ ]++$",
          "displayName":"Purpose Of Road Cutting",
          "inputType":"dropdown",
          "dropdownData":[
@@ -595,6 +595,26 @@
          "sectionName":"Applicant Details",
          "isbackendRequired":"true"
       },
+      "sector":{
+         "fieldName":"sector",
+         "type":"number",
+         "mandatory":"true",
+         "validateRegularExp":"^[a-zA-Z0-9-\/,()_'&.\" ]*$",
+         "displayName":"Sector",
+         "inputType":"dropdown",
+         "dropdownData":[
+
+         ],
+         "value":"",
+         "displaySequence":"6",
+         "isMasterDataRequired":"true",
+         "pageNo":"1",
+         "pageName":"Page 1",
+         "moduleName":"sector",
+         "section":"1",
+         "sectionName":"Applicant Details",
+         "isbackendRequired":"true"
+      },
       "ward":{
          "fieldName":"ward",
          "type":"number",
@@ -689,7 +709,7 @@
          "fieldName":"typeOfApplicant",
          "type":"number",
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z0-9-\/,()_'&.\" ]*$",
+         "validateRegularExp":"^[a-zA-Z-_ ]*$",
          "displayName":"Type Of Applicant",
          "inputType":"dropdown",
          "dropdownData":[
