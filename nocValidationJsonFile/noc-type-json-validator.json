@@ -913,7 +913,7 @@
          "moduleName":"typeOfAdvertisement",
          "section":"1",
          "sectionName":"Advertisement Details",
-         "isbackendRequired":"true"
+         "isbackendRequired":"false"
       },
       "subTypeOfAdvertisement":{
          "fieldName":"subTypeOfAdvertisement",
@@ -933,7 +933,7 @@
          "moduleName":"subTypeOfAdvertisement",
          "section":"1",
          "sectionName":"Advertisement Details",
-         "isbackendRequired":"true"
+         "isbackendRequired":"false"
       },
       "duration":{
          "fieldName":"duration",
