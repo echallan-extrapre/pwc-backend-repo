@@ -124,3 +124,44 @@ ReportDefinitions:
   additionalConfig:
     reportTitle: reports.tl.ApplicationProcessingTimeReport.title
   query:  SELECT finalTable.application_type as applcationType, SUM(finalTable.subAverage)/(CASE WHEN SUM(finalTable.totalCountSubAverage)=0 THEN 1 ELSE SUM(finalTable.totalCountSubAverage) END) as avgTimeTakenToProcessRequest, SUM(finalTable.subAveragePending10DayasTo30Days)/(CASE WHEN SUM(finalTable.totalCountSubAveragePending10DayasTo30Days)=0 THEN 1 ELSE SUM(finalTable.totalCountSubAveragePending10DayasTo30Days) END) as pendingMoreThan10AndLessThan30Days, SUM(finalTable.subAveragePendingGreaterThan30Days)/(CASE WHEN SUM(finalTable.totalCountSubAveragePendingGreaterThan30Days)=0 THEN 1 ELSE SUM(finalTable.totalCountSubAveragePendingGreaterThan30Days) END) as pendingMoreThan30Days FROM( SELECT MAX(T1.application_status) AS t11,MAX(T2.application_type) AS t22,CASE WHEN t1.application_status ='APPROVE' THEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp)) ELSE 0 END AS subAverage, CASE WHEN t1.application_status ='APPROVE' THEN COUNT(DISTINCT(T1.application_uuid)) ELSE 0 END AS totalCountSubAverage, CASE WHEN t1.application_status NOT IN ('APPROVE','REJECT') THEN CASE WHEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp)) BETWEEN 10 AND 30 THEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp))/COUNT(DISTINCT(T1.application_uuid)) ELSE 0 END ELSE 0 END AS subAveragePending10DayasTo30Days, CASE WHEN t1.application_status NOT IN ('APPROVE','REJECT') THEN CASE WHEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp)) BETWEEN 10 AND 30 THEN COUNT(DISTINCT(T1.application_uuid)) ELSE 0 END ELSE 0 END AS totalCountSubAveragePending10DayasTo30Days, CASE WHEN t1.application_status NOT IN ('APPROVE','REJECT') THEN CASE WHEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp)) > 30 THEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp))/COUNT(DISTINCT(T1.application_uuid)) ELSE 0 END ELSE 0 END AS subAveragePendingGreaterThan30Days, CASE WHEN t1.application_status NOT IN ('APPROVE','REJECT') THEN CASE WHEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp)) > 30 THEN COUNT(DISTINCT(T1.application_uuid)) ELSE 0 END ELSE 0 END AS totalCountSubAveragePendingGreaterThan30Days, MAX(T1.application_uuid) as application_uuid, MAX(T1.application_type) as application_type FROM (SELECT MIN(b.application_uuid) AS application_uuid, MIN(a.application_type) AS application_type, MIN(b.created_time) AS dt, MIN(b.remark_by) AS remark_by, MIN(a.application_status) AS application_status, MIN(b.application_status) AS application_status_remarks, DENSE_RANK() over (partition by b.application_uuid order by MIN(b.created_time)) RowNum FROM egpm_noc_application a inner join egpm_noc_application_remark b ON a.application_uuid = b.application_uuid WHERE a.applied_date::date BETWEEN (NOW() - INTERVAL '1 YEAR')::date AND NOW()::date GROUP BY b.created_time,b.application_uuid) t1 INNER JOIN (SELECT MIN(b.application_uuid) AS application_uuid, MIN(a.application_type) AS application_type, MIN(b.created_time) AS dt, MIN(b.remark_by) AS remark_by, MIN(a.application_status) AS application_status, MIN(b.application_status) AS application_status_remarks, DENSE_RANK() over (partition by b.application_uuid order by MIN(b.created_time)) RowNum FROM egpm_noc_application a inner join egpm_noc_application_remark b ON a.application_uuid = b.application_uuid WHERE a.applied_date::date BETWEEN (NOW() - INTERVAL '1 YEAR')::date AND NOW()::date GROUP BY b.created_time,b.application_uuid) t2 ON t2.RowNum = t1.RowNum + 1 AND t1.application_uuid = t2.application_uuid AND t1.application_status = t2.application_status WHERE t1.remark_by <> 'CITIZEN' GROUP BY T1.application_uuid,t1.application_status) finalTable GROUP BY finalTable.application_type
+  
+- reportName: RevenueCollectionReportSectorWise
+  summary: Revenue Collection report Sector Wise
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: applcationType
+    label: report.tl.applcationType
+    type: string
+    source: tl
+    total: false
+  - name: sector
+    label: report.tl.sector
+    type: string
+    source: tl
+    total: false
+  - name: totalNoOfApplicationApproved
+    label: report.tl.totalNoOfApplicationApproved
+    type: string
+    source: tl
+    total: false
+  - name: revenueCollected
+    label: report.tl.revenueCollected
+    type: string
+    source: tl
+    total: false
+  - name: totalNoApplicationApprovedWithNilCharges
+    label: report.tl.totalNoApplicationApprovedWithNilCharges
+    type: string
+    source: tl
+    total: false
+  searchParams:
+  - name: sector
+    label: reports.tl.sector
+    type: epoch
+    source: tl
+    isMandatory: true
+    searchClause: AND sector in($sector)
+  additionalConfig:
+    reportTitle: reports.tl.RevenueCollectionReportSectorWise.title
+  query:  select finalResult.application_type as applcationType,finalResult.sector as sector, SUM(finalResult.noOfApplicationProccessed) as totalNoOfApplicationApproved,SUM(finalResult.revenueCollected) as revenueCollected , SUM(finalResult.totalNoApplicationApprovedWithNilCharges) as totalNoApplicationApprovedWithNilCharges from(select a.application_type, a.sector,count(distinct(a.application_uuid)) noOfApplicationProccessed,sum(COALESCE(a.amount, 0)) revenueCollected,case when COALESCE(max((b.application_detail::jsonb -> 'exemptedCategory')::TEXT), '0')<>'1' then sum(COALESCE(a.amount, 0)) else 0 end totalNoApplicationApprovedWithNilCharges from egpm_noc_application a left join egpm_noc_application_detail b on a.application_uuid=b.application_uuid where TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') >=TO_DATE($fromDate, 'DD/MM/YYYY') and TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') <=TO_DATE($toDate, 'DD/MM/YYYY') group by a.application_type,a.sector) finalResult group by finalResult.application_type,finalResult.sector
