@@ -563,6 +563,16 @@
                "inputType":"textbox",
                "value":""
             }
+         }, 
+         "WITHDRAWAFTERAPRROVAL":{
+            "remarks":{
+               "fieldName":"remarks",
+               "mandatory":"true",
+               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "displayName":"Remark",
+               "inputType":"textbox",
+               "value":""
+            }
          },
          "PAID":{
 
