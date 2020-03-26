@@ -155,13 +155,6 @@ ReportDefinitions:
     type: string
     source: tl
     total: false
-  searchParams:
-  - name: sector
-    label: reports.tl.sector
-    type: epoch
-    source: tl
-    isMandatory: true
-    searchClause: AND sector in($sector)
   additionalConfig:
     reportTitle: reports.tl.RevenueCollectionReportSectorWise.title
-  query:  select finalResult.application_type as applcationType,finalResult.sector as sector, SUM(finalResult.noOfApplicationProccessed) as totalNoOfApplicationApproved,SUM(finalResult.revenueCollected) as revenueCollected , SUM(finalResult.totalNoApplicationApprovedWithNilCharges) as totalNoApplicationApprovedWithNilCharges from(select a.application_type, a.sector,count(distinct(a.application_uuid)) noOfApplicationProccessed,sum(COALESCE(a.amount, 0)) revenueCollected,case when COALESCE(max((b.application_detail::jsonb -> 'exemptedCategory')::TEXT), '0')<>'1' then sum(COALESCE(a.amount, 0)) else 0 end totalNoApplicationApprovedWithNilCharges from egpm_noc_application a left join egpm_noc_application_detail b on a.application_uuid=b.application_uuid where TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') >=TO_DATE($fromDate, 'DD/MM/YYYY') and TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') <=TO_DATE($toDate, 'DD/MM/YYYY') group by a.application_type,a.sector) finalResult group by finalResult.application_type,finalResult.sector
+  query:  select finalResult.application_type as applcationType,finalResult.sector as sector, SUM(finalResult.noOfApplicationProccessed) as totalNoOfApplicationApproved,SUM(finalResult.revenueCollected) as revenueCollected , SUM(finalResult.totalNoApplicationApprovedWithNilCharges) as totalNoApplicationApprovedWithNilCharges from(select a.application_type, a.sector,count(distinct(a.application_uuid)) noOfApplicationProccessed,sum(COALESCE(a.amount, 0)) revenueCollected,case when COALESCE(max((b.application_detail::jsonb -> 'exemptedCategory')::TEXT), '0')<>'1' then sum(COALESCE(a.amount, 0)) else 0 end totalNoApplicationApprovedWithNilCharges from egpm_noc_application a left join egpm_noc_application_detail b on a.application_uuid=b.application_uuid where TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') >=TO_DATE($fromDate, 'DD/MM/YYYY') and TO_DATE(a.applied_date::date::text, 'YYYY/MM/DD') <=TO_DATE($toDate, 'DD/MM/YYYY') AND sector in(CASE WHEN $sector<>'' THEN $sector ELSE trim(a.sector) END) group by a.application_type,a.sector) finalResult group by finalResult.application_type,finalResult.sector
