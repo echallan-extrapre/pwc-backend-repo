@@ -757,7 +757,7 @@
          "moduleName":"",
          "section":"1",
          "sectionName":"Applicant Details",
-         "isbackendRequired":"true"
+         "isbackendRequired":"false"
       },
       "pan":{
          "fieldName":"pan",
@@ -774,7 +774,7 @@
          "moduleName":"",
          "section":"1",
          "sectionName":"Applicant Details",
-         "isbackendRequired":"true"
+         "isbackendRequired":"false"
       },
       "cin":{
          "fieldName":"cin",
@@ -791,7 +791,7 @@
          "moduleName":"",
          "section":"1",
          "sectionName":"Applicant Details",
-         "isbackendRequired":"true"
+         "isbackendRequired":"false"
       },
       "gstin":{
          "fieldName":"gstin",
@@ -808,7 +808,7 @@
          "moduleName":"",
          "section":"1",
          "sectionName":"Applicant Details",
-         "isbackendRequired":"true"
+         "isbackendRequired":"false"
       },
       "applicantAddress":{
          "fieldName":"applicantAddress",
