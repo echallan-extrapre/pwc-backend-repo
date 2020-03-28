@@ -115,7 +115,30 @@
       },
       "CITIZEN":{
          "PAID":{
-
+            "amount":{
+               "fieldName":"amount",
+               "mandatory":"true",
+               "validateRegularExp":"^[0-9 ]+$",
+               "displayName":"Estimated Amount",
+               "inputType":"textbox",
+               "value":""
+            },
+            "gstAmount":{
+               "fieldName":"gstAmount",
+               "mandatory":"true",
+               "validateRegularExp":"^[0-9 ]+$",
+               "displayName":"GST Amount",
+               "inputType":"textbox",
+               "value":""
+            },
+            "performanceBankGuaranteeCharges":{
+               "fieldName":"performanceBankGuaranteeCharges",
+               "mandatory":"true",
+               "validateRegularExp":"^[0-9 ]+$",
+               "displayName":"Performance Bank Guarantee Charges",
+               "inputType":"textbox",
+               "value":""
+            }
          }
       }
    },
@@ -563,7 +586,7 @@
                "inputType":"textbox",
                "value":""
             }
-         }, 
+         },
          "WITHDRAWAFTERAPRROVAL":{
             "remarks":{
                "fieldName":"remarks",
@@ -575,7 +598,30 @@
             }
          },
          "PAID":{
-
+            "amount":{
+               "fieldName":"amount",
+               "mandatory":"true",
+               "validateRegularExp":"^[0-9 ]+$",
+               "displayName":"Estimated Amount",
+               "inputType":"textbox",
+               "value":""
+            },
+            "gstAmount":{
+               "fieldName":"gstAmount",
+               "mandatory":"true",
+               "validateRegularExp":"^[0-9 ]+$",
+               "displayName":"GST Amount",
+               "inputType":"textbox",
+               "value":""
+            },
+            "performanceBankGuaranteeCharges":{
+               "fieldName":"performanceBankGuaranteeCharges",
+               "mandatory":"true",
+               "validateRegularExp":"^[0-9 ]+$",
+               "displayName":"Performance Bank Guarantee Charges",
+               "inputType":"textbox",
+               "value":""
+            }
          }
       },
       "JEX":{
@@ -774,7 +820,30 @@
          },
          "CITIZEN":{
             "PAID":{
-
+               "amount":{
+                  "fieldName":"amount",
+                  "mandatory":"true",
+                  "validateRegularExp":"^[0-9 ]+$",
+                  "displayName":"Estimated Amount",
+                  "inputType":"textbox",
+                  "value":""
+               },
+               "gstAmount":{
+                  "fieldName":"gstAmount",
+                  "mandatory":"true",
+                  "validateRegularExp":"^[0-9 ]+$",
+                  "displayName":"GST Amount",
+                  "inputType":"textbox",
+                  "value":""
+               },
+               "performanceBankGuaranteeCharges":{
+                  "fieldName":"performanceBankGuaranteeCharges",
+                  "mandatory":"true",
+                  "validateRegularExp":"^[0-9 ]+$",
+                  "displayName":"Performance Bank Guarantee Charges",
+                  "inputType":"textbox",
+                  "value":""
+               }
             }
          }
       }
