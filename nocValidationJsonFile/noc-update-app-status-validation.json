@@ -139,6 +139,8 @@
                "inputType":"textbox",
                "value":""
             }
+         },
+         "RESENT":{
          }
       }
    },
@@ -573,6 +575,11 @@
          "PAID":{
 
          }
+      },
+     "CITIZEN":{
+         "RESENT":{
+
+         }
       }
    },
    "ADVERTISEMENTNOC":{
@@ -622,6 +629,8 @@
                "inputType":"textbox",
                "value":""
             }
+         },
+       "RESENT":{
          }
       },
       "JEX":{
@@ -844,6 +853,8 @@
                   "inputType":"textbox",
                   "value":""
                }
+            },
+           "RESENT":{
             }
          }
       }
