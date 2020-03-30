@@ -745,7 +745,7 @@
       "tan":{
          "fieldName":"tan",
          "type":"text",
-         "mandatory":"true",
+         "mandatory":"false",
          "validateRegularExp":"^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$",
          "displayName":"TAN No.",
          "inputType":"textbox",
@@ -762,7 +762,7 @@
       "pan":{
          "fieldName":"pan",
          "type":"text",
-         "mandatory":"true",
+         "mandatory":"false",
          "validateRegularExp":"^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$",
          "displayName":"PAN No.",
          "inputType":"textbox",
@@ -779,7 +779,7 @@
       "cin":{
          "fieldName":"cin",
          "type":"text",
-         "mandatory":"true",
+         "mandatory":"false",
          "validateRegularExp":"^([L|U]{1})([0-9]{5})([A-Za-z]{2})([0-9]{4})([A-Za-z]{3})([0-9]{6})$",
          "displayName":"CIN No.",
          "inputType":"textbox",
@@ -796,7 +796,7 @@
       "gstin":{
          "fieldName":"gstin",
          "type":"text",
-         "mandatory":"true",
+         "mandatory":"false",
          "validateRegularExp":"^([0]{1}[1-9]{1}|[1-2]{1}[0-9]{1}|[3]{1}[0-7]{1})([a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9a-zA-Z]{1}[zZ]{1}[0-9a-zA-Z]{1})+$",
          "displayName":"GSTIN No.",
          "inputType":"textbox",
