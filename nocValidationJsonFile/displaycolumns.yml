@@ -75,7 +75,7 @@ ColumnMaps:
      
  documentConfig:
    - applicationType: PETNOC
-     certificateDataQuery: SELECT ab.applicant_name AS "applicantName", Concat(Concat (ab.house_number, ', '), ab.sector) AS "applicantNameAddress", ab.noc_number AS "applicationId", To_char(ab.applied_date :: DATE, 'DD-MM-YYYY') AS "applicationDate", To_char(To_timestamp(cdd.created_time / 1000), 'DD-MM-YYYY') AS "approveDate" FROM public.egpm_noc_application ab INNER join public.egpm_noc_application_remark cdd ON ab.application_uuid = cdd.application_uuid WHERE ab.noc_number =? AND ab.tenant_id = ? AND ab.application_type = 'PETNOC' AND cdd.application_status = 'APPROVED'
+     certificateDataQuery: ''
      receiptDataQuery: SELECT main.applicant_name AS "applicantName", main.noc_number AS "applicationId", Concat(Concat (main.house_number, ', '), main.sector) AS "applicantNameAddress", To_char(main.applied_date :: DATE, 'DD-MM-YYYY') AS "applicationDate", main.total_amount AS "Amount", (SELECT Trim(Substring(Cash_words(main.total_amount :: VARCHAR :: money), 1, Position( 'dollars' IN Cash_words(main.total_amount :: VARCHAR :: money)) - 1))) AS "amountinword", To_char(To_timestamp(remark.created_time / 1000), 'DD-MM-YYYY') AS "dateofpayment" FROM egpm_noc_application main INNER JOIN public.egpm_noc_application_remark remark ON main.application_uuid = remark.application_uuid WHERE main.noc_number =? AND main.tenant_id = ? AND main.is_active = 'true' AND main.application_type = 'PETNOC' AND remark.application_status = 'PAID'
 
    - applicationType: SELLMEATNOC
