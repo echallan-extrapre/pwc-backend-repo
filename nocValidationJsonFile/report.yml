@@ -32,3 +32,129 @@ ReportDefinitions:
   additionalConfig:
     reportTitle: reports.tl.MISSummaryReport.title
   query:  SELECT (CASE WHEN finalResult.applcationtype='ADVERTISEMENTNOC' THEN 'Permission for Advertisement' WHEN finalResult.applcationtype='PETNOC' THEN 'Permission to Keep Pet Dog' WHEN finalResult.applcationtype='ROADCUTNOC' THEN 'Permission for Road Cut' WHEN finalResult.applcationtype='SELLMEATNOC' THEN 'Permission to Sell Meat' END) applcationType, SUM(finalResult.totalapplications) AS totalNoOfApplicationReceived, SUM(finalResult.approvedcounter) AS noOfApplicationProcessed, SUM(finalResult.rejectedcounter) AS noOfApplicationRejected, SUM(finalResult.pendingcounter) AS noOfApplicationPending FROM (SELECT a.application_type applcationType, Count(1) totalApplications, Count(a.application_uuid) approvedCounter, 0 rejectedCounter, 0 pendingCounter FROM egpm_noc_application a WHERE a.application_status = 'APPROVED' AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type, a.application_status UNION ALL SELECT a.application_type applcationType, Count(1) totalApplications, 0 approvedCounter, Count(a.application_uuid) rejectedCounter, 0 pendingCounter FROM egpm_noc_application a WHERE a.application_status = 'REJECTED' AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type, a.application_status UNION ALL SELECT a.application_type applcationType, Count(1) totalApplications, 0 approvedCounter, 0 rejectedCounter, Count(a.application_uuid) pendingCounter FROM egpm_noc_application a WHERE a.application_status NOT IN ( 'APPROVED', 'REJECTED' ) AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type, a.application_status ) finalResult GROUP BY finalResult.applcationtype ORDER BY finalResult.applcationtype
+  
+- reportName: RevenueCollectionReportApplicationTypeWise
+  summary: Revenue Collection report application type wise
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: applcationType
+    label: report.tl.applcationType
+    type: string
+    source: tl
+    total: false
+  - name: totalNoOfApplicationApproved
+    label: report.tl.totalNoOfApplicationApproved
+    type: string
+    source: tl
+    total: false
+  - name: revenueCollected
+    label: report.tl.revenueCollected
+    type: string
+    source: tl
+    total: false
+  - name: totalNoApplicationApprovedWithNilCharges
+    label: report.tl.totalNoApplicationApprovedWithNilCharges
+    type: string
+    source: tl
+    total: false
+  additionalConfig:
+    reportTitle: reports.tl.RevenueCollectionReportApplicationTypeWise.title
+  query:  SELECT (CASE WHEN finalResult.application_type='ADVERTISEMENTNOC' THEN 'Permission for Advertisement' WHEN finalResult.application_type='PETNOC' THEN 'Permission to Keep Pet Dog' WHEN finalResult.application_type='ROADCUTNOC' THEN 'Permission for Road Cut' WHEN finalResult.application_type='SELLMEATNOC' THEN 'Permission to Sell Meat' END) applcationType, SUM(finalResult.recievedcounter) AS totalNoOfApplicationRecieved, SUM(finalResult.revenuecollected) AS revenueCollected, SUM(finalResult.totalnoapplicationapprovedwithnilcharges) AS totalNoApplicationApprovedWithNilCharges FROM ( SELECT a.application_type, Count(a.application_uuid) recievedCounter, SUM(Coalesce(a.total_amount, 0)) revenueCollected, count((a.application_type='SELLMEATNOC' AND a.application_status='APPROVED') or NULL) totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a WHERE To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type, a.application_status UNION ALL SELECT a.application_type, 0 recievedCounter, 0 revenueCollected, COUNT(a.application_uuid) totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a inner join egpm_noc_application_detail b ON a.application_uuid = b.application_uuid AND b.is_active = a.is_active WHERE a.application_type IN ( 'ADVERTISEMENTNOC' ) AND a.application_status='APPROVED' AND Coalesce(( b.application_detail::jsonb -> 'exemptedCategory' )::text, '0') = '1' AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type, a.application_status) finalResult GROUP BY finalResult.application_type ORDER BY finalResult.application_type
+
+- reportName: RevenueCollectionReportMonthWise
+  summary: Revenue Collection report Month Wise
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: application_type
+    label: report.tl.application_type
+    type: string
+    source: tl
+    total: false
+  - name: YearMonth
+    label: report.tl.YearMonth
+    type: string
+    source: tl
+    total: false
+  - name: approve
+    label: report.tl.approve
+    type: string
+    source: tl
+    total: false
+  - name: rev
+    label: report.tl.rev
+    type: string
+    source: tl
+    total: false
+  - name: exempted
+    label: report.tl.exempted
+    type: string
+    source: tl
+    total: false
+  additionalConfig:
+    reportTitle: reports.tl.RevenueCollectionReportMonthWise.title
+  query:  Select application_type, YearMonth, rev, approve, exempted from ( Select ab.application_type, (ab.years || '-' || to_char(to_timestamp (ab.months::text, 'MM'), 'TMMON')) YearMonth, ab.years, ab.months, sum(ab.rev) rev, sum(ab.approve) approve, sum(ab.exempted) exempted from( select a.application_type, max(EXTRACT(YEAR FROM to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD'))) years, max(EXTRACT(MONTH FROM to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD'))) months, sum(COALESCE(a.amount, 0)) rev , count(a.application_uuid) approve, count(COALESCE((b.application_detail -> 'exemptedCategory')::TEXT, '0'::TEXT)='1'::TEXT or null) exempted from egpm_noc_application a inner join egpm_noc_application_detail b on a.application_uuid=b.application_uuid and a.is_active=b.is_active inner join egpm_noc_application_remark c on a.application_uuid=c.application_uuid and a.application_status=c.application_status where a.application_type<>'SELLMEATNOC' and a.application_status='APPROVED' and (to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD') between TO_DATE(CONCAT($fromYear,'-04-01'), 'YYYY-MM-DD') and TO_DATE(CONCAT($toYear,'-03-31'), 'YYYY-MM-DD')) and EXTRACT(MONTH FROM to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD')) in ($months) group by a.application_type, EXTRACT(YEAR FROM to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD')), EXTRACT(MONTH FROM to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD')) union all select a.application_type, max(EXTRACT(YEAR FROM to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD'))) years, max(EXTRACT(MONTH FROM to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD'))) months, 0 rev , count(a.application_uuid) approve, count(a.application_uuid) exempted from egpm_noc_application a inner join egpm_noc_application_detail b on a.application_uuid=b.application_uuid and a.is_active=b.is_active inner join egpm_noc_application_remark c on a.application_uuid=c.application_uuid and a.application_status=c.application_status where a.application_type='SELLMEATNOC' and a.application_status='APPROVED' and (to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD') between TO_DATE(CONCAT($fromYear,'-04-01'), 'YYYY-MM-DD') and TO_DATE(CONCAT($toYear,'-03-31'), 'YYYY-MM-DD')) and EXTRACT(MONTH FROM to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD')) in ($months) group by a.application_type, EXTRACT(YEAR FROM to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD')), EXTRACT(MONTH FROM to_date(to_char(to_timestamp(c.created_time/1000)::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD')) ) ab group by ab.application_type, ab.years, ab.months ) abb order by application_type, YearMonth
+
+- reportName: ApplicationProcessingTimeReport
+  summary: Application processing time report
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: applcationType
+    label: report.tl.applcationType
+    type: string
+    source: tl
+    total: false
+  - name: avgTimeTakenToProcessRequest
+    label: report.tl.avgTimeTakenToProcessRequest
+    type: string
+    source: tl
+    total: false
+  - name: pendingMoreThan30Days
+    label: report.tl.pendingMoreThan30Days
+    type: string
+    source: tl
+    total: false
+  - name: pendingMoreThan10AndLessThan30Days
+    label: report.tl.pendingMoreThan10AndLessThan30Days
+    type: string
+    source: tl
+    total: false
+  additionalConfig:
+    reportTitle: reports.tl.ApplicationProcessingTimeReport.title
+  query:  SELECT finalTable.application_type as applcationType, SUM(finalTable.subAverage)/(CASE WHEN SUM(finalTable.totalCountSubAverage)=0 THEN 1 ELSE SUM(finalTable.totalCountSubAverage) END) as avgTimeTakenToProcessRequest, SUM(finalTable.subAveragePending10DayasTo30Days)/(CASE WHEN SUM(finalTable.totalCountSubAveragePending10DayasTo30Days)=0 THEN 1 ELSE SUM(finalTable.totalCountSubAveragePending10DayasTo30Days) END) as pendingMoreThan10AndLessThan30Days, SUM(finalTable.subAveragePendingGreaterThan30Days)/(CASE WHEN SUM(finalTable.totalCountSubAveragePendingGreaterThan30Days)=0 THEN 1 ELSE SUM(finalTable.totalCountSubAveragePendingGreaterThan30Days) END) as pendingMoreThan30Days FROM( SELECT MAX(T1.application_status) AS t11,MAX(T2.application_type) AS t22,CASE WHEN t1.application_status ='APPROVED' THEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp)) ELSE 0 END AS subAverage, CASE WHEN t1.application_status ='APPROVED' THEN COUNT(DISTINCT(T1.application_uuid)) ELSE 0 END AS totalCountSubAverage, CASE WHEN t1.application_status NOT IN ('APPROVED','REJECTED') THEN CASE WHEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp)) BETWEEN 10 AND 30 THEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp))/COUNT(DISTINCT(T1.application_uuid)) ELSE 0 END ELSE 0 END AS subAveragePending10DayasTo30Days, CASE WHEN t1.application_status NOT IN ('APPROVED','REJECTED') THEN CASE WHEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp)) BETWEEN 10 AND 30 THEN COUNT(DISTINCT(T1.application_uuid)) ELSE 0 END ELSE 0 END AS totalCountSubAveragePending10DayasTo30Days, CASE WHEN t1.application_status NOT IN ('APPROVED','REJECTED') THEN CASE WHEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp)) > 30 THEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp))/COUNT(DISTINCT(T1.application_uuid)) ELSE 0 END ELSE 0 END AS subAveragePendingGreaterThan30Days, CASE WHEN t1.application_status NOT IN ('APPROVED','REJECTED') THEN CASE WHEN SUM(DATE_PART('day', TO_TIMESTAMP(t2.dt / 1000)::timestamp - TO_TIMESTAMP(t1.dt / 1000)::timestamp)) > 30 THEN COUNT(DISTINCT(T1.application_uuid)) ELSE 0 END ELSE 0 END AS totalCountSubAveragePendingGreaterThan30Days, MAX(T1.application_uuid) as application_uuid, MAX(T1.application_type) as application_type FROM (SELECT MIN(b.application_uuid) AS application_uuid, MIN(a.application_type) AS application_type, MIN(b.created_time) AS dt, MIN(b.remark_by) AS remark_by, MIN(a.application_status) AS application_status, MIN(b.application_status) AS application_status_remarks, DENSE_RANK() over (partition by b.application_uuid order by MIN(b.created_time)) RowNum FROM egpm_noc_application a inner join egpm_noc_application_remark b ON a.application_uuid = b.application_uuid WHERE a.applied_date::date BETWEEN (NOW() - INTERVAL '1 YEAR')::date AND NOW()::date GROUP BY b.created_time,b.application_uuid) t1 INNER JOIN (SELECT MIN(b.application_uuid) AS application_uuid, MIN(a.application_type) AS application_type, MIN(b.created_time) AS dt, MIN(b.remark_by) AS remark_by, MIN(a.application_status) AS application_status, MIN(b.application_status) AS application_status_remarks, DENSE_RANK() over (partition by b.application_uuid order by MIN(b.created_time)) RowNum FROM egpm_noc_application a inner join egpm_noc_application_remark b ON a.application_uuid = b.application_uuid WHERE a.applied_date::date BETWEEN (NOW() - INTERVAL '1 YEAR')::date AND NOW()::date GROUP BY b.created_time,b.application_uuid) t2 ON t2.RowNum = t1.RowNum + 1 AND t1.application_uuid = t2.application_uuid AND t1.application_status = t2.application_status WHERE t1.remark_by <> 'CITIZEN' GROUP BY T1.application_uuid,t1.application_status) finalTable GROUP BY finalTable.application_type
+  
+- reportName: RevenueCollectionReportSectorWise
+  summary: Revenue Collection report Sector Wise
+  version: 1.0.0
+  moduleName: egov-opmsService
+  sourceColumns:
+  - name: applcationType
+    label: report.tl.applcationType
+    type: string
+    source: tl
+    total: false
+  - name: sector
+    label: report.tl.sector
+    type: string
+    source: tl
+    total: false
+  - name: totalNoOfApplicationApproved
+    label: report.tl.totalNoOfApplicationApproved
+    type: string
+    source: tl
+    total: false
+  - name: revenueCollected
+    label: report.tl.revenueCollected
+    type: string
+    source: tl
+    total: false
+  - name: totalNoApplicationApprovedWithNilCharges
+    label: report.tl.totalNoApplicationApprovedWithNilCharges
+    type: string
+    source: tl
+    total: false
+  additionalConfig:
+    reportTitle: reports.tl.RevenueCollectionReportSectorWise.title
+  query:  SELECT (CASE WHEN finalResult.application_type='ADVERTISEMENTNOC' THEN 'Permission for Advertisement' WHEN finalResult.application_type='PETNOC' THEN 'Permission to Keep Pet Dog' WHEN finalResult.application_type='ROADCUTNOC' THEN 'Permission for Road Cut' WHEN finalResult.application_type='SELLMEATNOC' THEN 'Permission to Sell Meat' END) applcationType, finalResult.sector AS sector, SUM(finalResult.noofapplicationproccessed) AS totalNoOfApplicationApproved, SUM(finalResult.revenuecollected) AS revenueCollected, SUM(finalResult.totalnoapplicationapprovedwithnilcharges) AS totalNoApplicationApprovedWithNilCharges FROM (SELECT a.application_type, a.sector, Count(a.application_status = 'APPROVED' OR NULL) noOfApplicationProccessed, 0 revenueCollected, 0 totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a WHERE To_date(To_char(To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') AND UPPER (Trim(a.sector)) IN( CASE WHEN UPPER (Trim($sector)) <> '' THEN UPPER (Trim($sector)) ELSE UPPER (Trim(a.sector)) END ) GROUP BY a.application_type, a.sector UNION ALL SELECT a.application_type, a.sector, 0 noOfApplicationProccessed, SUM(a.total_amount) revenueCollected, 0 totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a WHERE To_date(To_char(To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') AND UPPER (Trim(a.sector)) IN( CASE WHEN UPPER (Trim($sector)) <> '' THEN UPPER (Trim($sector)) ELSE UPPER (Trim(a.sector)) END ) GROUP BY a.application_type, a.sector UNION ALL SELECT a.application_type, a.sector, 0 noOfApplicationProccessed, 0 revenueCollected, Count(a.application_uuid) AS totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a inner join egpm_noc_application_detail b ON a.application_uuid = b.application_uuid AND b.is_active = TRUE WHERE a.application_type = 'ADVERTISEMENTNOC' AND a.application_status = 'APPROVED' AND Coalesce(( b.application_detail -> 'exemptedCategory' )::text, '0'::text ) = '1'::text AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') AND UPPER (Trim(a.sector)) IN( CASE WHEN UPPER (Trim($sector)) <> '' THEN UPPER (Trim($sector)) ELSE UPPER (Trim(a.sector)) END ) GROUP BY a.application_type, a.sector UNION ALL SELECT a.application_type, a.sector, 0 noOfApplicationProccessed, 0 revenueCollected, Count(a.application_uuid) AS totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a WHERE a.application_type = 'SELLMEATNOC' AND a.application_status = 'APPROVED' AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') AND UPPER (Trim(a.sector)) IN( CASE WHEN UPPER (Trim($sector)) <> '' THEN UPPER (Trim($sector)) ELSE UPPER (Trim(a.sector)) END ) GROUP BY a.application_type, a.sector) finalResult GROUP BY finalResult.application_type, finalResult.sector ORDER BY finalResult.application_type, finalResult.sector
