@@ -424,7 +424,7 @@
          "fieldName":"requestedLocation",
          "type":"text",
          "mandatory":"false",
-         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\"]*$",
+         "validateRegularExp":"^[a-zA-Z0-9!@#$&()\\-`.+,/\" ]*$",
          "displayName":"Requested Location",
          "inputType":"textbox",
          "value":"",
