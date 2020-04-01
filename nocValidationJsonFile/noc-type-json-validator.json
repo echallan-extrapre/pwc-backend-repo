@@ -878,7 +878,7 @@
          "sectionName":"Advertisement Details",
          "isbackendRequired":"true"
       },
-      "applicantSector":{
+      "sector":{
          "fieldName":"applicantSector",
          "type":"text",
          "mandatory":"false",
