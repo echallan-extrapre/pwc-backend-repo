@@ -25,7 +25,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"false",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -54,7 +54,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -72,7 +72,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -91,7 +91,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "displaySequence":"1",
@@ -150,7 +150,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "displaySequence":"1",
@@ -194,7 +194,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -215,7 +215,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "displaySequence":"1",
@@ -235,7 +235,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -256,7 +256,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -266,7 +266,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "displaySequence":"1",
@@ -286,7 +286,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -305,7 +305,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -326,7 +326,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "displaySequence":"1",
@@ -346,7 +346,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -367,7 +367,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -377,7 +377,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -396,7 +396,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -424,7 +424,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "displaySequence":"1",
@@ -444,7 +444,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -464,7 +464,7 @@
          "remarks":{
             "fieldName":"remarks",
             "mandatory":"true",
-            "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+            "validateRegularExp":"^[a-zA-Z0-9. ]+$",
             "displayName":"Remark",
             "inputType":"textbox",
             "value":""
@@ -474,7 +474,7 @@
          "remarks":{
             "fieldName":"remarks",
             "mandatory":"true",
-            "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+            "validateRegularExp":"^[a-zA-Z0-9. ]+$",
             "displayName":"Remark",
             "inputType":"textbox",
             "value":""
@@ -485,7 +485,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "displaySequence":"1",
@@ -505,7 +505,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -526,7 +526,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -536,7 +536,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -555,7 +555,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -588,7 +588,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -598,7 +598,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -638,7 +638,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "displaySequence":"1",
@@ -658,7 +658,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -685,7 +685,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -697,7 +697,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "displaySequence":"1",
@@ -717,7 +717,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -738,7 +738,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "displaySequence":"1",
@@ -758,7 +758,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -785,7 +785,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -797,7 +797,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
@@ -807,7 +807,7 @@
             "remarks":{
                "fieldName":"remarks",
                "mandatory":"true",
-               "validateRegularExp":"^[a-zA-Z0-9 ]+$",
+               "validateRegularExp":"^[a-zA-Z0-9. ]+$",
                "displayName":"Remark",
                "inputType":"textbox",
                "value":""
