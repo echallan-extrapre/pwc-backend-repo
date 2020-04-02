@@ -57,7 +57,7 @@
       },
       "immunizationNameVeterinaryDoctor":{
          "mandatory":"true",
-         "validateRegularExp":"^[a-zA-Z ]{1,250}$",
+         "validateRegularExp":"^[a-zA-Z. ]{1,250}$",
          "isbackendRequired":"true"
       },
       "veterinaryCouncilRegistrationNo":{
