@@ -55,7 +55,7 @@ ColumnMaps:
    
    - applicationType: ADVERTISEMENTNOC
      roles: [JEX]
-     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ADVERTISEMENTNOC' AND EA.application_status in ('PAID','WITHDRAWAFTERAPRROVAL','RESENT') AND ED.is_active=TRUE AND EA.is_active=TRUE ORDER BY EA.created_time desc
+     colunmNames: select EA.noc_number "applicationId",EA.applicant_name "applicantName",EA.application_status "applicationStatus" from egpm_noc_application_detail ED inner join egpm_noc_application EA on ED.application_uuid=EA.application_uuid WHERE EA.application_type='ADVERTISEMENTNOC' AND EA.application_status in ('PAID','WITHDRAWAFTERAPRROVAL','RESENT','REASSIGNTOJEX') AND ED.is_active=TRUE AND EA.is_active=TRUE ORDER BY EA.created_time desc
      
    - applicationType: ADVERTISEMENTNOC
      roles: [SUPERINTENDENT]
