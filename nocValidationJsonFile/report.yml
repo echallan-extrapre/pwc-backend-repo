@@ -123,7 +123,7 @@ ReportDefinitions:
     total: false
   additionalConfig:
     reportTitle: reports.tl.ApplicationProcessingTimeReport.title
-  query:  SELECT CASE WHEN application_type='ADVERTISEMENTNOC' then 'Permission for Advertisement' WHEN application_type='PETNOC' then 'Permission to Keep Pet Dog' WHEN application_type='ROADCUTNOC' then 'Permission for Road Cut' WHEN application_type='SELLMEATNOC' then 'Permission to Sell Meat' END AS application_type, total_average as avgTimeTakenToProcessRequest, total_avg_pending_10days_to_30days as pendingMoreThan10AndLessThan30Days, total_avg_pending_greater_than30days as pendingMoreThan30Days FROM public.egpm_noc_report_avgproctime_aggregate WHERE dimension_type=1 AND to_date(to_char(report_generation_datetime::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD') = to_date(to_char(now()::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD')
+  query:  SELECT CASE WHEN application_type='ADVERTISEMENTNOC' then 'Permission for Advertisement' WHEN application_type='PETNOC' then 'Permission to Keep Pet Dog' WHEN application_type='ROADCUTNOC' then 'Permission for Road Cut' WHEN application_type='SELLMEATNOC' then 'Permission to Sell Meat' END AS applcationType, total_average as avgTimeTakenToProcessRequest, total_avg_pending_10days_to_30days as pendingMoreThan10AndLessThan30Days, total_avg_pending_greater_than30days as pendingMoreThan30Days FROM public.egpm_noc_report_avgproctime_aggregate WHERE dimension_type=1 AND to_date(to_char(report_generation_datetime::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD') = to_date(to_char(now()::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD')
   
 - reportName: RevenueCollectionReportSectorWise
   summary: Revenue Collection report Sector Wise
