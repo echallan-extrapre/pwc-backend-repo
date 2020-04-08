@@ -2,7 +2,7 @@ ReportDefinitions:
 - reportName: MISSummaryReport
   summary: Summary report
   version: 1.0.0
-  moduleName: egov-opmsService
+  moduleName: pm-services
   sourceColumns:
   - name: applcationType
     label: report.tl.applcationType
@@ -36,7 +36,7 @@ ReportDefinitions:
 - reportName: RevenueCollectionReportApplicationTypeWise
   summary: Revenue Collection report application type wise
   version: 1.0.0
-  moduleName: egov-opmsService
+  moduleName: pm-services
   sourceColumns:
   - name: applcationType
     label: report.tl.applcationType
@@ -65,7 +65,7 @@ ReportDefinitions:
 - reportName: RevenueCollectionReportMonthWise
   summary: Revenue Collection report Month Wise
   version: 1.0.0
-  moduleName: egov-opmsService
+  moduleName: pm-services
   sourceColumns:
   - name: application_type
     label: report.tl.application_type
@@ -99,7 +99,7 @@ ReportDefinitions:
 - reportName: ApplicationProcessingTimeReport
   summary: Application processing time report
   version: 1.0.0
-  moduleName: egov-opmsService
+  moduleName: pm-services
   sourceColumns:
   - name: applcationType
     label: report.tl.applcationType
@@ -128,7 +128,7 @@ ReportDefinitions:
 - reportName: RevenueCollectionReportSectorWise
   summary: Revenue Collection report Sector Wise
   version: 1.0.0
-  moduleName: egov-opmsService
+  moduleName: pm-services
   sourceColumns:
   - name: applcationType
     label: report.tl.applcationType
