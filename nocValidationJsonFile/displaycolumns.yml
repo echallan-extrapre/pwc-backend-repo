@@ -1,5 +1,5 @@
 ColumnMaps:
- tenantId: [ch]
+ tenantId: [ch.chandigarh]
  columnConfig:
    - applicationType: PETNOC
      roles: [SI]
