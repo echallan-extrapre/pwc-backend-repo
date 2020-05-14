@@ -5,8 +5,8 @@ ServiceMaps:
   - topic: save-library-topic
     configKey: INDEX
     indexes:
-    - name: noc-v1
-      type: noc
+    - name: library
+      type: library
       id: $.moduleCode,$.tenantId,$.eventDetailUuid
       isBulk: true
       timeStampField: $.createdTime
