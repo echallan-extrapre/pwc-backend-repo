@@ -1,0 +1,13 @@
+ServiceMaps:
+ serviceName: prscp-service
+ version: 1.0.0
+ mappings:
+  - topic: save-library-topic
+    configKey: INDEX
+    indexes:
+    - name: noc-v1
+      type: noc
+      id: $.moduleCode,$.tenantId,$.eventDetailUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.Library
