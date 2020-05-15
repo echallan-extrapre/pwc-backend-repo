@@ -676,6 +676,145 @@
       "uniqueKeys": [
         "$.code"
       ]
+    },
+		  "eventDocuments": {
+      "masterName": "eventDocuments",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+		  "eventReportAggregatedBy": {
+      "masterName": "eventReportAggregatedBy",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+		  "eventReportYear": {
+      "masterName": "eventReportYear",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+		  "eventScheduledStatus": {
+      "masterName": "eventScheduledStatus",
+     "isStateLevel": true,
+      ,
+			   "eventSector": {
+      "masterName": "eventSector",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+		  "eventStatus": {
+      "masterName": "eventStatus",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+			  
+		  "externalGuestDocuments": {
+      "masterName": "externalGuestDocuments",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+			  
+		  "guestType": {
+      "masterName": "guestType",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+			  
+		  "Documents": {
+      "masterName": "Documents",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+			  
+		  "libraryDocumentCategory": {
+      "masterName": "libraryDocumentCategory",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+			  
+		  "localityAreaName": {
+      "masterName": "localityAreaName",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+			  
+		  "notificationTemplates": {
+      "masterName": "notificationTemplates",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+			  
+		  "notificationTemplateType": {
+      "masterName": "notificationTemplateType",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+			  
+		  "pressnoteDocuments": {
+      "masterName": "pressnoteDocuments",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+			  
+		  "pressType": {
+      "masterName": "pressType",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
+			  
+		  "templateType": {
+      "masterName": "templateType",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
     }
+			  ,
+			  
+		  "tenderDocuments": {
+      "masterName": "tenderDocuments",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    }
+			  ,
+			  
+		  "tenderBillDocuments": {
+      "masterName": "tenderBillDocuments",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    }
+		 
+		 
 	 }
 }
