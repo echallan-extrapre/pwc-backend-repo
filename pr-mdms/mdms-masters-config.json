@@ -698,6 +698,13 @@
         "$.code"
       ]
     },
+		  "eventReportMonth": {
+      "masterName": "eventReportMonth",
+     "isStateLevel": true,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
 		  "eventScheduledStatus": {
       "masterName": "eventScheduledStatus",
      "isStateLevel": true,
