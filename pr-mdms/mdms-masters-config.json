@@ -701,7 +701,10 @@
 		  "eventScheduledStatus": {
       "masterName": "eventScheduledStatus",
      "isStateLevel": true,
-      ,
+      "uniqueKeys": [
+        "$.code"
+      ]
+    },
 			   "eventSector": {
       "masterName": "eventSector",
      "isStateLevel": true,
