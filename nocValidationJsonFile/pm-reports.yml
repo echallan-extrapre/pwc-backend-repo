@@ -1,0 +1,160 @@
+ReportDefinitions:
+- reportName: MISSummaryReport
+  summary: Summary report
+  version: 1.0.0
+  moduleName: pm-services
+  sourceColumns:
+  - name: applcationType
+    label: report.pm.applcationType
+    type: string
+    source: pm
+    total: false
+  - name: totalNoOfApplicationReceived
+    label: report.pm.totalNoOfApplicationReceived
+    type: string
+    source: pm
+    total: false
+  - name: noOfApplicationProcessed
+    label: report.pm.noOfApplicationProcessed
+    type: string
+    source: pm
+    total: false
+  - name: noOfApplicationPending
+    label: report.pm.noOfApplicationPending
+    type: string
+    source: pm
+    total: false
+  - name: noOfApplicationRejected
+    label: report.pm.noOfApplicationRejected
+    type: string
+    source: pm
+    total: false
+  additionalConfig:
+    reportTitle: reports.pm.MISSummaryReport.title
+  query: SELECT (CASE WHEN finalResult.applcationtype='ADVERTISEMENTNOC' THEN 'Permission for Advertisement' WHEN finalResult.applcationtype='PETNOC' THEN 'Permission to Keep Pet Dog' WHEN finalResult.applcationtype='ROADCUTNOC' THEN 'Permission for Road Cut' WHEN finalResult.applcationtype='SELLMEATNOC' THEN 'Permission to Sell Meat' END) applcationType, finalResult.totalapplications AS totalNoOfApplicationReceived, finalResult.approvedcounter AS noOfApplicationProcessed, finalResult.rejectedcounter AS noOfApplicationRejected, finalResult.pendingcounter AS noOfApplicationPending FROM ( SELECT a.application_type applcationType, Count(1) totalApplications, Count(a.application_status = 'APPROVED' OR NULL) approvedCounter, Count(a.application_status = 'REJECTED' OR NULL) rejectedCounter, Count(a.application_status NOT IN ( 'APPROVED', 'REJECTED', 'WITHDRAW', 'WITHDRAWAPPROVAL') OR NULL) pendingCounter FROM egpm_noc_application a WHERE a.application_type= 'PETNOC' AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type UNION ALL SELECT a.application_type applcationType, Count(1) totalApplications, Count(a.application_status = 'APPROVED' OR NULL) approvedCounter, Count(a.application_status = 'REJECTED' OR NULL) rejectedCounter, Count(a.application_status NOT IN ( 'APPROVED', 'REJECTED') OR NULL) pendingCounter FROM egpm_noc_application a WHERE a.application_type= 'SELLMEATNOC' AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type UNION ALL SELECT a.application_type applcationType, Count(1) totalApplications, Count(a.application_status IN ('APPROVED','PAID') OR NULL) approvedCounter, Count(a.application_status = 'REJECTED' OR NULL) rejectedCounter, Count(a.application_status NOT IN ( 'APPROVED', 'REJECTED', 'PAID') OR NULL) pendingCounter FROM egpm_noc_application a WHERE a.application_type= 'ROADCUTNOC' AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type UNION ALL SELECT a.application_type applcationType, Count(1) totalApplications, Count(a.application_status = 'APPROVED' OR NULL) approvedCounter, Count(a.application_status = 'REJECTED' OR NULL) rejectedCounter, Count(a.application_status NOT IN ( 'APPROVED', 'REJECTED', 'WITHDRAW', 'WITHDRAWAPPROVAL') OR NULL) pendingCounter FROM egpm_noc_application a WHERE a.application_type= 'ADVERTISEMENTNOC' AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type ) finalResult ORDER BY finalResult.applcationtype
+  
+- reportName: RevenueCollectionReportApplicationTypeWise
+  summary: Revenue Collection report application type wise
+  version: 1.0.0
+  moduleName: pm-services
+  sourceColumns:
+  - name: applcationType
+    label: report.pm.applcationType
+    type: string
+    source: pm
+    total: false
+  - name: totalNoOfApplicationRecieved
+    label: report.pm.totalNoOfApplicationRecieved
+    type: string
+    source: pm
+    total: false
+  - name: revenueCollected
+    label: report.pm.revenueCollected
+    type: string
+    source: pm
+    total: false
+  - name: totalNoApplicationApprovedWithNilCharges
+    label: report.pm.totalNoApplicationApprovedWithNilCharges
+    type: string
+    source: pm
+    total: false
+  additionalConfig:
+    reportTitle: reports.pm.RevenueCollectionReportApplicationTypeWise.title
+  query:  SELECT (CASE WHEN finalResult.application_type='ADVERTISEMENTNOC' THEN 'Permission for Advertisement' WHEN finalResult.application_type='PETNOC' THEN 'Permission to Keep Pet Dog' WHEN finalResult.application_type='ROADCUTNOC' THEN 'Permission for Road Cut' WHEN finalResult.application_type='SELLMEATNOC' THEN 'Permission to Sell Meat' END) applcationType, SUM(finalResult.recievedcounter) AS totalNoOfApplicationRecieved, SUM(finalResult.revenuecollected) AS revenueCollected, SUM(finalResult.totalnoapplicationapprovedwithnilcharges) AS totalNoApplicationApprovedWithNilCharges FROM ( SELECT a.application_type, Count(a.application_uuid) recievedCounter, SUM(Coalesce(a.total_amount, 0)) revenueCollected, count((a.application_type='SELLMEATNOC' AND a.application_status='APPROVED') or NULL) totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a WHERE a.application_type IN ('SELLMEATNOC','PETNOC','ADVERTISEMENTNOC') AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type, a.application_status UNION ALL SELECT a.application_type, Count(a.application_uuid) recievedCounter, CASE WHEN a.application_status='PAID' THEN SUM(Coalesce(a.total_amount , 0)) END AS revenueCollected, 0 totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a WHERE a.application_type = 'ROADCUTNOC' AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type, a.application_status UNION ALL SELECT a.application_type, 0 recievedCounter, 0 revenueCollected, COUNT(a.application_uuid) totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a inner join egpm_noc_application_detail b ON a.application_uuid = b.application_uuid AND b.is_active = a.is_active WHERE a.application_type IN ( 'ADVERTISEMENTNOC' ) AND a.application_status='APPROVED' AND Coalesce(( b.application_detail::jsonb -> 'exemptedCategory' )::text, '0') = '1' AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') GROUP BY a.application_type, a.application_status) finalResult GROUP BY finalResult.application_type ORDER BY finalResult.application_type
+
+- reportName: RevenueCollectionReportMonthWise
+  summary: Revenue Collection report Month Wise
+  version: 1.0.0
+  moduleName: pm-services
+  sourceColumns:
+  - name: application_type
+    label: report.pm.application_type
+    type: string
+    source: pm
+    total: false
+  - name: YearMonth
+    label: report.pm.YearMonth
+    type: string
+    source: pm
+    total: false
+  - name: approve
+    label: report.pm.approve
+    type: string
+    source: pm
+    total: false
+  - name: rev
+    label: report.pm.rev
+    type: string
+    source: pm
+    total: false
+  - name: exempted
+    label: report.pm.exempted
+    type: string
+    source: pm
+    total: false
+  additionalConfig:
+    reportTitle: reports.pm.RevenueCollectionReportMonthWise.title
+  query:  SELECT (CASE WHEN application_type='ADVERTISEMENTNOC' THEN 'Permission for Advertisement' WHEN application_type='PETNOC' THEN 'Permission to Keep Pet Dog' WHEN application_type='ROADCUTNOC' THEN 'Permission for Road Cut' WHEN application_type='SELLMEATNOC' THEN 'Permission to Sell Meat' END) application_type, yearmonth, rev, approve, exempted FROM (SELECT ab.application_type, ( ab.years || '-' || To_char(To_timestamp (ab.months::text, 'MM'), 'TMMON') ) YearMonth, ab.years, ab.months, SUM(ab.rev) rev, SUM(ab.approve) approve, SUM(ab.exempted) exempted FROM (SELECT a.application_type, Max(Extract(year FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD'))) years, Max(Extract(month FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD'))) months, SUM(Coalesce(a.total_amount, 0)) rev, Count(a.application_uuid) approve, Count(Coalesce(( b.application_detail -> 'exemptedCategory' )::text, '0'::text) = '1'::text OR NULL) exempted FROM egpm_noc_application a inner join egpm_noc_application_detail b ON a.application_uuid = b.application_uuid AND a.is_active = b.is_active WHERE a.application_type IN ('PETNOC' , 'ADVERTISEMENTNOC') AND a.application_status = 'APPROVED' AND ( To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD' )::text, 'YYYY-MM-DD') BETWEEN To_date(Concat($fromYear, '-04-01'), 'YYYY-MM-DD' ) AND To_date( Concat($toYear, '-03-31'), 'YYYY-MM-DD') ) AND Extract(month FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD')) IN ($months) GROUP BY a.application_type, Extract(year FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD')), Extract(month FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD')) UNION ALL SELECT a.application_type, Max(Extract(year FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD'))) years, Max(Extract(month FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD'))) months, CASE WHEN a.application_status='PAID' THEN SUM(Coalesce(a.total_amount , 0)) END rev, Count(a.application_uuid) approve, Count(Coalesce(( b.application_detail -> 'exemptedCategory' )::text, '0'::text) = '1'::text OR NULL) exempted FROM egpm_noc_application a inner join egpm_noc_application_detail b ON a.application_uuid = b.application_uuid AND a.is_active = b.is_active WHERE a.application_type = 'ROADCUTNOC' AND a.application_status IN ('PAID','APPROVED') AND ( To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD' )::text, 'YYYY-MM-DD') BETWEEN To_date(Concat($fromYear, '-04-01'), 'YYYY-MM-DD' ) AND To_date( Concat($toYear, '-03-31'), 'YYYY-MM-DD') ) AND Extract(month FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD')) IN ($months) GROUP BY a.application_type, a.application_status, Extract(year FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD')), Extract(month FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD')) UNION ALL SELECT a.application_type, Max(Extract(year FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD'))) years, Max(Extract(month FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD'))) months, 0 rev, Count(a.application_uuid) approve, Count(a.application_uuid) exempted FROM egpm_noc_application a WHERE a.application_type = 'SELLMEATNOC' AND a.application_status = 'APPROVED' AND ( To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD' )::text, 'YYYY-MM-DD') BETWEEN To_date(Concat($fromYear, '-04-01'), 'YYYY-MM-DD' ) AND To_date( Concat($toYear, '-03-31'), 'YYYY-MM-DD') ) AND Extract(month FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD')) IN ($months) GROUP BY a.application_type, Extract(year FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD')), Extract(month FROM To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD')) ) ab GROUP BY ab.application_type, ab.years, ab.months) abb ORDER BY application_type, yearmonth
+
+- reportName: ApplicationProcessingTimeReport
+  summary: Application processing time report
+  version: 1.0.0
+  moduleName: pm-services
+  sourceColumns:
+  - name: applcationType
+    label: report.pm.applcationType
+    type: string
+    source: pm
+    total: false
+  - name: avgTimeTakenToProcessRequest
+    label: report.pm.avgTimeTakenToProcessRequest
+    type: string
+    source: pm
+    total: false
+  - name: pendingMoreThan30Days
+    label: report.pm.pendingMoreThan30Days
+    type: string
+    source: pm
+    total: false
+  - name: pendingMoreThan10AndLessThan30Days
+    label: report.pm.pendingMoreThan10AndLessThan30Days
+    type: string
+    source: pm
+    total: false
+  additionalConfig:
+    reportTitle: reports.pm.ApplicationProcessingTimeReport.title
+  query:  SELECT CASE WHEN application_type='ADVERTISEMENTNOC' then 'Permission for Advertisement' WHEN application_type='PETNOC' then 'Permission to Keep Pet Dog' WHEN application_type='ROADCUTNOC' then 'Permission for Road Cut' WHEN application_type='SELLMEATNOC' then 'Permission to Sell Meat' END AS applcationType, total_average as avgTimeTakenToProcessRequest, total_avg_pending_10days_to_30days as pendingMoreThan10AndLessThan30Days, total_avg_pending_greater_than30days as pendingMoreThan30Days FROM public.egpm_noc_report_avgproctime_aggregate WHERE dimension_type=1 AND to_date(to_char(report_generation_datetime::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD') = to_date(to_char(now()::timestamp, 'YYYY-MM-DD')::text,'YYYY-MM-DD')
+  
+- reportName: RevenueCollectionReportSectorWise
+  summary: Revenue Collection report Sector Wise
+  version: 1.0.0
+  moduleName: pm-services
+  sourceColumns:
+  - name: applcationType
+    label: report.pm.applcationType
+    type: string
+    source: pm
+    total: false
+  - name: sector
+    label: report.pm.sector
+    type: string
+    source: pm
+    total: false
+  - name: totalNoOfApplicationApproved
+    label: report.pm.totalNoOfApplicationApproved
+    type: string
+    source: pm
+    total: false
+  - name: revenueCollected
+    label: report.pm.revenueCollected
+    type: string
+    source: pm
+    total: false
+  - name: totalNoApplicationApprovedWithNilCharges
+    label: report.pm.totalNoApplicationApprovedWithNilCharges
+    type: string
+    source: pm
+    total: false
+  additionalConfig:
+    reportTitle: reports.pm.RevenueCollectionReportSectorWise.title
+  query: SELECT (CASE WHEN finalResult.application_type='ADVERTISEMENTNOC' THEN 'Permission for Advertisement' WHEN finalResult.application_type='PETNOC' THEN 'Permission to Keep Pet Dog' WHEN finalResult.application_type='ROADCUTNOC' THEN 'Permission for Road Cut' WHEN finalResult.application_type='SELLMEATNOC' THEN 'Permission to Sell Meat' END) applcationType, finalResult.sector AS sector, SUM(finalResult.noofapplicationproccessed) AS totalNoOfApplicationApproved, SUM(finalResult.revenuecollected) AS revenueCollected, SUM(finalResult.totalnoapplicationapprovedwithnilcharges) AS totalNoApplicationApprovedWithNilCharges FROM (SELECT a.application_type, a.sector, Count(a.application_status = 'APPROVED' OR NULL) noOfApplicationProccessed, 0 revenueCollected, 0 totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a WHERE To_date(To_char(To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') AND UPPER (Trim(a.sector)) IN( CASE WHEN UPPER (Trim($sector)) <> '' THEN UPPER (Trim($sector)) ELSE UPPER (Trim(a.sector)) END ) GROUP BY a.application_type, a.sector UNION ALL SELECT a.application_type, a.sector, 0 noOfApplicationProccessed, SUM(a.total_amount) revenueCollected, 0 totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a WHERE a.application_type IN ('PETNOC','ADVERTISEMENTNOC') AND To_date(To_char(To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') AND UPPER (Trim(a.sector)) IN( CASE WHEN UPPER (Trim($sector)) <> '' THEN UPPER (Trim($sector)) ELSE UPPER (Trim(a.sector)) END ) GROUP BY a.application_type, a.sector UNION ALL SELECT a.application_type, a.sector, Count(a.application_uuid) noOfApplicationProccessed, SUM(Coalesce(a.total_amount , 0)) revenueCollected, 0 totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a WHERE a.application_type = 'ROADCUTNOC' AND a.application_status='PAID' AND To_date(To_char(To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') AND UPPER (Trim(a.sector)) IN( CASE WHEN UPPER (Trim($sector)) <> '' THEN UPPER (Trim($sector)) ELSE UPPER (Trim(a.sector)) END ) GROUP BY a.application_type, a.sector UNION ALL SELECT a.application_type, a.sector, 0 noOfApplicationProccessed, 0 revenueCollected, Count(a.application_uuid) AS totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a inner join egpm_noc_application_detail b ON a.application_uuid = b.application_uuid AND b.is_active = TRUE WHERE a.application_type = 'ADVERTISEMENTNOC' AND a.application_status = 'APPROVED' AND Coalesce(( b.application_detail -> 'exemptedCategory' )::text, '0'::text ) = '1'::text AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') AND UPPER (Trim(a.sector)) IN( CASE WHEN UPPER (Trim($sector)) <> '' THEN UPPER (Trim($sector)) ELSE UPPER (Trim(a.sector)) END ) GROUP BY a.application_type, a.sector UNION ALL SELECT a.application_type, a.sector, 0 noOfApplicationProccessed, 0 revenueCollected, Count(a.application_uuid) AS totalNoApplicationApprovedWithNilCharges FROM egpm_noc_application a WHERE a.application_type = 'SELLMEATNOC' AND a.application_status = 'APPROVED' AND To_date(To_char( To_timestamp(a.created_time / 1000)::timestamp, 'YYYY-MM-DD')::text, 'YYYY-MM-DD') BETWEEN To_date($fromDate, 'YYYY-MM-DD') AND To_date($toDate, 'YYYY-MM-DD') AND UPPER (Trim(a.sector)) IN( CASE WHEN UPPER (Trim($sector)) <> '' THEN UPPER (Trim($sector)) ELSE UPPER (Trim(a.sector)) END ) GROUP BY a.application_type, a.sector) finalResult GROUP BY finalResult.application_type, finalResult.sector ORDER BY finalResult.application_type, finalResult.sector
