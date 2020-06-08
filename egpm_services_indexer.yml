@@ -11,7 +11,7 @@ ServiceMaps:
       isBulk: true
       timeStampField: $.createdTime
       jsonPath: $.NOCApplications
-      
+
   - topic: save-noc-details-transitions
     configKey: INDEX
     indexes:
@@ -21,7 +21,7 @@ ServiceMaps:
       isBulk: true
       timeStampField: $.createdTime
       jsonPath: $.NOCApplicationDetails
-	  
+
   - topic: update-noc-transitions
     configKey: INDEX
     indexes:
@@ -31,7 +31,7 @@ ServiceMaps:
       isBulk: true
       timeStampField: $.createdTime
       jsonPath: $.NOCApplications
-      
+
   - topic: update-noc-details-transitions
     configKey: INDEX
     indexes:
@@ -91,7 +91,7 @@ ServiceMaps:
       isBulk: true
       timeStampField: $.createdTime
       jsonPath: $.NOCPriceBook	  
-	  
+
   - topic: update-opms-priceBookMasterDate
     configKey: INDEX
     indexes:
