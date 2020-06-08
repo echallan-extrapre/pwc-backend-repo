@@ -1,0 +1,103 @@
+ServiceMaps:
+ serviceName: NOC
+ version: 1.0.0
+ mappings:
+  - topic: save-noc-transitions
+    configKey: INDEX
+    indexes:
+    - name: noc-v1
+      type: noc
+      id: $.applicationUuid,$.tenantId,$.nocNumber,$.applicationType
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplications
+      
+  - topic: save-noc-details-transitions
+    configKey: INDEX
+    indexes:
+    - name: nocDetails-v1
+      type: nocDetails
+      id: $.applicationDetailUuid,$.tenantId,$.applicationUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplicationDetails
+	  
+  - topic: update-noc-transitions
+    configKey: INDEX
+    indexes:
+    - name: noc-v1
+      type: noc
+      id: $.applicationUuid,$.tenantId,$.nocNumber,$.applicationType
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplications
+      
+  - topic: update-noc-details-transitions
+    configKey: INDEX
+    indexes:
+    - name: nocDetails-v1
+      type: nocDetails
+      id: $.applicationDetailUuid,$.tenantId,$.applicationUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplicationDetails
+
+  - topic: save-nocapprovereject-transitions
+    configKey: INDEX
+    indexes:
+    - name: nocDetails-v1
+      type: nocDetails
+      id: $.remarkId,$.tenantId,$.applicationUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplicationRemark
+
+  - topic: update-noc-approve-reject-main-transitions
+    configKey: INDEX
+    indexes:
+    - name: nocDetails-v1
+      type: nocDetails
+      id: $.tenantId,$.applicationUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplications
+
+  - topic: update-noc-approve-reject-transitions
+    configKey: INDEX
+    indexes:
+    - name: nocDetails-v1
+      type: nocDetails
+      id: $.remarkId,$.tenantId,$.applicationUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplicationRemark
+
+  - topic: delete-noc-transitions
+    configKey: INDEX
+    indexes:
+    - name: nocDetails-v1
+      type: nocDetails
+      id: $.applicationDetailUuid,$.tenantId,$.applicationUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplicationDetails
+
+  - topic: update-opms-priceBookMasterDate
+    configKey: INDEX
+    indexes:
+    - name: nocDetails-v1
+      type: nocDetails
+      id: $.priceBookId,$.tenantId,$.applicationType
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCPriceBook	  
+	  
+  - topic: update-opms-priceBookMasterDate
+    configKey: INDEX
+    indexes:
+    - name: nocDetails-v1
+      type: nocDetails
+      id: $.priceBookId,$.tenantId,$.applicationType
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCPriceBook
