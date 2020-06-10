@@ -80,4 +80,4 @@ ServiceMaps:
       id: $.priceBookId,$.tenantId,$.applicationType
       isBulk: true
       timeStampField: $.createdTime
-      jsonPath: $.NOCPriceBook	  
+      jsonPath: $.NOCPriceBook
