@@ -15,8 +15,8 @@ ServiceMaps:
   - topic: save-noc-details-transitions
     configKey: INDEX
     indexes:
-    - name: nocDetails-v1
-      type: nocDetails
+    - name: nocdetails-v1
+      type: nocdetails
       id: $.applicationDetailUuid,$.tenantId,$.applicationUuid
       isBulk: true
       timeStampField: $.createdTime
@@ -35,8 +35,8 @@ ServiceMaps:
   - topic: update-noc-details-transitions
     configKey: INDEX
     indexes:
-    - name: nocDetails-v1
-      type: nocDetails
+    - name: nocdetails-v1
+      type: nocdetails
       id: $.applicationDetailUuid,$.tenantId,$.applicationUuid
       isBulk: true
       timeStampField: $.createdTime
@@ -45,8 +45,8 @@ ServiceMaps:
   - topic: save-nocapprovereject-transitions
     configKey: INDEX
     indexes:
-    - name: nocDetails-v1
-      type: nocDetails
+    - name: nocdetails-v1
+      type: nocdetails
       id: $.remarkId,$.tenantId,$.applicationUuid
       isBulk: true
       timeStampField: $.createdTime
@@ -55,8 +55,8 @@ ServiceMaps:
   - topic: update-noc-approve-reject-main-transitions
     configKey: INDEX
     indexes:
-    - name: nocDetails-v1
-      type: nocDetails
+    - name: nocdetails-v1
+      type: nocdetails
       id: $.tenantId,$.applicationUuid
       isBulk: true
       timeStampField: $.createdTime
@@ -65,8 +65,8 @@ ServiceMaps:
   - topic: update-noc-approve-reject-transitions
     configKey: INDEX
     indexes:
-    - name: nocDetails-v1
-      type: nocDetails
+    - name: nocdetails-v1
+      type: nocdetails
       id: $.remarkId,$.tenantId,$.applicationUuid
       isBulk: true
       timeStampField: $.createdTime
@@ -75,8 +75,8 @@ ServiceMaps:
   - topic: delete-noc-transitions
     configKey: INDEX
     indexes:
-    - name: nocDetails-v1
-      type: nocDetails
+    - name: nocdetails-v1
+      type: nocdetails
       id: $.applicationDetailUuid,$.tenantId,$.applicationUuid
       isBulk: true
       timeStampField: $.createdTime
@@ -85,8 +85,8 @@ ServiceMaps:
   - topic: update-opms-priceBookMasterDate
     configKey: INDEX
     indexes:
-    - name: nocDetails-v1
-      type: nocDetails
+    - name: nocdetails-v1
+      type: nocdetails
       id: $.priceBookId,$.tenantId,$.applicationType
       isBulk: true
       timeStampField: $.createdTime
@@ -95,8 +95,8 @@ ServiceMaps:
   - topic: update-opms-priceBookMasterDate
     configKey: INDEX
     indexes:
-    - name: nocDetails-v1
-      type: nocDetails
+    - name: nocdetails-v1
+      type: nocdetails
       id: $.priceBookId,$.tenantId,$.applicationType
       isBulk: true
       timeStampField: $.createdTime
