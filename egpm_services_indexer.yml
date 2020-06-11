@@ -37,7 +37,7 @@ ServiceMaps:
     indexes:
     - name: pm-noc-details-index-v1
       type: nocdetails
-      id: $.applicationDetailUuid,$.tenantId,$.applicationUuid
+      id: $.applicationDetailUuid
       isBulk: true
       timeStampField: $.createdTime
       jsonPath: $.NOCApplicationDetails
