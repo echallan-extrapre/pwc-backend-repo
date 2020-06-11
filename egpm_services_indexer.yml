@@ -7,7 +7,7 @@ ServiceMaps:
     indexes:
     - name: pm-noc-index-v1
       type: noc
-      id: $.applicationUuid,$.tenantId,$.nocNumber,$.applicationType
+      id: $.applicationUuid,$.tenantId,$.nocNumber
       isBulk: true
       timeStampField: $.createdTime
       jsonPath: $.NOCApplications
@@ -17,7 +17,7 @@ ServiceMaps:
     indexes:
     - name: pm-noc-index-v1
       type: noc
-      id: $.applicationUuid,$.tenantId,$.nocNumber,$.applicationType
+      id: $.nocNumber
       isBulk: true
       timeStampField: $.createdTime
       jsonPath: $.NOCApplications      
