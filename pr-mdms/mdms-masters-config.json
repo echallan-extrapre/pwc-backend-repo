@@ -767,14 +767,6 @@
       ]
     },
 			  
-		  "notificationTemplates": {
-      "masterName": "notificationTemplates",
-     "isStateLevel": true,
-      "uniqueKeys": [
-        "$.code"
-      ]
-    },
-			  
 		  "notificationTemplateType": {
       "masterName": "notificationTemplateType",
      "isStateLevel": true,
