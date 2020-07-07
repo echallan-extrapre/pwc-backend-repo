@@ -1,0 +1,173 @@
+ServiceMaps:
+ serviceName: echallan
+ version: 1.0.0
+ mappings:
+  - topic: echallan-services-save-item
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-item-master-index-v1
+      type: item-master
+      id: $.itemUuid, $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: echallan-services-update-item
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-item-master-index-v1
+      type: item-master
+      id: $.itemUuid, $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+   
+  - topic: echallan-services-save-fine
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-fine-master-index-v1
+      type: fine-master
+      id: $.fineUuid, $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: echallan-services-update-fine
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-fine-master-index-v1
+      type: fine-master
+      id: $.fineUuid, $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody      
+
+  - topic: echallan-services-create-store-item
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-store-index-v1
+      type: store-item
+      id: $.storeItemUuid, $.documentUuid , $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: echallan-services-update-store-item
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-store-index-v1
+      type: store-item
+      id: $.challanUuid
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: echallan-services-generate-challan
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-challan-index-v1
+      type:  challan
+      id: $.violationUuid , $.challanUuid, $.paymentUuid, $.challanDetailUuid, $.documentUuid, $.violationItemUuid, $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: echallan-services-update-challan
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-challan-index-v1
+      type:  challan
+      id:  $.challanUuid
+      isBulk: false
+      timeStampField: $.RequestBody.lastModifiedTime
+      jsonPath: $.RequestBody
+
+  - topic: echallan-services-create-vendor
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-vendor-index-v1
+      type: vendor-master
+      id: $.vendorUuid, $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: echallan-services-update-store-offline-payment
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-store-index-v1
+      type: store-item
+      id: $.challanUuid
+      isBulk: false
+      timeStampField: $.RequestBody.lastModifiedTime
+      jsonPath: $.RequestBody
+
+  - topic: echallan-services-update-penalty-amount
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-challan-index-v1
+      type: challan
+      id: $.challanUuid
+      isBulk: false
+      timeStampField: $.RequestBody.lastModifiedTime
+      jsonPath: $.RequestBody
+
+  - topic: echallan-services-update-auction
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-auction-index-v1
+      type: auction-master
+      id: $.auctionUuid , $.auctionDetailUuid, $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.lastModifiedTime
+      jsonPath: $.RequestBody      
+ 
+  - topic: echallan-services-update-auction-rejection
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-auction-index-v1
+      type: auction-master
+      id: $.auctionUuid , $.storeItemUuid
+      isBulk: true
+      timeStampField: $.RequestBody.lastModifiedTime
+      jsonPath: $.RequestBody
+
+  - topic: echallan-services-update-vendor
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-vendor-index-v1
+      type: vendor-master
+      id: $.vendorUuid, $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+      
+  - topic: echallan-services-save-auction
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-auction-index-v1
+      type: auction-master
+      id: $.auctionUuid , $.auctionDetailUuid, $.storeItemUuid, $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: echallan-services-save-payment-history
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-payment-index-v1
+      type: payment
+      id: $.paymentUuid , $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody  
+
+  - topic: echallan-services-create-device-source
+    configKey: INDEX
+    indexes:
+    - name: echallan-services-device-detail-index-v1
+      type: device-source
+      id: $.sourceUuid, $.tenantId
+      isBulk: false
+      timeStampField: $.createdTime
+      jsonPath: $.RequestBody      
