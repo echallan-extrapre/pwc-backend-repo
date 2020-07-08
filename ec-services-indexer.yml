@@ -90,7 +90,7 @@ ServiceMaps:
       id: $.vendorUuid, $.tenantId
       isBulk: true
       timeStampField: $.createdTime
-      jsonPath: $.RequestBody
+      jsonPath: $.RequestBody.vendorRegistrationList
 
   - topic: ec-services-update-store-offline-payment
     configKey: INDEX
