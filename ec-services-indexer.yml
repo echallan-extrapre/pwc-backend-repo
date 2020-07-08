@@ -90,7 +90,7 @@ ServiceMaps:
       id: $.vendorUuid, $.tenantId
       isBulk: true
       timeStampField: $.createdTime
-      jsonPath: $.RequestBody.vendorRegistrationList.*
+      jsonPath: $.RequestBody
 
   - topic: ec-services-update-store-offline-payment
     configKey: INDEX
@@ -140,7 +140,7 @@ ServiceMaps:
       id: $.vendorUuid, $.tenantId
       isBulk: true
       timeStampField: $.createdTime
-      jsonPath: $.RequestBody.vendorRegistrationList.*
+      jsonPath: $.RequestBody.vendorRegistrationList
       
   - topic: ec-services-save-auction
     configKey: INDEX
