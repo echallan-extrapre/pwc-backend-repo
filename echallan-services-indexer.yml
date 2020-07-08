@@ -19,7 +19,7 @@ ServiceMaps:
       type: item-master
       id: $.itemUuid, $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
    
   - topic: echallan-services-save-fine
@@ -29,7 +29,7 @@ ServiceMaps:
       type: fine-master
       id: $.fineUuid, $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: echallan-services-update-fine
@@ -39,7 +39,7 @@ ServiceMaps:
       type: fine-master
       id: $.fineUuid, $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody      
 
   - topic: echallan-services-create-store-item
@@ -49,7 +49,7 @@ ServiceMaps:
       type: store-item
       id: $.storeItemUuid, $.documentUuid , $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: echallan-services-update-store-item
@@ -59,7 +59,7 @@ ServiceMaps:
       type: store-item
       id: $.challanUuid
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: echallan-services-generate-challan
@@ -69,7 +69,7 @@ ServiceMaps:
       type:  challan
       id: $.violationUuid , $.challanUuid, $.paymentUuid, $.challanDetailUuid, $.documentUuid, $.violationItemUuid, $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: echallan-services-update-challan
@@ -89,7 +89,7 @@ ServiceMaps:
       type: vendor-master
       id: $.vendorUuid, $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: echallan-services-update-store-offline-payment
@@ -99,7 +99,7 @@ ServiceMaps:
       type: store-item
       id: $.challanUuid
       isBulk: false
-      timeStampField: $.RequestBody.lastModifiedTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.RequestBody
 
   - topic: echallan-services-update-penalty-amount
@@ -109,7 +109,7 @@ ServiceMaps:
       type: challan
       id: $.challanUuid
       isBulk: false
-      timeStampField: $.RequestBody.lastModifiedTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.RequestBody
 
   - topic: echallan-services-update-auction
@@ -119,7 +119,7 @@ ServiceMaps:
       type: auction-master
       id: $.auctionUuid , $.auctionDetailUuid, $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.lastModifiedTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.RequestBody      
  
   - topic: echallan-services-update-auction-rejection
@@ -129,7 +129,7 @@ ServiceMaps:
       type: auction-master
       id: $.auctionUuid , $.storeItemUuid
       isBulk: true
-      timeStampField: $.RequestBody.lastModifiedTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.RequestBody
 
   - topic: echallan-services-update-vendor
@@ -139,7 +139,7 @@ ServiceMaps:
       type: vendor-master
       id: $.vendorUuid, $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
       
   - topic: echallan-services-save-auction
@@ -149,7 +149,7 @@ ServiceMaps:
       type: auction-master
       id: $.auctionUuid , $.auctionDetailUuid, $.storeItemUuid, $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: echallan-services-save-payment-history
@@ -159,7 +159,7 @@ ServiceMaps:
       type: payment
       id: $.paymentUuid , $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody  
 
   - topic: echallan-services-create-device-source
