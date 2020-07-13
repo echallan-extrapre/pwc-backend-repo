@@ -50,7 +50,7 @@ ServiceMaps:
       id: $.storeItemUuid, $.documentUuid , $.tenantId
       isBulk: true
       timeStampField: $.createdTime
-      jsonPath: $.RequestBody
+      jsonPath: $.RequestBody.storeItemRegister
 
   - topic: ec-services-update-store-item
     configKey: INDEX
