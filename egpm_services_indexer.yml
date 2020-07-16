@@ -19,7 +19,7 @@ ServiceMaps:
       type: noc
       id: $.nocNumber
       isBulk: true
-      timeStampField: $.createdTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.NOCApplications      
 
   - topic: update-noc-details-transitions
@@ -29,7 +29,7 @@ ServiceMaps:
       type: nocdetails
       id: $.applicationDetailUuid,$.tenantId,$.applicationUuid
       isBulk: true
-      timeStampField: $.createdTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.NOCApplicationDetails
 
   - topic: delete-noc-transitions
@@ -59,7 +59,7 @@ ServiceMaps:
       type: approve-reject-transitions
       id: $.tenantId,$.applicationUuid
       isBulk: true
-      timeStampField: $.createdTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.NOCApplications
 
   - topic: update-noc-approve-reject-transitions
@@ -69,7 +69,7 @@ ServiceMaps:
       type: approve-reject-transitions
       id: $.remarkId,$.tenantId,$.applicationUuid
       isBulk: true
-      timeStampField: $.createdTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.NOCApplicationRemark
 
   - topic: update-opms-priceBookMasterDate
